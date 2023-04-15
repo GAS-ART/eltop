@@ -1,0 +1,314 @@
+//====================================================================================================
+
+.header {
+
+  .header-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 36px;
+    gap: 10px;
+
+    &__contacts {
+      display: flex;
+      align-items: center;
+      gap: 48px;
+    }
+
+    &__contacts-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    &__contacts-icon {
+      font-size: 16px;
+      color: #828282;
+    }
+
+    &__contacts-address,
+    &__contacts-phone {
+      font-weight: 700;
+      font-size: 14px;
+      color: #828282;
+    }
+
+    &__links {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+  }
+
+  &__menu-wrapper {
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+    margin-bottom: 17px;
+  }
+
+  &__logo {
+    margin-right: auto;
+
+    & img {
+      width: 84px;
+      height: 50px;
+    }
+
+  }
+
+  &__menu {
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__menu-nav {}
+
+  &__menu-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 60px;
+    row-gap: 30px;
+  }
+
+  &__menu-item {}
+
+  &__menu-link {
+    font-weight: 700;
+    font-size: 18px;
+
+    & span {
+      color: $color__yellow;
+    }
+  }
+
+  &__popup {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
+    border: $color__yellow 1px solid;
+    width: 180px;
+    height: 54px;
+    border-radius: 50px;
+    margin-left: 60px;
+  }
+}
+
+@media(max-width: 950px) {
+  .header {
+    margin-top: 16px;
+
+    .header-top {
+      display: none;
+    }
+
+    &__menu {
+      display: none;
+    }
+
+    &__popup {
+      display: none;
+    }
+  }
+}
+
+//Burger ====================================================================================================
+
+.icon-menu {
+  display: none;
+
+  @media (max-width: 950px) {
+    display: flex;
+    position: relative;
+    width: 24px;
+    height: 19px;
+    cursor: pointer;
+    z-index: 5;
+    justify-content: center;
+
+    span,
+    &::before,
+    &::after {
+      content: "";
+      transition: all 0.3s ease 0s;
+      right: 0;
+      position: absolute;
+      width: 24px;
+      height: 2px;
+      background-color: #131313;
+      border-radius: 50px;
+    }
+
+    &::before {
+      top: 0;
+      width: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    &::after {
+      bottom: 0;
+      width: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    span {
+      top: calc(50% - rem(1));
+    }
+
+    .menu-open & {
+      span {
+        width: 0;
+      }
+
+      &::before,
+      &::after {
+        left: 0;
+        width: 24px;
+      }
+
+      &::before {
+        top: calc(50% - rem(1));
+        transform: rotate(-45deg);
+      }
+
+      &::after {
+        bottom: calc(50% - rem(1));
+        transform: rotate(45deg);
+      }
+    }
+  }
+}
+
+.menu {
+  display: none;
+}
+
+@media (max-width: 950px) {
+  .menu {
+    display: flex;
+    align-items: center;
+
+    &__burger {
+      position: relative;
+    }
+
+    &__body {
+      position: absolute;
+      opacity: 0;
+      transform: translateX(250px);
+      transition: all .6s;
+      top: 50px;
+      right: 0px;
+      background-color: #FCFDFF;
+      padding: 10px;
+      z-index: 1;
+      height: 100vh;
+    }
+
+    &__list {
+      width: 200px;
+      min-height: 200px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+    }
+  }
+
+  .menu-open .menu {
+    &__body {
+      opacity: 1;
+      transform: translateX(24px);
+    }
+  }
+}
+
+//====================================================================================================
+.header {
+
+  // Выпадающий список языков
+  &__language {
+    position: relative;
+    z-index: 2;
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    @media (pointer: fine) {
+      &:hover {
+        .language-btn__select:last-child {
+          opacity: 1;
+          visibility: visible;
+          pointer-events: all;
+          transform: translate(0, 0px);
+        }
+      }
+    }
+
+    &.active {
+      .language-btn__select:last-child {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+        transform: translate(0, 0px);
+      }
+    }
+  }
+}
+
+.language-btn {
+  margin: 15px;
+
+  &__text {}
+
+  &__icon {
+    width: rem(25);
+    height: 21px;
+    position: relative;
+    top: -2px;
+
+    &.ru {
+      background-image: url("/img/flags/ru/ru.svg");
+      //	background-image: url("https://colorit.agency/public/images/russia.svg"); 
+    }
+
+    &.es {
+      background-image: url("/img/flags/es/es.svg");
+      //	background-image: url("https://colorit.agency/public/images/spain.svg");
+    }
+  }
+
+  &__select {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+  }
+
+  &__select:last-child {
+    position: absolute;
+    bottom: -30px;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translate(0, 15px);
+    padding: 10px 0 0 0;
+  }
+}
+
+// Выпадающий список языков
+//====================================================================================================

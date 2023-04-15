@@ -1,0 +1,1 @@
+const e=document.querySelector(".language-btn");e.addEventListener("click",function(t){window.matchMedia("(pointer: coarse)").matches&&(e.classList.contains("active")||t.preventDefault(),e.classList.toggle("active"))});console.log("work");
