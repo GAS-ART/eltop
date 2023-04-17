@@ -14,6 +14,7 @@ languageBtn.addEventListener('click', function (e) {
 //Async form sending
 const mainForm = document.getElementById('mainForm');
 const token = document.querySelector('input[name="_token"]').value;
+console.log(token);
 const errorsMessagesUA = {
   name: ['Не заполнено поле "ВАШЕ ИМЯ"', 'Не заповнено поле "ВАШЕ ІМ\'Я', 'Поле \"ИМЯ\" должно иметь 2 или больше символов', 'Поле "ІМ\'Я" повинно мати 2 або більше символів', 'Поле \"ИМЯ\" должно иметь не больше 80 символов', 'Поле "ІМ\'Я" повинно мати не більше 80 символів', 'Поле \"ИМЯ\" не может содержать цифры', 'Поле "ІМ\'Я" не може містити цифри'],
   phone: ['Не верный формат номера телефона', 'Невірний формат номеру телефона', 'Не заполнено поле "Номер телефона"', 'Не заповнено поле "Номер телефону"',],
@@ -24,7 +25,7 @@ mainForm.addEventListener('submit', async (e) => {
   e.preventDefault();
   const formData = new FormData(mainForm);
   try {
-    const response = await fetch('https://eltop.artgas.pro/send-main-form', {
+    const response = await fetch('http://localhost:8000/send-main-form', {
       headers: {
         "Accept": "application/json",
         "X-Requested-With": "XMLHttpRequest",
@@ -32,6 +33,7 @@ mainForm.addEventListener('submit', async (e) => {
       },
       method: 'post',
       body: formData,
+      credentials: "same-origin",
     })
     const data = await response.json();
     if (response.ok) {
