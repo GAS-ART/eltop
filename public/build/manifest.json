@@ -24,8 +24,24 @@
     "isEntry": true,
     "src": "resources/js/app.js"
   },
+  "resources/scss/fonts/icon-fonts/icomoon.eot": {
+    "file": "assets/icomoon-0806e009.eot",
+    "src": "resources/scss/fonts/icon-fonts/icomoon.eot"
+  },
+  "resources/scss/fonts/icon-fonts/icomoon.svg": {
+    "file": "assets/icomoon-2cfd71f0.svg",
+    "src": "resources/scss/fonts/icon-fonts/icomoon.svg"
+  },
+  "resources/scss/fonts/icon-fonts/icomoon.ttf": {
+    "file": "assets/icomoon-ff4622f5.ttf",
+    "src": "resources/scss/fonts/icon-fonts/icomoon.ttf"
+  },
+  "resources/scss/fonts/icon-fonts/icomoon.woff": {
+    "file": "assets/icomoon-7ba2a511.woff",
+    "src": "resources/scss/fonts/icon-fonts/icomoon.woff"
+  },
   "resources/scss/style.scss": {
-    "file": "assets/style-1c6ce113.css",
+    "file": "assets/style-c92b483f.css",
     "isEntry": true,
     "src": "resources/scss/style.scss"
   }
