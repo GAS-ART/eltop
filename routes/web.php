@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/locale/{locale}',  'App\Http\Controllers\LanguagesController@changeLocale')->name('locale');
+Route::post('/send-main-form', 'App\Http\Controllers\sendController@submit')->name('sendMainForm');
 
 Route::get('/', function () {
     App::setLocale('ua');
