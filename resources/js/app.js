@@ -44,10 +44,13 @@ mainForm.addEventListener('submit', async (e) => {
       credentials: "same-origin",
     })
     try {
-      console.log(response);
+      if (response.ok) {
+        console.log('SEND WORK!');
+        return
+      }
       const data = await response.json();
       if (response.ok) {
-        console.log('SEND WORK!')
+
       } else if (!response.ok && mainForm.classList.contains('ru')) {
         console.log(data);
         data.errors?.name ? mainForm.querySelector('.error-name').innerText = data.errors?.name[0] : mainForm.querySelector('.error-name').innerText = "";
