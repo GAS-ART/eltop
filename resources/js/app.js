@@ -21,9 +21,16 @@ const errorsMessagesUA = {
   text: ['Вы ввели слишком много символов в поле "Сообщение"', 'Ви ввели занадто багато символів у полі "Повідомлення"']
 }
 
+
+
 mainForm.addEventListener('submit', async (e) => {
   e.preventDefault();
   const formData = new FormData(mainForm);
+  const formDataObj = {};
+  formData.forEach(function (value, key) {
+    formDataObj[key] = value;
+  });
+  const jsonData = JSON.stringify(formDataObj);
   try {
     const response = await fetch('https://eltop.artgas.pro/send-main-form', {
       headers: {
@@ -33,7 +40,7 @@ mainForm.addEventListener('submit', async (e) => {
         "X-CSRF-Token": token
       },
       method: 'post',
-      body: formData,
+      body: jsonData,
       credentials: "same-origin",
     })
     const data = await response.json();
