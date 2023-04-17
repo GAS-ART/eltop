@@ -24,7 +24,7 @@ mainForm.addEventListener('submit', async (e) => {
   e.preventDefault();
   const formData = new FormData(mainForm);
   try {
-    const response = await fetch('http://localhost:8000/send-main-form', {
+    const response = await fetch('https://eltop.artgas.pro/send-main-form', {
       headers: {
         "Accept": "application/json",
         "X-Requested-With": "XMLHttpRequest",
