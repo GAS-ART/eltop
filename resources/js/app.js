@@ -43,7 +43,7 @@ mainForm.addEventListener('submit', async (e) => {
       body: jsonData,
       credentials: "same-origin",
     })
-    const data = await response.json();
+    const data = await response.json() || response;
     if (response.ok) {
       console.log(data);
     } else if (!response.ok && mainForm.classList.contains('ru')) {
