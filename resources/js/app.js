@@ -27,6 +27,7 @@ mainForm.addEventListener('submit', async (e) => {
   try {
     const response = await fetch('https://eltop.artgas.pro/send-main-form', {
       headers: {
+        "Content-Type": "application/json",
         "Accept": "application/json",
         "X-Requested-With": "XMLHttpRequest",
         "X-CSRF-Token": token
