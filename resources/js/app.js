@@ -1,6 +1,5 @@
 //import './bootstrap';
 
-
 //Переключение языков (комп и мобилка)
 const languageBtn = document.querySelector('.language-btn');
 languageBtn.addEventListener('click', function (e) {
@@ -12,4 +11,4 @@ languageBtn.addEventListener('click', function (e) {
   }
 });
 
-console.log("work");
+console.log("test");

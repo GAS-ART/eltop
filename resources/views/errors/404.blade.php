@@ -1,5 +1,5 @@
 <?php
-$languages = ['ru', 'es' ];
+$languages = ['ru', 'ua' ];
 $url = url()->current();
 $protacol = Str::before($url, '://') . "://";
 $urlPart = Str::of($url)->after($protacol);
@@ -9,7 +9,7 @@ $urlLanguagePrefix = Str::substr($urlPart, 0, 2);
 if(Str::contains($urlLanguagePrefix, $languages)){
    app()->setLocale($urlLanguagePrefix);
 } else {
-   app()->setLocale("es");
+   app()->setLocale("ua");
 }
 ?>
 @extends('layout')

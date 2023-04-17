@@ -10,6 +10,10 @@
 <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('img/favicon/favicon-32x32.png') }}">
 <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('img/favicon/favicon-16x16.png')}} ">
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter&family=Mulish:wght@300;400;500;700;900&family=Poppins:wght@500;600&display=swap" rel="stylesheet">
+
 
    <title>@yield('title')</title>
    <meta name="description" content="@yield('description')">
@@ -21,15 +25,7 @@
    <meta property="og:site_name" content="ruban-dentist.com.ua" />
  <!--  <meta property="og:image" content="{{ asset('img/avatar/3.jpg')}}"/> -->
 
- @vite(['resources/scss/style.scss', 'resources/js/app.js'])
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-
-   <link rel="stylesheet" href="{{asset('css/style.css') . '?_v=1'}}"> 
-
-   <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-   <script src="{{asset('js/app.js')}}"></script>
+  @vite(['resources/scss/style.scss'])
 
    <!-- Global site tag (gtag.js) - Google Analytics -->
 

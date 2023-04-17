@@ -10,6 +10,7 @@
       @include('inc.footer')
    </div>
    @include('inc.popup')
+   @vite(['resources/js/app.js'])
 </body>
 
 </html>

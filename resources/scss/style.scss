@@ -15,15 +15,19 @@
 @import "fonts/icons";
 
 // Шрифт по умолчанию 
-$fontFamily: "Mulish", sans-serif;
+$fontFamily: "Mulish";
 $font__CormorantGaramond: "CormorantGaramond", sans-serif;
 
 $fontSize: rem(18); // где 14(px) - размер шрифта по умолчанию из макета
 
 // Основные цвета шрифта
-$mainColor: #131313; // Цвет шрифта по умолчанию
-$color__yellow: #FFD700;
+$mainColor: #333333; // Цвет шрифта по умолчанию
+$gradient: linear-gradient(89.69deg, #036A35 0.23%, #94CC23 99.77%);
+$green: #056C36;
+$lightGreen: #93CB24;
+$grey: #F2F2F2;
 
+// 404 colors
 $blue: #46B1DE;
 $paleBlue: #A1C7D4;
 
@@ -150,7 +154,3 @@ body {
 @import "footer";
 @import "404";
 @import "fonts/icons";
-@import "swiper";
-@import "popup";
-@import "services";
-@import "teaching";

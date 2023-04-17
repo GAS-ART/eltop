@@ -44,3 +44,19 @@ Route::get('/', function () {
       return view('home');
     }
   })->name('home');
+
+
+  Route::get('/{locale}/form', function ($locale) {
+    if (!in_array($locale, ['ua', 'ru'])) {
+  
+      abort(404);
+    } else if ($locale == 'ua') {
+  
+      App::setLocale('ua');
+      return view('form');
+    } else if ($locale == 'ru') {
+  
+      App::setLocale('ru');
+      return view('form');
+    }
+  })->name('form');

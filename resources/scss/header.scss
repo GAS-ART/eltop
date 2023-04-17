@@ -2,121 +2,6 @@
 
 .header {
 
-  .header-top {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 10px;
-    margin-bottom: 36px;
-    gap: 10px;
-
-    &__contacts {
-      display: flex;
-      align-items: center;
-      gap: 48px;
-    }
-
-    &__contacts-item {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    &__contacts-icon {
-      font-size: 16px;
-      color: #828282;
-    }
-
-    &__contacts-address,
-    &__contacts-phone {
-      font-weight: 700;
-      font-size: 14px;
-      color: #828282;
-    }
-
-    &__links {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-    }
-  }
-
-  &__menu-wrapper {
-    display: flex;
-    align-items: top;
-    justify-content: space-between;
-    margin-bottom: 17px;
-  }
-
-  &__logo {
-    margin-right: auto;
-
-    & img {
-      width: 84px;
-      height: 50px;
-    }
-
-  }
-
-  &__menu {
-    margin: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  &__menu-nav {}
-
-  &__menu-list {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 60px;
-    row-gap: 30px;
-  }
-
-  &__menu-item {}
-
-  &__menu-link {
-    font-weight: 700;
-    font-size: 18px;
-
-    & span {
-      color: $color__yellow;
-    }
-  }
-
-  &__popup {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: 700;
-    font-size: 16px;
-    border: $color__yellow 1px solid;
-    width: 180px;
-    height: 54px;
-    border-radius: 50px;
-    margin-left: 60px;
-  }
-}
-
-@media(max-width: 950px) {
-  .header {
-    margin-top: 16px;
-
-    .header-top {
-      display: none;
-    }
-
-    &__menu {
-      display: none;
-    }
-
-    &__popup {
-      display: none;
-    }
-  }
 }
 
 //Burger ====================================================================================================
@@ -280,13 +165,21 @@
     top: -2px;
 
     &.ru {
-      background-image: url("/img/flags/ru/ru.svg");
-      //	background-image: url("https://colorit.agency/public/images/russia.svg"); 
+      background-image: url("../../public/img/flags/ru/ru.svg");
     }
 
+    &.en {
+      background-image: url("../../public/img/flags/en/en.webp");
+    }
+    &.ua {
+      background-image: url("../../public/img/flags/ua/ua.webp");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
     &.es {
-      background-image: url("/img/flags/es/es.svg");
-      //	background-image: url("https://colorit.agency/public/images/spain.svg");
+      background-image: url("../../public/img/flags/es/es.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
     }
   }
 

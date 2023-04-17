@@ -31,7 +31,6 @@
 
    &__button {
       @include adaptiveValueREM('font-size', 30,18 );
-      font-family: "Roboto";
       color: $blue;
       a{
          position: relative;

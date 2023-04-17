@@ -4,7 +4,6 @@
       <div class="header__container">
 
          <div class="header__options">
-           
 
             <div class="header__actions">
                <!--Для выпадающего списка языков-->
@@ -13,7 +12,7 @@
                      <a class="language-btn__link @lang('lang.current')"
                         href="{{ route('locale', __('lang.current')) }}">
                         <div class="language-btn__text">@lang('lang.current')</div>
-                        <div class="language-btn__icon es @lang('lang.current')"></div>
+                        <div class="language-btn__icon @lang('lang.current')"></div>
                      </a>
                   </div>
                   <div class="language-btn__select">
