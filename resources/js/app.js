@@ -46,7 +46,7 @@ mainForm.addEventListener('submit', async (e) => {
     try {
       const data = await response.json();
       if (response.ok) {
-        console.log(data);
+        console.log('SEND WORK!')
       } else if (!response.ok && mainForm.classList.contains('ru')) {
         console.log(data);
         data.errors?.name ? mainForm.querySelector('.error-name').innerText = data.errors?.name[0] : mainForm.querySelector('.error-name').innerText = "";
@@ -58,9 +58,7 @@ mainForm.addEventListener('submit', async (e) => {
         data.errors?.text ? mainForm.querySelector('.error-text').innerText = errorsMessagesUA.text[errorsMessagesUA.text.findIndex(msg => msg == data.errors.text[0]) + 1] : mainForm.querySelector('.error-text').innerText = "";
       }
     } catch (e) {
-      if (response.ok) {
-        console.log(data);
-      }
+
     }
   } catch (e) {
     console.log(e);
