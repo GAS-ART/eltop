@@ -14,14 +14,11 @@ languageBtn.addEventListener('click', function (e) {
 //Async form sending
 const mainForm = document.getElementById('mainForm');
 const token = document.querySelector('input[name="_token"]').value;
-console.log(token);
 const errorsMessagesUA = {
   name: ['Не заполнено поле "ВАШЕ ИМЯ"', 'Не заповнено поле "ВАШЕ ІМ\'Я', 'Поле \"ИМЯ\" должно иметь 2 или больше символов', 'Поле "ІМ\'Я" повинно мати 2 або більше символів', 'Поле \"ИМЯ\" должно иметь не больше 80 символов', 'Поле "ІМ\'Я" повинно мати не більше 80 символів', 'Поле \"ИМЯ\" не может содержать цифры', 'Поле "ІМ\'Я" не може містити цифри'],
   phone: ['Не верный формат номера телефона', 'Невірний формат номеру телефона', 'Не заполнено поле "Номер телефона"', 'Не заповнено поле "Номер телефону"',],
   text: ['Вы ввели слишком много символов в поле "Сообщение"', 'Ви ввели занадто багато символів у полі "Повідомлення"']
 }
-
-
 
 mainForm.addEventListener('submit', async (e) => {
   e.preventDefault();
@@ -43,7 +40,6 @@ mainForm.addEventListener('submit', async (e) => {
     } else {
       const data = await response.json();
       if (mainForm.classList.contains('ru')) {
-        console.log(data);
         data.errors?.name ? mainForm.querySelector('.error-name').innerText = data.errors?.name[0] : mainForm.querySelector('.error-name').innerText = "";
         data.errors?.phone ? mainForm.querySelector('.error-phone').innerText = data.errors?.phone[0] : mainForm.querySelector('.error-phone').innerText = "";
         data.errors?.text ? mainForm.querySelector('.error-text').innerText = data.errors?.text[0] : mainForm.querySelector('.error-text').innerText = "";
@@ -57,5 +53,3 @@ mainForm.addEventListener('submit', async (e) => {
     console.log(e);
   }
 });
-
-console.log("test");
