@@ -44,6 +44,7 @@ mainForm.addEventListener('submit', async (e) => {
       credentials: "same-origin",
     })
     try {
+      console.log(response);
       const data = await response.json();
       if (response.ok) {
         console.log('SEND WORK!')
