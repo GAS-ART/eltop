@@ -16,7 +16,6 @@
 
 // Шрифт по умолчанию 
 $fontFamily: "Mulish";
-$font__CormorantGaramond: "CormorantGaramond", sans-serif;
 
 $fontSize: rem(18); // где 14(px) - размер шрифта по умолчанию из макета
 
@@ -24,7 +23,7 @@ $fontSize: rem(18); // где 14(px) - размер шрифта по умолч
 $mainColor: #333333; // Цвет шрифта по умолчанию
 $gradient: linear-gradient(89.69deg, #036A35 0.23%, #94CC23 99.77%);
 $green: #056C36;
-$lightGreen: #93CB24;
+$lightGreen: rgba(147, 203, 36, 0.1);
 $grey: #F2F2F2;
 
 // 404 colors
@@ -41,7 +40,7 @@ $maxWidth: 1920;
 $maxWidthContainer: 1240;
 // Общий отступ у контейнера
 // (30 = по 15px слева и справа, 0 = нет отступа)
-$containerPadding: 48;
+$containerPadding: 30;
 
 // Общая ширина контейнера с учетом падинга (ширина первого брейкпоинта)
 $containerWidth: $maxWidthContainer + $containerPadding;

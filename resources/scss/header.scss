@@ -1,22 +1,271 @@
 //====================================================================================================
 
 .header {
+  position: relative;
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 
+  &__top{
+    padding: 20px 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #fff;
+      z-index: 940;
+      &.burger-active{
+        
+      }
+      .burger-bg{
+        background-color: #F2F2F2;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: all 0.3s ease 0s;
+        transform: translateX(100%);
+        &.open{
+          transform: translateX(0%);
+        }
+      }
+  }
+  
+
+  &__logo {
+    position: relative;
+    width: 75px;
+    height: 60px;
+    z-index: 930;
+    img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    }
+  }
+
+  &__contacts {
+    display: flex;
+    align-items: center;
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+
+  &__contacts-body {
+    &:not(:last-child){
+      @include adaptiveValueREM('margin-right', 40, 20, 1920, 768, 1);
+    }
+    display: flex;
+    align-items: center;
+  }
+
+  &__contacts-icon {
+    position: relative;
+    @include adaptiveValueREM('margin-right', 16, 8, 1920, 768, 1);
+    width: 40px;
+    height: 40px;
+    background-color: $lightGreen;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg{
+      position: relative;
+      z-index: 1;
+    }
+    stop {
+      transition: all .3s linear 0s;
+    }
+    &:before{
+      content: '';
+      transition: all .3s linear 0s;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      opacity: 0;
+      background: $gradient;
+    }
+    @media (pointer: fine) {
+      &:hover {
+        stop:first-child {
+          stop-color: #fff;
+        }
+        stop:last-child {
+          stop-color: #fff;
+        }
+        &::before{
+          opacity: 1;
+        }
+      }
+    }
+    &.active{
+      stop:first-child {
+        stop-color: #fff;
+      }
+      stop:last-child {
+        stop-color: #fff;
+      }
+      &::before{
+        opacity: 1;
+      }
+    }
+  }
+
+  &__contacts-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__contacts-text {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #828282;
+    margin-bottom: 4px  ;
+  }
+
+  &__contacts-contact {
+    font-weight: 500;
+    color: #111111;
+  }
+
+
+  &__bottom{
+    background-color: $green;
+    padding: 15px 0;
+    margin-top: 100px;
+    @media (max-width: $mobile) {
+      display: none;
+    }
+  }
+
+  &__menu {
+  }
+
+  &__menu-list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__menu-list-item {
+    &:not(:last-child){
+      @include adaptiveValueREM('margin-right', 120, 60, 1920, 768, 1);
+    }
+  }
+
+  &__menu-list-link {
+    font-size: 18px;
+    font-weight: 700;
+    color: #FFFFFF;
+    line-height: 23px;
+    transition: all 0.3s ease 0s;
+    @media (pointer: fine) {
+      &:hover {
+        color: rgb(147, 203, 36);
+      }
+    }
+  }
+
+  // Выпадающий список языков
+  &__language {
+    position: relative;
+    z-index: 2;
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 18px;
+      color: #111111;
+      text-transform: uppercase;
+      transition: all 0.3s ease 0s;
+      @media (pointer: fine) {
+        &:hover {
+          color: $green;
+        }
+      }
+    }
+
+    @media (pointer: fine) {
+      &:hover {
+        .language-btn__select:last-child {
+          opacity: 1;
+          visibility: visible;
+          pointer-events: all;
+          transform: translate(0, 0px);
+        }
+      }
+    }
+
+    &.active {
+      .language-btn__select:last-child {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: all;
+        transform: translate(0, 0px);
+      }
+    }
+  }
 }
+
+.language-btn {
+  margin: 15px;
+
+  &__text {}
+
+  &__select {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease 0s;
+    width: 32px;
+    height: 32px;
+    background-color: #fff;
+  }
+
+  &__select:last-child {
+    position: absolute;
+    bottom: -30px;
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translate(0, 15px);
+    padding: 10px 0 0 0;
+  }
+}
+// Выпадающий список языков
 
 //Burger ====================================================================================================
 
 .icon-menu {
   display: none;
-
-  @media (max-width: 950px) {
+  
+  @media (max-width: $mobile) {
     display: flex;
-    position: relative;
+    position: fixed;
+    right: 20px;
+    top: 40px;
     width: 24px;
     height: 19px;
     cursor: pointer;
     z-index: 5;
     justify-content: center;
+    z-index: 950;
 
     span,
     &::before,
@@ -27,20 +276,18 @@
       position: absolute;
       width: 24px;
       height: 2px;
-      background-color: #131313;
+      background-color: $green;
       border-radius: 50px;
     }
 
     &::before {
       top: 0;
-      width: 20px;
       left: 50%;
       transform: translateX(-50%);
     }
 
     &::after {
       bottom: 0;
-      width: 20px;
       left: 50%;
       transform: translateX(-50%);
     }
@@ -49,7 +296,7 @@
       top: calc(50% - rem(1));
     }
 
-    .menu-open & {
+    &.open {
       span {
         width: 0;
       }
@@ -118,90 +365,56 @@
 }
 
 //====================================================================================================
-.header {
-
-  // Выпадающий список языков
-  &__language {
-    position: relative;
-    z-index: 2;
-
-    a {
+//BURGER
+.burger{
+  @media (min-width: $mobile) {
+    display: none;
+  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 120px 0 0 0;
+  background-color: #F2F2F2;
+  transition: all 0.3s ease 0s;
+  transform: translateX(100%);
+  z-index: 920;
+  &.open{
+    transform: translateX(0);
+  }
+  .header__contacts{
+    flex-direction: column;
+    @media (max-width: $mobile) {
       display: flex;
-      align-items: center;
-      gap: 5px;
     }
-
-    @media (pointer: fine) {
-      &:hover {
-        .language-btn__select:last-child {
-          opacity: 1;
-          visibility: visible;
-          pointer-events: all;
-          transform: translate(0, 0px);
-        }
-      }
+  }
+  .header__contacts-body{
+    margin-right: 0;
+    min-width: 230px;
+    &:not(:last-child){
+      margin-bottom: 30px;
     }
-
-    &.active {
-      .language-btn__select:last-child {
-        opacity: 1;
-        visibility: visible;
-        pointer-events: all;
-        transform: translate(0, 0px);
-      }
+    margin-bottom: 50px;
+  }
+  .header__menu-list{
+    flex-direction: column;
+    margin-bottom: 50px;
+  }
+  .header__menu-list-item{
+    margin-right: 0;
+    &:not(:last-child){
+      margin-bottom: 30px;
     }
+  }
+  .header__menu-list-link{
+    color: $green;
+    font-size: 24px;
+  }
+  .language-btn{
+    display: flex;
+    justify-content: center;
   }
 }
 
-.language-btn {
-  margin: 15px;
-
-  &__text {}
-
-  &__icon {
-    width: rem(25);
-    height: 21px;
-    position: relative;
-    top: -2px;
-
-    &.ru {
-      background-image: url("../../public/img/flags/ru/ru.svg");
-    }
-
-    &.en {
-      background-image: url("../../public/img/flags/en/en.webp");
-    }
-    &.ua {
-      background-image: url("../../public/img/flags/ua/ua.webp");
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
-    &.es {
-      background-image: url("../../public/img/flags/es/es.svg");
-      background-size: contain;
-      background-repeat: no-repeat;
-    }
-  }
-
-  &__select {
-    display: flex;
-    align-items: center;
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-  }
-
-  &__select:last-child {
-    position: absolute;
-    bottom: -30px;
-    display: flex;
-    align-items: center;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    transform: translate(0, 15px);
-    padding: 10px 0 0 0;
-  }
-}
-
-// Выпадающий список языков
 //====================================================================================================
