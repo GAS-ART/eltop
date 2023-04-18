@@ -3,24 +3,8 @@
     "file": "assets/bg-37964721.jpg",
     "src": "public/img/bg.jpg"
   },
-  "public/img/flags/en/en.webp": {
-    "file": "assets/en-55b2df41.webp",
-    "src": "public/img/flags/en/en.webp"
-  },
-  "public/img/flags/es/es.svg": {
-    "file": "assets/es-091dad36.svg",
-    "src": "public/img/flags/es/es.svg"
-  },
-  "public/img/flags/ru/ru.svg": {
-    "file": "assets/ru-5f4d812e.svg",
-    "src": "public/img/flags/ru/ru.svg"
-  },
-  "public/img/flags/ua/ua.webp": {
-    "file": "assets/ua-db93d0ef.webp",
-    "src": "public/img/flags/ua/ua.webp"
-  },
   "resources/js/app.js": {
-    "file": "assets/app-33ab6daa.js",
+    "file": "assets/app-638734c7.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   },
@@ -41,7 +25,7 @@
     "src": "resources/scss/fonts/icon-fonts/icomoon.woff"
   },
   "resources/scss/style.scss": {
-    "file": "assets/style-c92b483f.css",
+    "file": "assets/style-ee0160f2.css",
     "isEntry": true,
     "src": "resources/scss/style.scss"
   }
