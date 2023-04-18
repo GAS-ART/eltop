@@ -1,7 +1,10 @@
 
-.test__container{
-  margin-top: 50px;
+main{
+  @media (max-width: $mobile) {
+    margin-top: 100px;
+  }
 }
+
 .bg{
   width: 1500px;
   height: 600px;

@@ -9,18 +9,13 @@
 @section('content')
 
 <div class="test__container  ">
-    <div class="icons">
-        <div class="icon icon-energy"></div>
-    </div>
-    @lang('home.test')<br /><br />
-    <a href="{{ route('home', ['locale' => __('lang.ua')]) }}">UA</a>
-    <br /><br />
-    <a href="{{ route('home', ['locale' => __('lang.ru')]) }}">RU</a>
-    <br /><br />
     <div class="_icon-mail test"></div>
     <!-- <img src="{{asset('/img/icons/instagram.svg')}}" alt=""> -->
     <div class="bg"></div>
     <img src="{{ asset('img/img.jpg') }}" />
+    <div class="icons">
+        <div class="icon icon-energy"></div>
+    </div>
 
     <a href="{{ route('form', ['locale' => __('lang.current')]) }}">LINK TO FORM</a>
 
