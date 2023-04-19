@@ -36,9 +36,10 @@ if (mainForm) {
   }
   const nameError = mainForm.querySelector('.error-name');
   const phoneError = mainForm.querySelector('.error-phone');
-
+  const loading = mainForm.closest('.popup__row').previousElementSibling.previousElementSibling;
   mainForm.addEventListener('submit', async (e) => {
     e.preventDefault();
+    loading.classList.add('active');
     const formData = new FormData(mainForm);
     try {
       const response = await fetch('https://eltop.artgas.pro/send-main-form', {
@@ -53,6 +54,7 @@ if (mainForm) {
       })
       if (response.ok) {
         console.log('SEND WORK!');
+        loading.classList.remove('active');
         mainForm.closest('.popup').classList.add('sent');
         nameError.innerText = '';
         nameError.previousElementSibling.classList.remove('error');
@@ -61,9 +63,9 @@ if (mainForm) {
         phoneError.previousElementSibling.classList.remove('error');
         phoneError.previousElementSibling.previousElementSibling.classList.remove('error');
         mainForm.reset();
-        //return
       } else {
         const data = await response.json();
+        loading.classList.remove('active');
         if (mainForm.classList.contains('ru')) {
           if (data.errors?.name) {
             nameError.innerText = data.errors?.name[0];

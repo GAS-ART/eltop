@@ -1,10 +1,10 @@
 @section('popup')
-<div id="main" class="popup sent">
-   <div class="popup__send-load">
-
-   </div>
+<div id="main" class="popup">
    <div class="popup__body">
       <div class="popup__content">
+         <div class="popup__loading">
+            <img src="{{asset('img/load.gif')}}" alt="">
+         </div>
          <button class="popup__close close-popup"><span></span><span></span></button>
          <div class="popup__row">
             <div class="popup__form">
