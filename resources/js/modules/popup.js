@@ -5,6 +5,7 @@ export function popUp(popupId) {
 	const popupBtn = popUp.querySelector('.popup__button');
 	const popupLoading = popUp.querySelector('.popup__loading');
 	const filePreview = popUp.querySelector('.preview-file') || false;
+	const inputs = popUp.querySelectorAll('input');
 	popUp.classList.add('open');
 	bodyLock.classList.add('lock');
 
@@ -21,6 +22,14 @@ export function popUp(popupId) {
 		popupActive.classList.remove('open');
 		bodyLock.classList.remove("lock");
 		popUp.classList.remove('sent');
+		inputs.forEach(input => {
+			if (!input.value) {
+				input.previousElementSibling.classList.remove('error');
+				input.classList.remove('error');
+				input.nextElementSibling.classList.remove('error');
+				input.nextElementSibling.innerHTML = '';
+			}
+		});
 		if (filePreview) {
 			filePreview.innerHTML = '';
 		}
