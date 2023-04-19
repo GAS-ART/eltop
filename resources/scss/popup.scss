@@ -21,6 +21,9 @@
     padding: 100px;
     transition: all 0.5s ease 0s;
     opacity: 0;
+    @media (max-width: $mobile) {
+    padding: 30px;
+    }
   }
 
   &.open{
@@ -71,6 +74,10 @@
     right: 25px;
     margin-left: auto;
     cursor: pointer;
+    @media (max-width: $mobile) {
+      right: 0px;
+      top: 0px;
+    }
 
     &:before,
     &:after {
