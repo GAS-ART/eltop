@@ -1,8 +1,10 @@
 <?php
 
 return [
-   'test'=>'ESPANIOL',
-   'link'=>'Enlace a la página de servicios'
+   'main' => [
+      'title' => 'Теплові насоси',
+      'btn' => 'Замовити',
+   ],
 ]
 
 ?>

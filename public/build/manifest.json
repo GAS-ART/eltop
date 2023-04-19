@@ -1,10 +1,10 @@
 {
-  "public/img/bg.jpg": {
-    "file": "assets/bg-37964721.jpg",
-    "src": "public/img/bg.jpg"
+  "public/img/home/bg.webp": {
+    "file": "assets/bg-e7ed2785.webp",
+    "src": "public/img/home/bg.webp"
   },
   "resources/js/app.js": {
-    "file": "assets/app-638734c7.js",
+    "file": "assets/app-329d24ac.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   },
@@ -25,7 +25,7 @@
     "src": "resources/scss/fonts/icon-fonts/icomoon.woff"
   },
   "resources/scss/style.scss": {
-    "file": "assets/style-8ada2b9f.css",
+    "file": "assets/style-11edf675.css",
     "isEntry": true,
     "src": "resources/scss/style.scss"
   }

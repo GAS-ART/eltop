@@ -147,9 +147,10 @@ body {
   }
 }
 
-
+@import "tamplate";
 @import "header";
 @import "home";
 @import "footer";
 @import "404";
 @import "fonts/icons";
+@import "popup";

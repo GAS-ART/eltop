@@ -1,5 +1,16 @@
 //import './bootstrap';
 
+import { popUp } from './modules/popup.js';
+
+//PopUp
+const popupButtons = document.querySelectorAll('.link-on-popup');
+
+popupButtons.forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    popUp(e.target.dataset.popupId);
+  });
+})
+
 //Переключение языков (комп и мобилка)
 const languageBtn = document.querySelectorAll('.language-btn');
 languageBtn.forEach(btn => {
@@ -15,6 +26,7 @@ languageBtn.forEach(btn => {
 
 //Async form sending
 const mainForm = document.getElementById('mainForm');
+
 if (mainForm) {
   const token = document.querySelector('input[name="_token"]').value;
   const errorsMessagesUA = {
@@ -22,6 +34,8 @@ if (mainForm) {
     phone: ['Не верный формат номера телефона', 'Невірний формат номеру телефона', 'Не заполнено поле "Номер телефона"', 'Не заповнено поле "Номер телефону"',],
     text: ['Вы ввели слишком много символов в поле "Сообщение"', 'Ви ввели занадто багато символів у полі "Повідомлення"']
   }
+  const nameError = mainForm.querySelector('.error-name');
+  const phoneError = mainForm.querySelector('.error-phone');
 
   mainForm.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -43,13 +57,49 @@ if (mainForm) {
       } else {
         const data = await response.json();
         if (mainForm.classList.contains('ru')) {
-          data.errors?.name ? mainForm.querySelector('.error-name').innerText = data.errors?.name[0] : mainForm.querySelector('.error-name').innerText = "";
-          data.errors?.phone ? mainForm.querySelector('.error-phone').innerText = data.errors?.phone[0] : mainForm.querySelector('.error-phone').innerText = "";
-          data.errors?.text ? mainForm.querySelector('.error-text').innerText = data.errors?.text[0] : mainForm.querySelector('.error-text').innerText = "";
+          if (data.errors?.name) {
+            nameError.innerText = data.errors?.name[0];
+            nameError.previousElementSibling.classList.add('error');
+            nameError.previousElementSibling.previousElementSibling.classList.add('error');
+          } else {
+            nameError.innerText = '';
+            nameError.previousElementSibling.classList.remove('error');
+            nameError.previousElementSibling.previousElementSibling.classList.remove('error');
+          }
+          if (data.errors?.phone) {
+            phoneError.innerText = data.errors?.phone[0];
+            phoneError.previousElementSibling.classList.add('error');
+            phoneError.previousElementSibling.previousElementSibling.classList.add('error');
+          } else {
+            phoneError.innerText = '';
+            phoneError.previousElementSibling.classList.remove('error');
+            phoneError.previousElementSibling.previousElementSibling.classList.remove('error');
+          }
+          //data.errors?.name ? mainForm.querySelector('.error-name').innerText = data.errors?.name[0] : mainForm.querySelector('.error-name').innerText = "";
+          //data.errors?.phone ? mainForm.querySelector('.error-phone').innerText = data.errors?.phone[0] : mainForm.querySelector('.error-phone').innerText = "";
+          //data.errors?.text ? mainForm.querySelector('.error-text').innerText = data.errors?.text[0] : mainForm.querySelector('.error-text').innerText = "";
         } else {
-          data.errors?.name ? mainForm.querySelector('.error-name').innerText = errorsMessagesUA.name[errorsMessagesUA.name.findIndex(msg => msg == data.errors.name[0]) + 1] : mainForm.querySelector('.error-name').innerText = "";
-          data.errors?.phone ? mainForm.querySelector('.error-phone').innerText = errorsMessagesUA.phone[errorsMessagesUA.phone.findIndex(msg => msg == data.errors.phone[0]) + 1] : mainForm.querySelector('.error-phone').innerText = "";
-          data.errors?.text ? mainForm.querySelector('.error-text').innerText = errorsMessagesUA.text[errorsMessagesUA.text.findIndex(msg => msg == data.errors.text[0]) + 1] : mainForm.querySelector('.error-text').innerText = "";
+          if (data.errors?.name) {
+            nameError.innerText = errorsMessagesUA.name[errorsMessagesUA.name.findIndex(msg => msg == data.errors.name[0]) + 1];
+            nameError.previousElementSibling.classList.add('error');
+            nameError.previousElementSibling.previousElementSibling.classList.add('error');
+          } else {
+            nameError.innerText = '';
+            nameError.previousElementSibling.classList.remove('error');
+            nameError.previousElementSibling.previousElementSibling.classList.remove('error');
+          }
+          if (data.errors?.phone) {
+            phoneError.innerText = errorsMessagesUA.phone[errorsMessagesUA.phone.findIndex(msg => msg == data.errors.phone[0]) + 1];
+            phoneError.previousElementSibling.classList.add('error');
+            phoneError.previousElementSibling.previousElementSibling.classList.add('error');
+          } else {
+            phoneError.innerText = '';
+            phoneError.previousElementSibling.classList.remove('error');
+            phoneError.previousElementSibling.previousElementSibling.classList.remove('error');
+          }
+          // data.errors?.name ? mainForm.querySelector('.error-name').innerText = errorsMessagesUA.name[errorsMessagesUA.name.findIndex(msg => msg == data.errors.name[0]) + 1] : mainForm.querySelector('.error-name').innerText = "";
+          // data.errors?.phone ? mainForm.querySelector('.error-phone').innerText = errorsMessagesUA.phone[errorsMessagesUA.phone.findIndex(msg => msg == data.errors.phone[0]) + 1] : mainForm.querySelector('.error-phone').innerText = "";
+          // data.errors?.text ? mainForm.querySelector('.error-text').innerText = errorsMessagesUA.text[errorsMessagesUA.text.findIndex(msg => msg == data.errors.text[0]) + 1] : mainForm.querySelector('.error-text').innerText = "";
         }
       }
     } catch (e) {
