@@ -53,7 +53,15 @@ if (mainForm) {
       })
       if (response.ok) {
         console.log('SEND WORK!');
-        return
+        mainForm.closest('.popup').classList.add('sent');
+        nameError.innerText = '';
+        nameError.previousElementSibling.classList.remove('error');
+        nameError.previousElementSibling.previousElementSibling.classList.remove('error');
+        phoneError.innerText = '';
+        phoneError.previousElementSibling.classList.remove('error');
+        phoneError.previousElementSibling.previousElementSibling.classList.remove('error');
+        mainForm.reset();
+        //return
       } else {
         const data = await response.json();
         if (mainForm.classList.contains('ru')) {

@@ -70,7 +70,12 @@
   &__row {
   }
 
+  .popup__form-body{
+    transition: all 0.3s ease 0s;
+  }
+
   &__form {
+    position: relative;
     .error{
       color: #EB5757;
       border-color: #EB5757;
@@ -127,8 +132,42 @@
     padding-right: 0px;
     margin: 0 auto;
   }
+
+  &.sent{
+    .popup__form-body{
+      opacity: 0;
+      visibility: hidden;
+    }
+    .success {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  .success {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease 0s;
+    h4{
+      font-weight: 900;
+      font-size: 30px;
+      line-height: 38px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #333333;
+      margin-bottom: 40px;
+    }
+    .popup__button{
+      @extend %btn;
+      width: 240px;
+    }
+  }
 }
+
 .close-popup {
-}
-.success {
 }

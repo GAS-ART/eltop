@@ -20,7 +20,7 @@ export function popUp(popupId) {
 	function popupClose(popupActive) {
 		popupActive.classList.remove('open');
 		bodyLock.classList.remove("lock");
-		popUp.classList.remove('send');
+		popUp.classList.remove('sent');
 		if (filePreview) {
 			filePreview.innerHTML = '';
 		}
