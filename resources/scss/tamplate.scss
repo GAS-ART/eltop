@@ -15,3 +15,15 @@
       }
     }
 }
+
+h2{
+  font-weight: 900;
+  @include adaptiveValueREM('font-size', 30, 18, 1920, 320, 1);
+  line-height: 126%;
+  text-transform: uppercase;
+  color: #333333;
+  margin-bottom: em(40, 30);
+  @media (max-width: $mobile) {
+    text-align: center;
+  }
+}

@@ -194,3 +194,26 @@ window.onresize = () => {
   if (headerBackground.classList.contains('open')) headerBackground.classList.remove('open');
   if (body.classList.contains('lock')) body.classList.remove('lock');
 };
+
+
+//Animation advantages icons
+const adventagesTitle = document.querySelectorAll('.advantages__item h3');
+const adventagesText = document.querySelectorAll('.advantages__item p');
+
+adventagesTitle.forEach(title => {
+  title.addEventListener('mouseenter', (e) => {
+    e.target.previousElementSibling.classList.add('active');
+  });
+  title.addEventListener('mouseleave', (e) => {
+    e.target.previousElementSibling.classList.remove('active');
+  });
+});
+
+adventagesText.forEach(text => {
+  text.addEventListener('mouseenter', (e) => {
+    e.target.previousElementSibling.previousElementSibling.classList.add('active');
+  });
+  text.addEventListener('mouseleave', (e) => {
+    e.target.previousElementSibling.previousElementSibling.classList.remove('active');
+  });
+});

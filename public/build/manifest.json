@@ -4,7 +4,7 @@
     "src": "public/img/home/bg.webp"
   },
   "resources/js/app.js": {
-    "file": "assets/app-02906554.js",
+    "file": "assets/app-aeb8f1b0.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   },
@@ -25,7 +25,7 @@
     "src": "resources/scss/fonts/icon-fonts/icomoon.woff"
   },
   "resources/scss/style.scss": {
-    "file": "assets/style-2661fed6.css",
+    "file": "assets/style-bf0ee293.css",
     "isEntry": true,
     "src": "resources/scss/style.scss"
   }

@@ -1,12 +1,15 @@
+/*============MAIN============*/
 .main {
   padding-top: 71px;
   padding-bottom: 47px;
   background-image: url("../../public/img/home/bg.webp");
   background-repeat: no-repeat;
   background-size: cover;
+  @include adaptiveValueREM('margin-bottom', 100, 30, 1920, 320, 1);
   @media (max-width: $mobile) {
     padding-top: 30px;
     padding-bottom: 30px;
+    margin-top: 100px;
   }
   &__container {
   }
@@ -83,37 +86,184 @@
     }
   }
 }
+/*============MAIN============*/
 
+/*============WHAT============*/
+.what {
+  @include adaptiveValueREM('margin-bottom', 100, 30, 1920, 320, 1);
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @media (max-width: $tablet) {
+      flex-direction: column;
+    }
+  }
 
+  &__img {
+    position: relative;
+    margin-right: 100px;
+    @media (max-width: $tablet) {
+      order: 2;
+      margin-right: 0;
+    }
+    img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    }
+  }
 
+  &__text {
+    max-width: 520px;
+    @media (max-width: $tablet) {
+      order: 1;
+      margin-bottom: 30px;
+    }
+  }
+}
+/*============ADVANTAGES============*/
+.advantages {
+  @include adaptiveValueREM('padding-top', 100, 30, 1920, 320, 1);
+  @include adaptiveValueREM('padding-bottom', 100, 30, 1920, 320, 1);
+  background-color: $lightGreen;
 
-main{
-  @media (max-width: $mobile) {
-    margin-top: 100px;
+  &__container {
+  }
+
+  &__body {
+    h2{
+      text-align: center;
+    }
+  }
+
+  &__row {
+    display: flex;
+    @media (max-width: em(1300)) {
+      flex-direction: column;
+      justify-content: center;
+    }
+  }
+
+  &__items {
+    display: flex;
+    &:not(:last-child){
+      margin-right: 32px;
+      }
+      @media (max-width: em(1300)) {
+        margin-bottom: 30px;
+        justify-content: center;
+        &:not(:last-child){
+          margin-right: 0px;
+          }
+      }
+      @media (max-width: $mobile) {
+      flex-direction: column;
+      }
+  }
+
+  &__item {
+    position: relative;
+    &:not(:last-child){
+      margin-right: 32px;
+      }
+      h3{
+        position: relative;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 150%;
+        color: #333333;
+        margin-bottom: 16px;
+        @media (max-width: $mobile) {
+          margin-bottom: 8px;
+          text-align: center;
+        }
+        &:after{
+          content: '';
+          position: absolute;
+          bottom: -16px;
+          left: 0;
+          width: 100%;
+          height: 16px;
+        }
+      }
+      @media (max-width: em(1300)) {
+        //max-width: 222px;
+      }
+      @media (max-width: $mobile) {
+        &:not(:last-child){
+          margin-right: 0px;
+          margin-bottom: 25px;
+          }
+      }
+  }
+
+  &__icon {
+    position: relative;
+    margin-bottom: 16px;
+    padding: 24px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    svg{
+      position: relative;
+      z-index: 1;
+    }
+    stop {
+      transition: all .3s linear 0s;
+    }
+    &:before{
+      content: '';
+      transition: all .3s linear 0s;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      opacity: 0;
+      background: $gradient;
+    }
+      &:hover {
+        stop:first-child {
+          stop-color: #fff;
+        }
+        stop:last-child {
+          stop-color: #fff;
+        }
+        &::before{
+          opacity: 1;
+        }
+      }
+    &.active{
+      stop:first-child {
+        stop-color: #fff;
+      }
+      stop:last-child {
+        stop-color: #fff;
+      }
+      &::before{
+        opacity: 1;
+      }
+    }
+    &::after{
+      content: '';
+      position: absolute;
+      bottom: -16px;
+      left: 0;
+      width: 100%;
+      height: 46px;
+      
+    }
+    @media (max-width: $mobile) {
+      margin: 0px auto 8px auto;
+    }
   }
 }
 
-/* .bg{
-  width: 1500px;
-  height: 600px;
-  background-image: url("../../public/img/bg.jpg");
-} */
 
-.icons{
-  background-color: rgba(147, 203, 36, 0.1);
-  padding: 5px;
-}
-
-.icon.icon-energy{
-  color: $green;
-  font-size: 32px;
-  width: fit-content;
-  padding: 24px;
-  border-radius: 50%;
-  background-color: #fff;
-  transition: all 0.5s ease 0s;
-  &:hover{
-    color: #fff;
-    background-color: $green;
-  }
-}
+/*============ADVANTAGES============*/
