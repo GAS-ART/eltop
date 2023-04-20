@@ -19,12 +19,12 @@
                         <div class="popup__item">
                            <label for="name">@lang('popup.name')</label>
                            <input id="name" name="name" type="text" placeholder="@lang('popup.name_placeholder')">
-                           <p class="error-name error"></p>
+                           <p class="error-name"></p>
                         </div>
                         <div class="popup__item">
                            <label for="phone">@lang('popup.phone')</label>
                            <input id="phone" name="phone" type="text" placeholder="@lang('popup.phone_placeholder')">
-                           <p class="error-phone error"></p>
+                           <p class="error-phone"></p>
                         </div>
                         <button class="popup__btn" type="submit">@lang('popup.btn')</button>
                      </form>
