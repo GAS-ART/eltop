@@ -251,6 +251,38 @@
         </div>
     </div>
 </section>
+<section class="efficiency">
+    <div class="efficiency__container1920">
+        <div class="efficiency__body">
+            <div class="efficiency__content">
+                <h2>@lang('home.efficiency.title')</h2>
+                <p>@lang('home.efficiency.text')</p>
+            </div>
+            <div class="efficiency__img">
+                @if(App::isLocale('ua'))
+                <img src="{{ asset('img/home/ua/3_.webp') }}" alt="">
+                @elseif(App::isLocale('ru'))
+                <img src="{{ asset('img/home/ru/3_.webp') }}" alt="">
+                @endif
+            </div>
+            <div class="efficiency__picture-mobile">
+                @if(App::isLocale('ua'))
+                <img src="{{ asset('img/home/ua/4_.webp') }}" alt="">
+                @elseif(App::isLocale('ru'))
+                <img src="{{ asset('img/home/ua/4_.webp') }}" alt="">
+                @endif
+            </div>
+        </div>
+        <div class="efficiency__picture">
+            @if(App::isLocale('ua'))
+            <img src="{{ asset('img/home/ua/4_.webp') }}" alt="">
+            @elseif(App::isLocale('ru'))
+            <img src="{{ asset('img/home/ua/4_.webp') }}" alt="">
+            @endif
+        </div>
+    </div>
+
+</section>
 
 
 

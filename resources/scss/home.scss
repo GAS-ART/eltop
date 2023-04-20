@@ -264,6 +264,113 @@
     }
   }
 }
-
-
 /*============ADVANTAGES============*/
+
+/*============EFFICIENCY============*/
+.efficiency {
+  @include adaptiveValueREM('margin-bottom', 100, 30, 1920, 320, 1);
+  @include adaptiveValueREM('padding-bottom', 210, 260, 1920, 1750, 1);
+  @media (min-width: em(1920)) {
+    padding-bottom: calc(100vw * 210 / 1920);
+  }
+  //padding-bottom: 210px;
+  
+  &__container1920{
+    position: relative;
+    //max-width: rem(1920);
+    max-width: 100%;
+    padding: 0;
+  @media (max-width: em(1300)) {
+    max-width: 77.5rem;
+    padding: 0 0.9375rem;
+  }
+  }
+  &__body {
+  display: flex;
+  justify-content: space-between;
+  //@include adaptiveValueREM('margin-left', 340, 10, 1920, 1301, 1);
+  margin-left: calc((100vw - 1240px) / 2);
+  @media (max-width: em(1300)) {
+    margin-left: 0;
+    flex-direction: column;
+  }
+  }
+
+  &__content {
+  max-width: 520px;
+  margin-right: 100px; 
+  margin-top: 100px;
+  @media (max-width: em(1300)) {
+    margin: 0 auto 20px auto;
+    order: 2;
+    h2{
+      text-align: center;
+    }
+  }
+  }
+
+  &__img {
+    position: relative;
+    right: 0;
+    @include adaptiveValueREM('top', 0, 100, 1920, 1301, 1);
+    img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill; 
+    }
+    @media (max-width: em(1300)) {
+      top: 0;
+      margin-bottom: 20px;
+      order: 1;
+    }
+  }
+
+  &__picture-mobile{
+    display: none;
+    @media (max-width: em(1300)) {
+      display: block;
+      order: 3;
+      position: relative;
+      img {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+      }
+    }
+  }
+
+  &__picture {
+    position: absolute;
+    bottom: -210px;
+    left: 0;
+    width: 53.959%;
+    height: 46.358%;
+    @include adaptiveValueREM('bottom', -210, -260, 1920, 1750, 1);
+    @media (min-width: em(1921)) {
+      width: calc(100vw - 880px);
+      height: calc(100vw * 350px / 1920px);
+      bottom: calc(100vw * -210px / 1920px);
+      max-height: 580px;
+    }
+    img {
+      //position: relative;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: fill; 
+      }
+      @media (max-width: em(1300)) {
+        display: none;
+      }
+  }
+ 
+}
+/*============EFFICIENCY============*/
