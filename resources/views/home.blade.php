@@ -45,6 +45,7 @@
     </div>
 </section>
 <section id="advantages" class="advantages">
+    <div id="advantages-ancor" class="advantages__ancor"></div>
     <div class="advantages__container">
         <div class="advantages__body">
             <h2>@lang('home.advantages.title')</h2>

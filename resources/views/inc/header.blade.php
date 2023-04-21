@@ -117,7 +117,7 @@
                             <a href="#advantages" class="header__menu-list-link">@lang('header.advantages')</a>
                             @else
                             <a class="header__menu-list-link"
-                                href="{{ route('home', ['locale' => __('lang.current')]) }}#advantages">@lang('header.advantages')</a>
+                                href="{{ route('home', ['locale' => __('lang.current')]) }}#advantages-ancor">@lang('header.advantages')</a>
                             @endif
                         </li>
                         <li class="header__menu-list-item"><a href="#"
@@ -191,7 +191,7 @@
                     <a href="#advantages" class="header__menu-list-link">@lang('header.advantages')</a>
                     @else
                     <a class="header__menu-list-link"
-                        href="{{ route('home', ['locale' => __('lang.current')]) }}#advantages">@lang('header.advantages')</a>
+                        href="{{ route('home', ['locale' => __('lang.current')]) }}#advantages-ancor">@lang('header.advantages')</a>
                     @endif
                 </li>
                 <li class="header__menu-list-item"><a href="#"
