@@ -18,7 +18,7 @@
             <div class="main__img">
                 <div class="main__img-bg"></div>
                 @if(App::isLocale('ua'))
-                <img src="{{ asset('img/home/ua/1_ua.webp') }}" alt="">
+                <img src="{{ asset('img/home/ua/1_ua_logo.webp') }}" alt="">
                 @elseif(App::isLocale('ru'))
                 <img src="{{ asset('img/home/ru/1_ru.webp') }}" alt="">
                 @endif
@@ -44,7 +44,7 @@
         </div>
     </div>
 </section>
-<section class="advantages">
+<section id="advantages" class="advantages">
     <div class="advantages__container">
         <div class="advantages__body">
             <h2>@lang('home.advantages.title')</h2>
