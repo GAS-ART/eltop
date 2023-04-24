@@ -23,7 +23,33 @@ h2{
   text-transform: uppercase;
   color: #333333;
   margin-bottom: em(40, 30);
+  span{
+    color: $green;
+  }
   @media (max-width: $mobile) {
     text-align: center;
+  }
+}
+
+%dot{
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  z-index: 10;
+  &::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $green;
+  }
+  @media (max-width: $tablet) {
+    display: none;
   }
 }

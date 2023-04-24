@@ -18,9 +18,9 @@
             <div class="main__img">
                 <div class="main__img-bg"></div>
                 @if(App::isLocale('ua'))
-                <img src="{{ asset('img/home/ua/1_ua_logo.webp') }}" alt="">
+                <img src="{{ asset('img/home/ua/1_.webp') }}" alt="">
                 @elseif(App::isLocale('ru'))
-                <img src="{{ asset('img/home/ru/1_ru.webp') }}" alt="">
+                <img src="{{ asset('img/home/ru/1_.webp') }}" alt="">
                 @endif
             </div>
             <button data-popup-id="main" class="main__btn-mobile link-on-popup">@lang('home.main.btn')</button>
@@ -283,6 +283,57 @@
         </div>
     </div>
 
+</section>
+<section class="water">
+    <div class="water__content content-water">
+        <div class="content-water__container">
+            <h2>@lang('home.water.title')</h2>
+            <div class="content-water__text">
+                <p class="content-water__text-item">@lang('home.water.content.1')</p>
+                <p class="content-water__text-item">@lang('home.water.content.2')</p>
+            </div>
+        </div>
+    </div>
+    <div class="water__presentation presentation-water">
+        <div class="presentation-water__container">
+            <div class="presentation-water__body">
+                <div class="presentation-water__img-wrapper">
+                    <div class="presentation-water__img">
+                        <div class="presentation-water__dot-lt"></div>
+                        <div class="presentation-water__dot-lb"></div>
+                        <div class="presentation-water__dot-rt"></div>
+                        <div class="presentation-water__dot-rb"></div>
+                        <div class="presentation-water__bg"></div>
+                        @if(App::isLocale('ua'))
+                        <img src="{{ asset('img/home/ua/5_1_.webp') }}" alt="">
+                        @elseif(App::isLocale('ru'))
+                        <img src="{{ asset('img/home/ua/5_1_.webp') }}" alt="">
+                        @endif
+                    </div>
+                </div>
+                <div class="presentation-water__cards">
+                    <h3>@lang('home.water.card.title')</h3>
+                    <div class="presentation-water__card">
+                        <div class="presentation-water__card-item card-left">
+                            @lang('home.water.card.1')
+                        </div>
+                        <div class="presentation-water__card-item card-right">
+                            @lang('home.water.card.3')
+                        </div>
+                    </div>
+                    <div class="presentation-water__card">
+                        <div class="presentation-water__card-item card-left">
+                            @lang('home.water.card.2')
+                        </div>
+                        <div class="presentation-water__card-item card-right">
+                            @lang('home.water.card.4')
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </section>
 
 

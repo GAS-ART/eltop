@@ -277,7 +277,9 @@
   @media (min-width: em(1920)) {
     padding-bottom: calc(100vw * 210 / 1920);
   }
-  //padding-bottom: 210px;
+  @media (max-width: em(1300)) {
+    padding-bottom: 0;
+  }
   
   &__container1920{
     position: relative;
@@ -378,3 +380,300 @@
  
 }
 /*============EFFICIENCY============*/
+
+/*============WATER============*/
+.water {
+  h2{
+    text-align: center;
+  }
+  &__content {
+    margin-bottom: 40px;
+    @media (max-width: $tablet) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__presentation {
+  }
+}
+.content-water {
+
+  &__text {
+    display: flex;
+    justify-content:center;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      width: fit-content;
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+
+  &__text-item {
+    max-width: 520px;
+    font-size: 15px;
+    line-height: 150%;
+    &:not(:last-child){
+      margin-right: 50px;
+    }
+    @media (max-width: $mobile) {
+      &:not(:last-child){
+        margin-right: 0px;
+        margin-bottom: 25px;
+      }
+    }
+  }
+}
+.presentation-water {
+  @include adaptiveValueREM('margin-bottom', 100, 30, 1920, 320, 1);
+  &__container {
+    position: relative;
+  }
+
+  &__body {
+    position: relative;
+    
+  }
+  &__img-wrapper{
+    padding-bottom: 17.02%;
+    background-image: url("../../public/img/home/bg-goods.webp");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    //padding-bottom: 7.823%;
+    //padding-bottom: 17.02%;
+    @media (max-width: $tablet) {
+      background-size: 110% 100%;
+      background-position-x: -50px;
+      margin-bottom: 20px;
+    }
+    @media (max-width: $mobile) {
+      background-size: 115% 100%;
+      background-position-x: -45px;
+      @include adaptiveValueREM('background-position-x', -70, - 45, 767, 480, 1)
+    }
+    @media (max-width: $mobileSmall) {
+      background-size: 170% 100%;
+      @include adaptiveValueREM('background-position-x', -175, -105, 479, 320, 1)
+    }
+  }
+
+  &__img {
+    margin: 0 auto;
+    position: relative;
+    z-index: 5;
+    @include adaptiveValueREM('width', 329, 200, 1240, 320, 1);
+    @include adaptiveValueREM('top', 115, 55, 1240, 768, 1);
+    @include adaptiveValueREM('left', 35, 25, 1240, 768, 1);
+    @media (max-width: $mobile) {
+      @include adaptiveValueREM('top', 55, 15, 767, 480, 1);
+      @include adaptiveValueREM('left', 25, 15, 767, 480, 1);
+    }
+    @media (max-width: $mobileSmall) {
+      @include adaptiveValueREM('top', 15, 10, 479, 320, 1);
+    }
+    &:before{
+      content: url('../../public/img/home/splash-left.webp');
+      position: absolute;
+      top: -10px;
+      left: -120px;
+      width: 204px;
+      max-height: 272px;
+      transform: rotate(-32.12deg);
+    }
+    &::after{
+      content: url('../../public/img/home/splash-right.webp');
+      position: absolute;
+      bottom: 10px;
+      right: -45px;
+      width: 204px;
+      max-height: 272px;
+      z-index: 2;
+      @media (max-width: $mobile) {
+        right: -10px;
+      }
+    }
+    img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    z-index: 5;
+    }
+  }
+
+		&__dot-lt {
+      @extend %dot;
+      top: percent(90, 339);
+      left: 8.515%;
+      &::after{
+        content: '';
+        position: absolute;
+        right: -5px;
+        top: -34px;
+        width: 133px;
+        height: 2px;
+        background-color: $green;
+        transform: rotate(35deg);
+      }
+		}
+
+		&__dot-lb {
+      @extend %dot;
+      top: percent(156, 339);
+      left: 8.515%;
+        &::after{
+          content: '';
+          position: absolute;
+          right: 0px;
+          top: 35px;
+          width: 133px;
+          height: 2px;
+          background-color: $green;
+          transform: rotate(-26.5deg);
+        }
+		}
+
+		&__dot-rt {
+      @extend %dot;
+      top: percent(82, 339);
+      left: percent(253, 329);
+      &::after{
+        content: '';
+        position: absolute;
+        right: -80px;
+        top: -22px;
+        width: 95px;
+        height: 2px;
+        background-color: $green;
+        transform: rotate(-35deg);
+      }
+		}
+
+		&__dot-rb {
+      @extend %dot;
+      top: percent(213, 339);
+      left: percent(253, 329);
+      &::after{
+        content: '';
+        position: absolute;
+        right: -80px;
+        top: 32px;
+        width: 95px;
+        height: 2px;
+        background-color: $green;
+        transform: rotate(35deg);
+      }
+		}
+  &__bg{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: percent(135, 329);
+    height: percent(120, 339);
+    transform: translate(-30%, -5%) rotate(90deg) scaleY(2);
+    
+    &::before{
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        transform: rotate(45deg);
+        background: #000000;
+        opacity: 0.3;
+        filter: blur(18.75px);
+    }
+  }
+
+
+
+  &__cards {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-top: 60px;
+    padding-left: 40px;
+    padding-right: 40px;
+    z-index: 5;
+    h3{
+      display: none;
+    }
+    @media (max-width: em(1269)) {
+      @include adaptiveValueREM('padding-top', 60, 10, 1269, 992, 1);
+      @include adaptiveValueREM('padding-left', 40, 10, 1269, 992, 1);
+      @include adaptiveValueREM('padding-right', 40, 10, 1269, 992, 1);
+    }
+    @media (max-width: $tablet) {
+      position: relative;
+      padding: 0;
+      h3{
+        display: block;
+        margin-bottom: 20px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 20px;
+      }
+    }
+  }
+
+  &__card {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    &:not(:last-child){
+      margin-bottom: 110px;
+    }
+    @media (max-width: em(1269)) {
+      &:not(:last-child){
+        @include adaptiveValueREM('margin-bottom', 110, 20, 1269, 992, 1);
+      }
+    }
+    @media (max-width: $tablet) {
+      flex-direction: column;
+    }
+  }
+
+  &__card-item {
+    max-width: 380px;
+    font-size: 15px;
+    line-height: 150%;
+    padding: 24px 40px;
+    background-color: #ffffff;
+    &.card-right{
+      border-left: 2px solid #056C36;
+    }
+    &.card-left{
+      border-right: 2px solid #056C36;
+      
+    }
+    span{
+      color: $green;
+      font-weight: 700;
+    }
+    @media (max-width: em(1269)) {
+      max-width: unset;
+      @include adaptiveValueREM('width', 380, 280, 1269, 992, 1);
+    }
+    @media (max-width: $tablet) {
+      width: 100%;
+      padding: 0;
+      font-size: 18px;
+      &:not(:last-child){
+      margin-bottom: 20px;
+      
+      }
+      &.card-right{
+        border-left: 0px solid #056C36;
+      }
+      &.card-left{
+        border-right: 0px solid #056C36;
+      }
+    }
+  }
+
+}
+
+/*============WATER============*/
