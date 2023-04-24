@@ -1,7 +1,19 @@
 {
+  "public/img/home/bg-goods.webp": {
+    "file": "assets/bg-goods-158dfef9.webp",
+    "src": "public/img/home/bg-goods.webp"
+  },
   "public/img/home/bg.webp": {
     "file": "assets/bg-e7ed2785.webp",
     "src": "public/img/home/bg.webp"
+  },
+  "public/img/home/splash-left.webp": {
+    "file": "assets/splash-left-e0d819ff.webp",
+    "src": "public/img/home/splash-left.webp"
+  },
+  "public/img/home/splash-right.webp": {
+    "file": "assets/splash-right-6bd2e19a.webp",
+    "src": "public/img/home/splash-right.webp"
   },
   "resources/js/app.js": {
     "file": "assets/app-7c96144c.js",
@@ -25,7 +37,7 @@
     "src": "resources/scss/fonts/icon-fonts/icomoon.woff"
   },
   "resources/scss/style.scss": {
-    "file": "assets/style-c76ef160.css",
+    "file": "assets/style-9d03f6fa.css",
     "isEntry": true,
     "src": "resources/scss/style.scss"
   }
