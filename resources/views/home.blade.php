@@ -284,7 +284,7 @@
     </div>
 
 </section>
-<section class="pump">
+<section class="heat-pump-water-water pump">
     <div class="pump__content content-water">
         <div class="content-water__container">
             <h2>@lang('home.water.title')</h2>
@@ -305,9 +305,9 @@
                         <div class="presentation-pump__dot-rb"></div>
                         <div class="presentation-pump__bg"></div>
                         @if(App::isLocale('ua'))
-                        <img src="{{ asset('img/home/ua/5_1_.webp') }}" alt="">
+                        <img src="{{ asset('img/home/ua/5_.webp') }}" alt="">
                         @elseif(App::isLocale('ru'))
-                        <img src="{{ asset('img/home/ua/5_1_.webp') }}" alt="">
+                        <img src="{{ asset('img/home/ua/5_.webp') }}" alt="">
                         @endif
                     </div>
                 </div>
@@ -335,8 +335,7 @@
         </div>
     </div>
 </section>
-
-<section class="pump">
+<section class="ground-water-heat-pump pump">
     <div class="pump__content content-water">
         <div class="content-water__container">
             <h2>@lang('home.ground.title')</h2>
@@ -357,9 +356,9 @@
                         <div class="presentation-pump__dot-rb"></div>
                         <div class="presentation-pump__bg"></div>
                         @if(App::isLocale('ua'))
-                        <img src="{{ asset('img/home/ua/5_1_.webp') }}" alt="">
+                        <img src="{{ asset('img/home/ua/5_.webp') }}" alt="">
                         @elseif(App::isLocale('ru'))
-                        <img src="{{ asset('img/home/ua/5_1_.webp') }}" alt="">
+                        <img src="{{ asset('img/home/ua/5_.webp') }}" alt="">
                         @endif
                     </div>
                 </div>
@@ -383,7 +382,43 @@
         </div>
     </div>
 </section>
-
+<section class="catalog">
+    <div class="catalog__container">
+        <h2>@lang('home.catalog.title')</h2>
+        <div class="catalog__body">
+            <div class="catalog__item">
+                <a href="#" class="catalog__img">
+                    @if(App::isLocale('ua'))
+                    <img src="{{ asset('img/home/ua/6_.webp') }}" alt="">
+                    @elseif(App::isLocale('ru'))
+                    <img src="{{ asset('img/home/ua/6_.webp') }}" alt="">
+                    @endif
+                </a>
+                <a href="#" class="catalog__link">@lang('home.catalog.link.1')</a>
+            </div>
+            <div class="catalog__item">
+                <div class="catalog__img">
+                    @if(App::isLocale('ua'))
+                    <img src="{{ asset('img/home/ua/6_.webp') }}" alt="">
+                    @elseif(App::isLocale('ru'))
+                    <img src="{{ asset('img/home/ua/6_.webp') }}" alt="">
+                    @endif
+                </div>
+                <a href="#" class="catalog__link">@lang('home.catalog.link.2')</a>
+            </div>
+            <div class="catalog__item">
+                <div class="catalog__img">
+                    @if(App::isLocale('ua'))
+                    <img src="{{ asset('img/home/ua/7_.webp') }}" alt="">
+                    @elseif(App::isLocale('ru'))
+                    <img src="{{ asset('img/home/ua/7_.webp') }}" alt="">
+                    @endif
+                </div>
+                <a href="#" class="catalog__link">@lang('home.catalog.link.3')</a>
+            </div>
+        </div>
+    </div>
+</section>
 
 
 

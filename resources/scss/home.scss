@@ -381,7 +381,7 @@
 }
 /*============EFFICIENCY============*/
 
-/*============WATER============*/
+/*============PUMP============*/
 .pump {
   h2{
     text-align: center;
@@ -726,7 +726,62 @@
       }
     }
   }
-
 }
+/*============PUMP============*/
 
-/*============WATER============*/
+/*============CATALOG============*/
+.catalog {
+  @include adaptiveValueREM('padding-bottom', 100, 30, 1920, 320, 1);
+  @include adaptiveValueREM('padding-top', 100, 30, 1920, 320, 1);
+  background-color: $lightGreen;
+  h2{
+    text-align: center;
+  }
+
+  &__body {
+    display: flex;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    &:not(:last-child){
+      margin-right: 20px;
+    }
+    @media (max-width: $mobile) {
+      &:not(:last-child){
+        margin-right: 0px;
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__img {
+    display: block;
+    @include adaptiveValueREM('padding-bottom', 60, 20, 1270, 768, 1);
+    @include adaptiveValueREM('padding-top', 60, 20, 1270, 768, 1);
+    @include adaptiveValueREM('padding-left', 69, 20, 1270, 768, 1);
+    @include adaptiveValueREM('padding-right', 69, 20, 1270, 768, 1);
+    position: relative;
+    background-color: #ffffff;
+    
+    img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    }
+  }
+
+  &__link {
+    @extend %btn;
+    display: block;
+    padding: 27px 0px;
+    width: 100%;
+    text-align: center;
+  }
+}
+/*============CATALOG============*/
