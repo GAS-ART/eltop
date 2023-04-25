@@ -382,7 +382,7 @@
 /*============EFFICIENCY============*/
 
 /*============WATER============*/
-.water {
+.pump {
   h2{
     text-align: center;
   }
@@ -424,7 +424,7 @@
     }
   }
 }
-.presentation-water {
+.presentation-pump {
   @include adaptiveValueREM('margin-bottom', 100, 30, 1920, 320, 1);
   &__container {
     position: relative;
@@ -492,6 +492,48 @@
         right: -10px;
       }
     }
+    &.ground{
+      .presentation-pump__dot-rb{
+        display: none;
+      }
+      .presentation-pump__dot-rt{
+        top: percent(113, 339);
+        left: percent(233, 329);
+        &::after{
+          content: '';
+          position: absolute;
+          right: -125px;
+          top: 47px;
+          width: 140px;
+          height: 2px;
+          background-color: $green;
+          transform: rotate(35deg);
+        }
+      }
+      &:before{
+      content: url('../../public/img/home/ground.webp');
+      top: unset;
+      bottom: -25px;
+      left: -100px;
+      width: 204px;
+      max-height: unset;
+      transform: rotate(0deg);
+      @include adaptiveValueREM('bottom', -25, -55, 1270, 320, 1);
+      @include adaptiveValueREM('left', -100, -80, 1270, 320, 1);
+      }
+      &::after{
+        content: url('../../public/img/home/water.webp');
+        bottom: unset;
+        top: -100px;
+        right: -45px;
+        width: 204px;
+        max-height: 272px;
+        z-index: 2;
+        @media (max-width: $mobile) {
+          right: -10px;
+        }
+    }
+  }
     img {
     position: relative;
     top: 0;
@@ -566,23 +608,25 @@
         transform: rotate(35deg);
       }
 		}
-  &__bg{
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: percent(135, 329);
-    height: percent(120, 339);
-    transform: translate(-30%, -5%) rotate(90deg) scaleY(2);
-    
-    &::before{
-        content: '';
-        display: block;
-        width: 100%;
-        height: 100%;
-        transform: rotate(45deg);
-        background: #000000;
-        opacity: 0.3;
-        filter: blur(18.75px);
+    @supports (filter: blur()){
+      &__bg{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: percent(135, 329);
+        height: percent(120, 339);
+        transform: translate(-30%, -5%) rotate(90deg) scaleY(2);
+        
+        &::before{
+            content: '';
+            display: block;
+            width: 100%;
+            height: 100%;
+            transform: rotate(45deg);
+            background: #000000;
+            opacity: 0.3;
+            filter: blur(18.75px);
+        }
     }
   }
 
@@ -615,6 +659,15 @@
         text-align: center;
         font-weight: 700;
         font-size: 20px;
+      }
+    }
+    &.ground{
+      .card-right{
+        position: relative;
+        top: 150px;
+        @media (max-width: $tablet) {
+        top: 0;
+        }
       }
     }
   }

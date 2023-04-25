@@ -7,6 +7,10 @@
     "file": "assets/bg-e7ed2785.webp",
     "src": "public/img/home/bg.webp"
   },
+  "public/img/home/ground.webp": {
+    "file": "assets/ground-dea1ed0d.webp",
+    "src": "public/img/home/ground.webp"
+  },
   "public/img/home/splash-left.webp": {
     "file": "assets/splash-left-e0d819ff.webp",
     "src": "public/img/home/splash-left.webp"
@@ -14,6 +18,10 @@
   "public/img/home/splash-right.webp": {
     "file": "assets/splash-right-6bd2e19a.webp",
     "src": "public/img/home/splash-right.webp"
+  },
+  "public/img/home/water.webp": {
+    "file": "assets/water-803d3d5a.webp",
+    "src": "public/img/home/water.webp"
   },
   "resources/js/app.js": {
     "file": "assets/app-7c96144c.js",
@@ -37,7 +45,7 @@
     "src": "resources/scss/fonts/icon-fonts/icomoon.woff"
   },
   "resources/scss/style.scss": {
-    "file": "assets/style-9d03f6fa.css",
+    "file": "assets/style-5e302d0a.css",
     "isEntry": true,
     "src": "resources/scss/style.scss"
   }
