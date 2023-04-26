@@ -122,8 +122,8 @@
                         </li>
                         <li class="header__menu-list-item"><a href="#"
                                 class="header__menu-list-link">@lang('header.catalog')</a></li>
-                        <li class="header__menu-list-item"><a href="#"
-                                class="header__menu-list-link">@lang('header.contants')</a></li>
+                        <li class="header__menu-list-item"><a href="#contacts"
+                                class="header__menu-list-link ancor">@lang('header.contants')</a></li>
                     </ul>
                 </nav>
                 <div class="header__options">
