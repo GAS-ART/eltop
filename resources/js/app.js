@@ -50,7 +50,9 @@ forms.forEach(form => {
     const nameError = form.querySelector('.error-name');
     const phoneError = form.querySelector('.error-phone');
     const textError = form.querySelector('.error-text');
-    const loading = form.closest('.popup__row').previousElementSibling.previousElementSibling;
+    let loading;
+    form.closest('.popup__row') ? loading = form.closest('.popup__row').previousElementSibling.previousElementSibling : loading = form.previousElementSibling;
+    console.log(form, loading);
     loading.classList.add('active');
     const formData = new FormData(form);
 
@@ -124,9 +126,6 @@ forms.forEach(form => {
             textError.previousElementSibling.classList.remove('error');
             textError.previousElementSibling.previousElementSibling.classList.remove('error');
           }
-          //data.errors?.name ? mainForm.querySelector('.error-name').innerText = data.errors?.name[0] : mainForm.querySelector('.error-name').innerText = "";
-          //data.errors?.phone ? mainForm.querySelector('.error-phone').innerText = data.errors?.phone[0] : mainForm.querySelector('.error-phone').innerText = "";
-          //data.errors?.text ? mainForm.querySelector('.error-text').innerText = data.errors?.text[0] : mainForm.querySelector('.error-text').innerText = "";
         } else {
           if (data.errors?.name) {
             nameError.innerText = errorsMessagesUA.name[errorsMessagesUA.name.findIndex(msg => msg == data.errors.name[0]) + 1];
@@ -161,9 +160,6 @@ forms.forEach(form => {
             textError.previousElementSibling.classList.remove('error');
             textError.previousElementSibling.previousElementSibling.classList.remove('error');
           }
-          // data.errors?.name ? mainForm.querySelector('.error-name').innerText = errorsMessagesUA.name[errorsMessagesUA.name.findIndex(msg => msg == data.errors.name[0]) + 1] : mainForm.querySelector('.error-name').innerText = "";
-          // data.errors?.phone ? mainForm.querySelector('.error-phone').innerText = errorsMessagesUA.phone[errorsMessagesUA.phone.findIndex(msg => msg == data.errors.phone[0]) + 1] : mainForm.querySelector('.error-phone').innerText = "";
-          // data.errors?.text ? mainForm.querySelector('.error-text').innerText = errorsMessagesUA.text[errorsMessagesUA.text.findIndex(msg => msg == data.errors.text[0]) + 1] : mainForm.querySelector('.error-text').innerText = "";
         }
       }
     } catch (e) {
@@ -182,6 +178,20 @@ if (window.matchMedia("(pointer: fine)").matches) {
     });
     contact.addEventListener('mouseleave', (e) => {
       e.target.closest('.header__contacts-content').previousElementSibling.classList.remove('active');
+    });
+  })
+}
+
+//Animation footer icons
+if (window.matchMedia("(pointer: fine)").matches) {
+  const headerContacts = document.querySelectorAll(".footer__contacts-contact");
+
+  headerContacts.forEach(contact => {
+    contact.addEventListener('mouseenter', (e) => {
+      e.target.closest('.footer__contacts-content').previousElementSibling.classList.add('active');
+    });
+    contact.addEventListener('mouseleave', (e) => {
+      e.target.closest('.footer__contacts-content').previousElementSibling.classList.remove('active');
     });
   })
 }
@@ -241,7 +251,7 @@ function stopAnimation() { stop = true; }
 const scrolling = (selectorBtn) => {
   //const btnUp = document.querySelector(selectorBtn);
 
-  const links = document.querySelectorAll("[href='#advantages']");
+  const links = document.querySelectorAll(".ancor");
   let speed = 0.3;
   const headerHeight = document.querySelector('.header__top').offsetHeight;
 

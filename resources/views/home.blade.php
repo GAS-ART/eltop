@@ -422,7 +422,7 @@
 
 
 
-<a href="{{ route('form', ['locale' => __('lang.current')]) }}">LINK TO FORM</a>
+{{-- <a href="{{ route('form', ['locale' => __('lang.current')]) }}">LINK TO FORM</a> --}}
 
 
 @endsection

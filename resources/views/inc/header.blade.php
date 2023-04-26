@@ -8,7 +8,6 @@
                     <a href="{{ route('home', ['locale' => __('lang.current')]) }}">
                         <img src="{{asset('/img/eltop-logo.webp')}}" alt="">
                     </a>
-
                 </div>
                 <div class="header__contacts">
                     <div class="header__contacts-body">
@@ -80,7 +79,7 @@
                         </div>
                     </div>
                     <div class="header__contacts-body">
-                        <div class="header__contacts-icon">
+                        <a href="#map" class="header__contacts-icon ancor">
                             <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16" viewBox="0 0 12 16"
                                 fill="none">
                                 <path
@@ -94,10 +93,11 @@
                                     </linearGradient>
                                 </defs>
                             </svg>
-                        </div>
+                        </a>
                         <div class="header__contacts-content">
                             <div class="header__contacts-text">@lang('main.contacts.address_text')</div>
-                            <div class="header__contacts-contact">@lang('main.contacts.address')</div>
+
+                            <a href="#map" class="header__contacts-contact ancor">@lang('main.contacts.address')</a>
                         </div>
                     </div>
                 </div>
@@ -114,7 +114,7 @@
                                 class="header__menu-list-link">@lang('header.about')</a></li>
                         <li class="header__menu-list-item">
                             @if(Route::is('home') || Route::is('index.lang'))
-                            <a href="#advantages" class="header__menu-list-link">@lang('header.advantages')</a>
+                            <a href="#advantages" class="header__menu-list-link ancor">@lang('header.advantages')</a>
                             @else
                             <a class="header__menu-list-link"
                                 href="{{ route('home', ['locale' => __('lang.current')]) }}#advantages-ancor">@lang('header.advantages')</a>
@@ -173,12 +173,12 @@
                 </div>
             </div>
             <div class="header__contacts-body">
-                <div class="header__contacts-icon">
+                <a href="#map" class="header__contacts-icon ancor">
                     <img src="{{asset('img/icons/point.svg')}}" alt="">
-                </div>
+                </a>
                 <div class="header__contacts-content">
                     <div class="header__contacts-text">@lang('main.contacts.address_text')</div>
-                    <div class="header__contacts-contact">@lang('main.contacts.address')</div>
+                    <a href="#map" class="header__contacts-contact ancor">@lang('main.contacts.address')</a>
                 </div>
             </div>
         </div>
@@ -188,7 +188,7 @@
                 </li>
                 <li class="header__menu-list-item">
                     @if(Route::is('home') || Route::is('index.lang'))
-                    <a href="#advantages" class="header__menu-list-link">@lang('header.advantages')</a>
+                    <a href="#advantages" class="header__menu-list-link ancor">@lang('header.advantages')</a>
                     @else
                     <a class="header__menu-list-link"
                         href="{{ route('home', ['locale' => __('lang.current')]) }}#advantages-ancor">@lang('header.advantages')</a>
