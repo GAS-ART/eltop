@@ -3,7 +3,7 @@
    <div class="popup__body">
       <div class="popup__content">
          <div class="popup__loading">
-            <img src="{{asset('img/load.gif')}}" alt="">
+            <img src="{{asset('img/load_100.gif')}}" alt="">
          </div>
          <button class="popup__close close-popup"><span></span><span></span></button>
          <div class="popup__row">
