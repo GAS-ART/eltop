@@ -3,7 +3,7 @@
    <div class="footer__bg"></div>
    <div class="footer__container">
       <div class="footer__body">
-         <div class="footer__contacts">
+         <div id="contacts" class="footer__contacts">
             <h2>@lang('footer.title')</h2>
             <div class="footer__contacts-body">
                <a href="tel:%2B0675201020" class="footer__contacts-icon contacts-icon">

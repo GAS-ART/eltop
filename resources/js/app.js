@@ -72,7 +72,7 @@ forms.forEach(form => {
       })
       if (response.ok) {
         loading.classList.remove('active');
-        form.closest('.popup').classList.add('sent');
+        if (form.closest('.popup')) form.closest('.popup').classList.add('sent');
         nameError.innerText = '';
         nameError.classList.remove('error');
         nameError.previousElementSibling.classList.remove('error');
