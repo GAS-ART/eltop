@@ -28,6 +28,54 @@
     "isEntry": true,
     "src": "resources/js/app.js"
   },
+  "resources/scss/fonts/fonts/Inter-Regular.woff": {
+    "file": "assets/Inter-Regular-64243944.woff",
+    "src": "resources/scss/fonts/fonts/Inter-Regular.woff"
+  },
+  "resources/scss/fonts/fonts/Inter-Regular.woff2": {
+    "file": "assets/Inter-Regular-4dcfe514.woff2",
+    "src": "resources/scss/fonts/fonts/Inter-Regular.woff2"
+  },
+  "resources/scss/fonts/fonts/Mulish-Black.woff": {
+    "file": "assets/Mulish-Black-533967a9.woff",
+    "src": "resources/scss/fonts/fonts/Mulish-Black.woff"
+  },
+  "resources/scss/fonts/fonts/Mulish-Black.woff2": {
+    "file": "assets/Mulish-Black-60c075d8.woff2",
+    "src": "resources/scss/fonts/fonts/Mulish-Black.woff2"
+  },
+  "resources/scss/fonts/fonts/Mulish-Bold.woff": {
+    "file": "assets/Mulish-Bold-12ee57a0.woff",
+    "src": "resources/scss/fonts/fonts/Mulish-Bold.woff"
+  },
+  "resources/scss/fonts/fonts/Mulish-Bold.woff2": {
+    "file": "assets/Mulish-Bold-7f92c45a.woff2",
+    "src": "resources/scss/fonts/fonts/Mulish-Bold.woff2"
+  },
+  "resources/scss/fonts/fonts/Mulish-Light.woff": {
+    "file": "assets/Mulish-Light-10a0f52c.woff",
+    "src": "resources/scss/fonts/fonts/Mulish-Light.woff"
+  },
+  "resources/scss/fonts/fonts/Mulish-Light.woff2": {
+    "file": "assets/Mulish-Light-5cbea30a.woff2",
+    "src": "resources/scss/fonts/fonts/Mulish-Light.woff2"
+  },
+  "resources/scss/fonts/fonts/Mulish-Medium.woff": {
+    "file": "assets/Mulish-Medium-6e3c65f7.woff",
+    "src": "resources/scss/fonts/fonts/Mulish-Medium.woff"
+  },
+  "resources/scss/fonts/fonts/Mulish-Medium.woff2": {
+    "file": "assets/Mulish-Medium-6e9d8aa9.woff2",
+    "src": "resources/scss/fonts/fonts/Mulish-Medium.woff2"
+  },
+  "resources/scss/fonts/fonts/Mulish-Regular.woff": {
+    "file": "assets/Mulish-Regular-28cc244a.woff",
+    "src": "resources/scss/fonts/fonts/Mulish-Regular.woff"
+  },
+  "resources/scss/fonts/fonts/Mulish-Regular.woff2": {
+    "file": "assets/Mulish-Regular-8c1f84fd.woff2",
+    "src": "resources/scss/fonts/fonts/Mulish-Regular.woff2"
+  },
   "resources/scss/fonts/icon-fonts/icomoon.eot": {
     "file": "assets/icomoon-0806e009.eot",
     "src": "resources/scss/fonts/icon-fonts/icomoon.eot"
@@ -45,7 +93,7 @@
     "src": "resources/scss/fonts/icon-fonts/icomoon.woff"
   },
   "resources/scss/style.scss": {
-    "file": "assets/style-29105983.css",
+    "file": "assets/style-3cebc6d2.css",
     "isEntry": true,
     "src": "resources/scss/style.scss"
   }
