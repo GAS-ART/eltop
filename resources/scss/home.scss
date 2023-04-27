@@ -880,6 +880,9 @@
         transition: all 1s ease 0s;
         opacity: 0;
         transform: translateX(-50%);
+        @media (max-width: $mobile) {
+          transform: translateX(-100%);
+        }
         ._animated &{
           transform: translateX(0%);
           opacity: 1;
@@ -887,9 +890,12 @@
       }
       &:nth-child(2){
         .card-right{
-          transition: all 1s ease 0.5s;
+        transition: all 1s ease 0.5s;
         opacity: 0;
         transform: translateX(50%);
+        @media (max-width: $mobile) {
+          transform: translateX(100%);
+        }
         ._animated &{
           transform: translateX(0%);
           opacity: 1;
@@ -902,6 +908,9 @@
         transition: all 1s ease 1s;
         opacity: 0;
         transform: translateX(-50%);
+        @media (max-width: $mobile) {
+          transform: translateX(-100%);
+        }
         ._animated &{
           transform: translateX(0%);
           opacity: 1;
@@ -912,6 +921,9 @@
           transition: all 1s ease 1.5s;
         opacity: 0;
         transform: translateX(50%);
+        @media (max-width: $mobile) {
+          transform: translateX(100%);
+        }
         ._animated &{
           transform: translateX(0%);
           opacity: 1;
