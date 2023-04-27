@@ -12,10 +12,10 @@
     <div class="main__container">
         <div class="main__body">
             <div class="main__content">
-                <h1>@lang('home.main.title')</h1>
-                <button data-popup-id="main" class="main__btn link-on-popup">@lang('home.main.btn')</button>
+                <h1 class="_animate">@lang('home.main.title')</h1>
+                <button data-popup-id="main" class="main__btn link-on-popup _animate">@lang('home.main.btn')</button>
             </div>
-            <div class="main__img">
+            <div class="main__img _animate">
                 <div class="main__img-bg"></div>
                 @if(App::isLocale('ua'))
                 <img src="{{ asset('img/home/ua/1_.webp') }}" alt="">
@@ -23,21 +23,21 @@
                 <img src="{{ asset('img/home/ru/1_.webp') }}" alt="">
                 @endif
             </div>
-            <button data-popup-id="main" class="main__btn-mobile link-on-popup">@lang('home.main.btn')</button>
+            <button data-popup-id="main" class="main__btn-mobile link-on-popup _animate">@lang('home.main.btn')</button>
         </div>
     </div>
 </section>
 <section class="what">
     <div class="what__container">
         <div class="what__body">
-            <div class="what__img">
+            <div class="what__img _animate">
                 @if(App::isLocale('ua'))
                 <img src="{{ asset('img/home/ua/2_.webp') }}" alt="">
                 @elseif(App::isLocale('ru'))
                 <img src="{{ asset('img/home/ru/2_.webp') }}" alt="">
                 @endif
             </div>
-            <div class="what__text">
+            <div class="what__text _animate">
                 <h2>@lang('home.what.title')</h2>
                 <p>@lang('home.what.text')</p>
             </div>

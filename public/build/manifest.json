@@ -24,7 +24,7 @@
     "src": "public/img/home/water.webp"
   },
   "resources/js/app.js": {
-    "file": "assets/app-5b6f9f84.js",
+    "file": "assets/app-930b64d1.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   },
@@ -93,7 +93,7 @@
     "src": "resources/scss/fonts/icon-fonts/icomoon.woff"
   },
   "resources/scss/style.scss": {
-    "file": "assets/style-afab2a01.css",
+    "file": "assets/style-2e4c885f.css",
     "isEntry": true,
     "src": "resources/scss/style.scss"
   }

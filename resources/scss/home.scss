@@ -32,10 +32,36 @@
       color: #FFFFFF;
       max-width: 506px;
       margin-bottom: em(50, 100);
+      transition: all 1s ease 0s;
+      @media (min-width: $mobile) {
+        transform: translateY(50%);
+        opacity: 0;
+        &._animated{
+          transform: translateY(0%);
+          opacity: 1;
+        }
+      }
+      @media (max-width: $mobile) {
+      opacity: 0;
+      transform: scale(0);
+      &._animated{
+        transform: scale(1);
+        opacity: 1;
+      }
+      }
     }
   }
   &__btn{
     @extend %btn;
+    @media (min-width: $mobile) {
+      transform: translateY(100%);
+      opacity: 0;
+      transition: all 1s ease 0.5s;
+      &._animated{
+        transform: translateY(0%);
+        opacity: 1;
+      }
+    }
     @media (max-width: $mobile) {
       display: none;
     }
@@ -52,12 +78,26 @@
     color: #ffffff;
     background: $gradient;
     padding: 15px 62px;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: all 1s ease 0.5s;
+    &._animated{
+      transform: translateY(0%);
+      opacity: 1;
+    }
   } 
 
   &__img {
     position: relative;
     z-index: 2;
     position: relative;
+    transition: all 2s ease 0s;
+      transform: translateX(100%);
+      opacity: 0;
+      &._animated{
+        transform: translateX(0%);
+        opacity: 1;
+      }
     @media (max-width: $mobile) {
       margin-bottom: 25px;
     }
@@ -95,6 +135,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
     @media (max-width: $tablet) {
       flex-direction: column;
     }
@@ -103,6 +144,15 @@
   &__img {
     position: relative;
     margin-right: 100px;
+
+      transform: scale(0);
+      opacity: 0;
+      transition: all 1s ease 0s;
+      &._animated{
+      transform: scale(1);
+      opacity: 1;
+      }
+
     @media (max-width: $tablet) {
       order: 2;
       margin-right: 0;
@@ -119,6 +169,13 @@
 
   &__text {
     max-width: 520px;
+      transform: translateX(80%);
+      opacity: 0;
+      transition: all 1s ease 0s;
+      &._animated{
+        transform: translateX(0%);
+        opacity: 1;
+      }
     @media (max-width: $tablet) {
       order: 1;
       margin-bottom: 30px;
