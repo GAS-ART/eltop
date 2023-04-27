@@ -100,6 +100,7 @@
       }
     @media (max-width: $mobile) {
       margin-bottom: 25px;
+      transform: translateX(80%);
     }
     img {
     position: relative;
@@ -179,6 +180,9 @@
     @media (max-width: $tablet) {
       order: 1;
       margin-bottom: 30px;
+    }
+    @media (max-width: $mobile) {
+      transform: translateX(50%);
     }
   }
 }
