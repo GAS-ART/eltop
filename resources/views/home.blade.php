@@ -50,7 +50,7 @@
         <div class="advantages__body">
             <h2>@lang('home.advantages.title')</h2>
             <div class="advantages__row">
-                <div class="advantages__items">
+                <div class="advantages__items _animate">
                     <div class="advantages__item">
                         <div class="advantages__icon">
                             <div class="advantages__icon-bg"></div>
@@ -152,7 +152,7 @@
                         <p>@lang('home.advantages.3_text')</p>
                     </div>
                 </div>
-                <div class="advantages__items">
+                <div class="advantages__items _animate">
                     <div class="advantages__item">
                         <div class="advantages__icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="32" viewBox="0 0 28 32"
@@ -253,7 +253,7 @@
     </div>
 </section>
 <section class="efficiency">
-    <div class="efficiency__container1920">
+    <div class="efficiency__container1920 _animate">
         <div class="efficiency__body">
             <div class="efficiency__content">
                 <h2>@lang('home.efficiency.title')</h2>
@@ -266,7 +266,7 @@
                 <img src="{{ asset('img/home/ru/3_.webp') }}" alt="">
                 @endif
             </div>
-            <div class="efficiency__picture-mobile">
+            <div class="efficiency__picture-mobile _animate">
                 @if(App::isLocale('ua'))
                 <img src="{{ asset('img/home/ua/4_.webp') }}" alt="">
                 @elseif(App::isLocale('ru'))
@@ -274,7 +274,7 @@
                 @endif
             </div>
         </div>
-        <div class="efficiency__picture">
+        <div class="efficiency__picture _animate">
             @if(App::isLocale('ua'))
             <img src="{{ asset('img/home/ua/4_.webp') }}" alt="">
             @elseif(App::isLocale('ru'))
@@ -296,13 +296,13 @@
     </div>
     <div class="pump__presentation presentation-pump">
         <div class="presentation-pump__container">
-            <div class="presentation-pump__body">
+            <div class="presentation-pump__body _animate">
                 <div class="presentation-pump__img-wrapper">
                     <div class="presentation-pump__img">
-                        <div class="presentation-pump__dot-lt"></div>
-                        <div class="presentation-pump__dot-lb"></div>
-                        <div class="presentation-pump__dot-rt"></div>
-                        <div class="presentation-pump__dot-rb"></div>
+                        <div class="presentation-pump__dot-lt"><span></span></div>
+                        <div class="presentation-pump__dot-lb"><span></span></div>
+                        <div class="presentation-pump__dot-rt"><span></span></div>
+                        <div class="presentation-pump__dot-rb"><span></span></div>
                         <div class="presentation-pump__bg"></div>
                         @if(App::isLocale('ua'))
                         <img src="{{ asset('img/home/ua/5_.webp') }}" alt="">
@@ -347,12 +347,12 @@
     </div>
     <div class="pump__presentation presentation-pump">
         <div class="presentation-pump__container">
-            <div class="presentation-pump__body">
+            <div class="presentation-pump__body _animate">
                 <div class="presentation-pump__img-wrapper">
                     <div class="presentation-pump__img ground">
-                        <div class="presentation-pump__dot-lt"></div>
-                        <div class="presentation-pump__dot-lb"></div>
-                        <div class="presentation-pump__dot-rt"></div>
+                        <div class="presentation-pump__dot-lt"><span></span></div>
+                        <div class="presentation-pump__dot-lb"><span></span></div>
+                        <div class="presentation-pump__dot-rt"><span></span></div>
                         <div class="presentation-pump__dot-rb"></div>
                         <div class="presentation-pump__bg"></div>
                         @if(App::isLocale('ua'))

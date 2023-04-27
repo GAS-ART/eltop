@@ -49,6 +49,26 @@ h2{
     transform: translate(-50%, -50%);
     background-color: $green;
   }
+  span{
+    display: block;
+    position: absolute;
+    &::after{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background-color: $green;
+    }
+  }
+  ._animated &{
+    span{
+      &::after{
+        width: 100%;
+      }
+    }
+  }
   @media (max-width: $tablet) {
     display: none;
   }

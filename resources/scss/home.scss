@@ -217,7 +217,82 @@
     display: flex;
     &:not(:last-child){
       margin-right: 32px;
+    }
+    /*===Animation===*/
+    @media (min-width: $mobile) {
+      &:first-child{
+        .advantages__item:nth-child(1){
+          .advantages__icon{
+            opacity: 0;
+            transition: all 2s ease 0s;
+          }
+          h3, p {
+            transform: translateX(85vw);
+            opacity: 0;
+            transition: all 1s ease 0s;
+          }
+        }
+        .advantages__item:nth-child(2){
+          .advantages__icon{
+            opacity: 0;
+            transition: all 2s ease 0.5s;
+          }
+          h3, p {
+            transform: translateX(85vw);
+            opacity: 0;
+            transition: all 1s ease 0.5s;
+          }
+        }
+        .advantages__item:nth-child(3){
+          .advantages__icon{
+            opacity: 0;
+            transition: all 2s ease 1s;
+          }
+          h3, p {
+            transform: translateX(85vw);
+            opacity: 0;
+            transition: all 1s ease 1s;
+          }
+        }
       }
+      &:last-child{
+        .advantages__item:nth-child(1){
+          .advantages__icon{
+            opacity: 0;
+            transition: all 2s ease 1.5s;
+          }
+          h3, p {
+            transform: translateX(85vw);
+            opacity: 0;
+            transition: all 1s ease 1.5s;
+          }
+        }
+        .advantages__item:nth-child(2){
+          .advantages__icon{
+            opacity: 0;
+            transition: all 2s ease 2s;
+          }
+          h3, p {
+            transform: translateX(85vw);
+            opacity: 0;
+            transition: all 1s ease 2s;
+          }
+        }
+      }
+      &._animated{
+          .advantages__item {
+            .advantages__icon{
+              opacity: 1 !important;
+            }
+            h3, p {
+              transform: translateX(0vh)!important;
+              opacity: 1 !important;
+            }
+        }
+      }
+    }
+    
+    /*===Animation===*/
       @media (max-width: em(1300)) {
         margin-bottom: 30px;
         justify-content: center;
@@ -351,6 +426,24 @@
     max-width: 77.5rem;
     padding: 0 0.9375rem;
   }
+  /*===Animation===*/
+   .efficiency__content{
+      transition: all 1s ease 0s;
+      transform: scale(0);
+    }
+    .efficiency__img{
+      transition: all 1s ease 0s;
+      transform: translateX(100%);
+    }
+    &._animated{
+      .efficiency__content{
+        transform: scale(1);
+      }
+      .efficiency__img{
+        transform: translateX(0%);
+      }
+    }
+  /*===Animation===*/
   }
   &__body {
   display: flex;
@@ -367,6 +460,11 @@
   max-width: 520px;
   margin-right: 100px; 
   margin-top: 100px;
+  /* transition: all 1s ease 0s;
+  transform: scale(0);
+  &._animated{
+    transform: scale(1);
+  } */
   @media (max-width: em(1300)) {
     margin: 0 auto 20px auto;
     order: 2;
@@ -387,7 +485,14 @@
     width: 100%;
     height: 100%;
     object-fit: fill; 
+    /* transition: all 1s ease 0s;
+    transform: translateX(100%); */
     }
+    /* &._animated{
+      img{
+        transform: translateX(0%);
+      }
+    } */
     @media (max-width: em(1300)) {
       top: 0;
       margin-bottom: 20px;
@@ -408,6 +513,13 @@
       width: 100%;
       height: 100%;
       object-fit: fill;
+      transition: all 1s ease 0s;
+      transform: translateX(-100%);
+      }
+      &._animated{
+        img{
+          transform: translateX(0%);
+        }
       }
     }
   }
@@ -425,6 +537,8 @@
       bottom: calc(100vw * -210px / 1920px);
       max-height: 580px;
     }
+    
+    
     img {
       //position: relative;
       position: absolute;
@@ -433,6 +547,14 @@
       width: 100%;
       height: 100%;
       object-fit: fill; 
+      transition: all 1s ease 0s;
+      transform: translateX(-100%);
+      }
+      &._animated{
+        img{
+          transform: translateX(0%);
+        }
+        
       }
       @media (max-width: em(1300)) {
         display: none;
@@ -455,6 +577,9 @@
   }
 
   &__presentation {
+    /*===Animation===*/
+    
+    /*===Animation===*/
   }
 }
 .content-water {
@@ -493,7 +618,6 @@
 
   &__body {
     position: relative;
-    
   }
   &__img-wrapper{
     padding-bottom: 17.02%;
@@ -560,15 +684,23 @@
       .presentation-pump__dot-rt{
         top: percent(113, 339);
         left: percent(233, 329);
-        &::after{
-          content: '';
-          position: absolute;
+        span{
           right: -125px;
           top: 47px;
           width: 140px;
           height: 2px;
-          background-color: $green;
           transform: rotate(35deg);
+          &::after{
+            transition: all 1s ease 0.5s;
+          }
+        }
+      }
+      .presentation-pump__dot-lb{
+        span{
+          transform: rotate(140deg);
+          top: 60px;
+          width: 173px;
+          right: -15px;
         }
       }
       &:before{
@@ -610,15 +742,15 @@
       @extend %dot;
       top: percent(90, 339);
       left: 8.515%;
-      &::after{
-        content: '';
-        position: absolute;
+      span{
         right: -5px;
         top: -34px;
         width: 133px;
         height: 2px;
-        background-color: $green;
-        transform: rotate(35deg);
+        transform: rotate(215deg);
+        &::after{
+          transition: all 1s ease 0s;
+        }
       }
 		}
 
@@ -626,31 +758,32 @@
       @extend %dot;
       top: percent(156, 339);
       left: 8.515%;
+      span{
+        right: 0px;
+        top: 35px;
+        width: 133px;
+        height: 2px;
+        transform: rotate(154deg);
         &::after{
-          content: '';
-          position: absolute;
-          right: 0px;
-          top: 35px;
-          width: 133px;
-          height: 2px;
-          background-color: $green;
-          transform: rotate(-26.5deg);
+          transition: all 1s ease 1s;
         }
+      }
+      
 		}
 
 		&__dot-rt {
       @extend %dot;
       top: percent(82, 339);
       left: percent(253, 329);
-      &::after{
-        content: '';
-        position: absolute;
+      span{
         right: -80px;
         top: -22px;
         width: 95px;
         height: 2px;
-        background-color: $green;
         transform: rotate(-35deg);
+        &::after{
+          transition: all 1s ease 0.5s;
+        }
       }
 		}
 
@@ -658,15 +791,15 @@
       @extend %dot;
       top: percent(213, 339);
       left: percent(253, 329);
-      &::after{
-        content: '';
-        position: absolute;
+      span{
         right: -80px;
         top: 32px;
         width: 95px;
         height: 2px;
-        background-color: $green;
         transform: rotate(35deg);
+        &::after{
+          transition: all 1s ease 1.5s;
+        }
       }
 		}
     @supports (filter: blur()){
@@ -739,7 +872,54 @@
     align-items: flex-start;
     &:not(:last-child){
       margin-bottom: 110px;
+      
     }
+    /*===Animation===*/
+    &:nth-child(2){
+      .card-left{
+        transition: all 1s ease 0s;
+        opacity: 0;
+        transform: translateX(-50%);
+        ._animated &{
+          transform: translateX(0%);
+          opacity: 1;
+        }
+      }
+      &:nth-child(2){
+        .card-right{
+          transition: all 1s ease 0.5s;
+        opacity: 0;
+        transform: translateX(50%);
+        ._animated &{
+          transform: translateX(0%);
+          opacity: 1;
+        }
+        }
+      }
+    }
+    &:nth-child(3){
+      .card-left{
+        transition: all 1s ease 1s;
+        opacity: 0;
+        transform: translateX(-50%);
+        ._animated &{
+          transform: translateX(0%);
+          opacity: 1;
+        }
+      }
+      &:nth-child(3){
+        .card-right{
+          transition: all 1s ease 1.5s;
+        opacity: 0;
+        transform: translateX(50%);
+        ._animated &{
+          transform: translateX(0%);
+          opacity: 1;
+        }
+        }
+      }
+    }
+    /*===Animation===*/
     @media (max-width: em(1269)) {
       &:not(:last-child){
         @include adaptiveValueREM('margin-bottom', 110, 20, 1269, 992, 1);
