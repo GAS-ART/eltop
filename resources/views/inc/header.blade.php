@@ -6,7 +6,7 @@
             <div class="header__body">
                 <div class="header__logo">
                     <a href="{{ route('home', ['locale' => __('lang.current')]) }}">
-                        <img src="{{asset('/img/eltop-logo.webp')}}" alt="">
+                        <img src="{{asset('/img/logo.png')}}" alt="">
                     </a>
                 </div>
                 <div class="header__contacts">
