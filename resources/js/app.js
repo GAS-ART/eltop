@@ -308,22 +308,36 @@ const scrolling = (selectorBtn) => {
 
 scrolling(/*".pageup"*/);
 
+
+
+
 //animation
 const animation = document.querySelectorAll('._animate');
+
 if (animation) {
-  const options = {
-    rootMargin: '0px 200% 0px 200%',
-    threshold: 0.2,
-  }
 
-  const animationObserver = new IntersectionObserver(watchAnimation, options);
-  animation.forEach(item => animationObserver.observe(item));
+  //Wait for background-img download
+  const main = document.querySelector('.main');
+  const backgroundImage = new Image();
+  backgroundImage.src = getComputedStyle(main).backgroundImage.replace(/(url\(|\)|")/g, '');
+  backgroundImage.onload = () => {
 
-  function watchAnimation(entries) {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('_animated');
-      }
-    });
-  }
+    const options = {
+      rootMargin: '0px 200% 0px 200%',
+      threshold: 0.2,
+    }
+
+    const animationObserver = new IntersectionObserver(watchAnimation, options);
+    animation.forEach(item => animationObserver.observe(item));
+
+    function watchAnimation(entries) {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('_animated');
+        }
+      });
+    }
+
+  };
+
 }
