@@ -72,7 +72,7 @@ forms.forEach(form => {
       })
       if (response.ok) {
         loading.classList.remove('active');
-        window.location.href = `/thanks-page${form.classList.contains('ua') ? 'ua' : 'ru'}?product=${encodeURIComponent(formData.get('product'))}`;
+        window.location.href = `/${form.classList.contains('ua') ? 'ua' : 'ru'}/thanks-page?product=${encodeURIComponent(formData.get('product'))}`;
         /* if (form.closest('.popup')) form.closest('.popup').classList.add('sent');
         nameError.innerText = '';
         nameError.classList.remove('error');
