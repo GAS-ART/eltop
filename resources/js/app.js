@@ -319,7 +319,7 @@ if (animation) {
   //Wait for background-img download
   const main = document.querySelector('.main');
   const backgroundImage = new Image();
-  backgroundImage.src = getComputedStyle(main).backgroundImage.replace(/(url\(|\)|")/g, '');
+  backgroundImage.src = window.getComputedStyle(main).backgroundImage.replace(/(url\(|\)|")/g, '');
   backgroundImage.onload = () => {
 
     const options = {

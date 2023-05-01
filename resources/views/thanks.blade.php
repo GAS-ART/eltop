@@ -7,9 +7,15 @@
 @section('page', 'home')
 
 @section('content')
+<section class="thanks">
+  @if(request('product') == "Запит на консультацію" || request('product') == "Запрос на консультацию")
+  <h1 class="thanks__title">{{ request('product') }}!</h1>
+  @else
+  <h1 class="thanks__title">@lang('thanks.title') "{{ request('product') }}"!</h1>
+  @endif
+  <h3 class="thanks__text">@lang('thanks.text')</h3>
+  <a class="thanks__link" href="{{ route('home', ['locale' => __('lang.current')]) }}">@lang('thanks.link')</a>
+</section>
 
-<h1>THIS IS THANKS PAGE</h1>
-
-<h2>Спасибо за интерес к продукту "{{ request('product') }}"!</h2>
 
 @endsection

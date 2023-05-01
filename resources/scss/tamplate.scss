@@ -16,7 +16,7 @@
     }
 }
 
-h2{
+h2, .thanks__title{
   font-weight: 900;
   @include adaptiveValueREM('font-size', 30, 18, 1920, 320, 1);
   line-height: 126%;

@@ -11,9 +11,6 @@ export function popUp(popupId, productName) {
 	bodyLock.classList.add('lock');
 	inputProductName.value = productName;
 
-	console.log(productName);
-	console.log(inputProductName.value);
-
 	popupCloseIcon.addEventListener('click', function (e) {
 		popupClose(popUp);
 		e.preventDefault();
