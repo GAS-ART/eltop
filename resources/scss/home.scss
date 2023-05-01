@@ -110,6 +110,21 @@
     height: 100%;
     object-fit: fill;
     z-index: 2;
+    &.main__img-logo{
+      position: absolute;
+      top: 70px;
+      left: 20px;
+      width: 70px;
+      height: 78.26px;
+      transform: rotate(-3deg);
+      @media (max-width: $mobileSmall) {
+        top: 60px;
+        width: 50px;
+        height: 55.9px;
+        /* width: 40px;
+        height: 44.72px; */
+      }
+    }
     }
   }
   @supports (filter: blur()){
@@ -409,6 +424,7 @@
 
 /*============ABOUT-US============*/
 .about-us {
+  position: relative;
   h2{
     text-align: center
   }
@@ -433,6 +449,10 @@
     }
   }
   @include adaptiveValueREM('margin-bottom', 100, 30, 1920, 320, 1);
+  &__ancor{
+    position: absolute;
+    top: -100px;
+  }
   &__content {
     display: flex;
     justify-content: center;

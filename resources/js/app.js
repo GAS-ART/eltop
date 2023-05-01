@@ -53,7 +53,6 @@ forms.forEach(form => {
     const textError = form.querySelector('.error-text');
     let loading;
     form.closest('.popup__row') ? loading = form.closest('.popup__row').previousElementSibling.previousElementSibling : loading = form.previousElementSibling;
-    console.log(form, loading);
     loading.classList.add('active');
     const formData = new FormData(form);
 
@@ -72,6 +71,7 @@ forms.forEach(form => {
         credentials: "same-origin",
       })
       if (response.ok) {
+        console.log(response);
         loading.classList.remove('active');
         if (form.closest('.popup')) form.closest('.popup').classList.add('sent');
         nameError.innerText = '';
@@ -98,7 +98,6 @@ forms.forEach(form => {
             nameError.classList.add('error');
             nameError.previousElementSibling.classList.add('error');
             nameError.previousElementSibling.previousElementSibling.classList.add('error');
-            console.log(nameError.previousElementSibling);
           } else {
             nameError.innerText = '';
             nameError.classList.remove('error');
@@ -245,7 +244,7 @@ adventagesText.forEach(text => {
 });
 
 
-//scroll to advantages
+//scroll
 let stop = false;
 let scrol = false;
 function stopAnimation() { stop = true; }

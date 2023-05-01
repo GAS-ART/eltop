@@ -114,8 +114,14 @@
             <div class="header__body">
                 <nav class="header__menu">
                     <ul class="header__menu-list">
-                        <li class="header__menu-list-item"><a href="#"
-                                class="header__menu-list-link">@lang('header.about')</a></li>
+                        <li class="header__menu-list-item">
+                            @if(Route::is('home') || Route::is('index.lang'))
+                            <a href="#about-us" class="header__menu-list-link ancor">@lang('header.about')</a>
+                            @else
+                            <a class="header__menu-list-link"
+                                href="{{ route('home', ['locale' => __('lang.current')]) }}#about-us-ancor">@lang('header.advantages')</a>
+                            @endif
+                        </li>
                         <li class="header__menu-list-item">
                             @if(Route::is('home') || Route::is('index.lang'))
                             <a href="#advantages" class="header__menu-list-link ancor">@lang('header.advantages')</a>
@@ -188,7 +194,14 @@
         </div>
         <nav class="header__menu">
             <ul class="header__menu-list">
-                <li class="header__menu-list-item"><a href="#" class="header__menu-list-link">@lang('header.about')</a>
+                <li class="header__menu-list-item">
+                    @if(Route::is('home') || Route::is('index.lang'))
+                    <a href="#about-us" class="header__menu-list-link ancor">@lang('header.about')</a>
+                    @else
+                    <a class="header__menu-list-link"
+                        href="{{ route('home', ['locale' => __('lang.current')]) }}#about-us-ancor">@lang('header.advantages')</a>
+                    @endif
+                    </a>
                 </li>
                 <li class="header__menu-list-item">
                     @if(Route::is('home') || Route::is('index.lang'))

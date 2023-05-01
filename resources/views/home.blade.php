@@ -19,8 +19,10 @@
                 <div class="main__img-bg"></div>
                 @if(App::isLocale('ua'))
                 <img src="{{ asset('img/home/ua/1_.webp') }}" alt="">
+                <img class="main__img-logo" src="{{ asset('img/home/ua/liveheat.svg') }}" alt="">
                 @elseif(App::isLocale('ru'))
                 <img src="{{ asset('img/home/ru/1_.webp') }}" alt="">
+                <img class="main__img-logo" src="{{ asset('img/home/ru/liveheat.svg') }}" alt="">
                 @endif
             </div>
             <button data-popup-id="main" class="main__btn-mobile link-on-popup _animate">@lang('home.main.btn')</button>
@@ -253,6 +255,7 @@
     </div>
 </section>
 <section id="about-us" class="about-us">
+    <div id="about-us-ancor" class="about-us__ancor"></div>
     <div class="about-us__container">
         <h2>@lang('home.about-us.title')</h2>
         <div class="about-us__content">
