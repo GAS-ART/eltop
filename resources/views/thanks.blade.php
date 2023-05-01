@@ -17,5 +17,4 @@
   <a class="thanks__link" href="{{ route('home', ['locale' => __('lang.current')]) }}">@lang('thanks.link')</a>
 </section>
 
-
 @endsection
