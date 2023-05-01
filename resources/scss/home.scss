@@ -190,6 +190,7 @@
 .advantages {
   @include adaptiveValueREM('padding-top', 100, 30, 1920, 320, 1);
   @include adaptiveValueREM('padding-bottom', 100, 30, 1920, 320, 1);
+  @include adaptiveValueREM('margin-bottom', 100, 30, 1920, 320, 1);
   background-color: $lightGreen;
   position: relative;
   &__ancor{
@@ -405,6 +406,181 @@
   }
 }
 /*============ADVANTAGES============*/
+
+/*============ABOUT-US============*/
+.about-us {
+  h2{
+    text-align: center
+  }
+  h3{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    margin-bottom: 16px;
+    text-align: center;
+    @media (max-width: $tablet) {
+      margin: 0 auto 16px auto;
+      max-width: 720px;
+      min-height: 54px;
+      display: flex;
+      align-items: flex-end;
+    }
+    @media (max-width: em(535)) {
+      min-height: 81px;
+    }
+    @media (max-width: em(390)) {
+      min-height: 108px;
+    }
+  }
+  @include adaptiveValueREM('margin-bottom', 100, 30, 1920, 320, 1);
+  &__content {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    @media (max-width: $mobile) {
+      margin-bottom: 30px;
+      flex-direction: column
+    }
+  }
+
+  &__text {
+    max-width: 520px;
+    
+    line-height: 150%;
+    font-size: 15px;
+    &:not(:last-child){
+      margin-right: 50px;
+    }
+    @media (max-width: $mobile) {
+      max-width: fit-content;
+      margin: 0 auto;
+      text-align: center;
+      &:not(:last-child){
+        margin-right: 0px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__slider {
+  }
+
+  &__slider-img {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1090px;
+    //max-height: 550px;
+    //@include adaptiveValueREM('height', 550, 245, 1270, 320, 1);
+    img {
+    position: relative;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    max-height: 100%;
+    }
+  }
+  .swiper {
+  }
+  .swiper-wrapper {
+  }
+  .swiper-slide {
+  }
+  .swiper-button-prev {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #E0E0E0;
+    background: #FFFFFF;
+    @media (max-width: $mobile) {
+    top: 65%;
+    }
+    span{
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 16px;
+      height: 1px;
+      background-color: #056C36;
+      z-index: 900;
+      &::after{
+        content: '';
+        position: absolute;
+        font-size: 0px;
+        top: 2px;
+        left: -1.5px;
+        transform: rotate(45deg);
+        width: 6px;
+        height: 1px;
+        background-color: #056C36;
+      }
+      &::before{
+        content: '';
+        position: absolute;
+        font-size: 0px;
+        top: -2px;
+        left: -1.5px;
+        transform: rotate(-45deg);
+        width: 6px;
+        height: 1px;
+        background-color: #056C36;
+      }
+    }
+    &::after{
+      font-size: 0px;
+    }
+  }
+  .swiper-button-next {
+    width: 32px;
+    height: 32px;
+    border: 1px solid #E0E0E0;
+    background: #FFFFFF;
+    @media (max-width: $mobile) {
+      top: 65%;
+      }
+    span{
+      position: absolute;
+      display: block;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 16px;
+      height: 1px;
+      background-color: #056C36;
+      z-index: 900;
+      &::after{
+        content: '';
+        position: absolute;
+        font-size: 0px;
+        top: 2px;
+        right: -1.5px;
+        transform: rotate(-45deg);
+        width: 6px;
+        height: 1px;
+        background-color: #056C36;
+      }
+      &::before{
+        content: '';
+        position: absolute;
+        font-size: 0px;
+        top: -2px;
+        right: -1.5px;
+        transform: rotate(45deg);
+        width: 6px;
+        height: 1px;
+        background-color: #056C36;
+      }
+    }
+    &::after{
+      font-size: 0px;
+    }
+  }
+}
+
+/*============ABOUT-US============*/
 
 /*============EFFICIENCY============*/
 .efficiency {

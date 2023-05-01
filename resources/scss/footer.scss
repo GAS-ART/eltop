@@ -142,6 +142,11 @@
           opacity: 1;
           visibility: visible;
         }
+        &.img{
+          position: relative;
+          width: 100%;
+          height: 100%;
+        }
       }
       input, textarea{
         max-width: unset;

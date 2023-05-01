@@ -252,6 +252,64 @@
         </div>
     </div>
 </section>
+<section id="about-us" class="about-us">
+    <div class="about-us__container">
+        <h2>@lang('home.about-us.title')</h2>
+        <div class="about-us__content">
+            <div class="about-us__text">@lang('home.about-us.content.1')</div>
+            <div class="about-us__text">@lang('home.about-us.content.2')</div>
+        </div>
+        <div class="swiper about-us__slider">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                    <h3>@lang('home.about-us.slider.1')</h3>
+                    <div class="about-us__slider-img">
+                        @if(App::isLocale('ua'))
+                        <img src="{{ asset('img/home/ua/about.webp') }}" alt="">
+                        @elseif(App::isLocale('ru'))
+                        <img src="{{ asset('img/home/ru/about.webp') }}" alt="">
+                        @endif
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <h3>@lang('home.about-us.slider.2')</h3>
+                    <div class="about-us__slider-img">
+                        @if(App::isLocale('ua'))
+                        <img src="{{ asset('img/home/ua/about2.webp') }}" alt="">
+                        @elseif(App::isLocale('ru'))
+                        <img src="{{ asset('img/home/ru/about2.webp') }}" alt="">
+                        @endif
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <h3>@lang('home.about-us.slider.3')</h3>
+                    <div class="about-us__slider-img">
+                        @if(App::isLocale('ua'))
+                        <img src="{{ asset('img/home/ua/about3.webp') }}" alt="">
+                        @elseif(App::isLocale('ru'))
+                        <img src="{{ asset('img/home/ru/about3.webp') }}" alt="">
+                        @endif
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <h3>@lang('home.about-us.slider.3')</h3>
+                    <div class="about-us__slider-img">
+                        @if(App::isLocale('ua'))
+                        <img src="{{ asset('img/home/ua/about4.webp') }}" alt="">
+                        @elseif(App::isLocale('ru'))
+                        <img src="{{ asset('img/home/ru/about4.webp') }}" alt="">
+                        @endif
+                    </div>
+                </div>
+            </div>
+            <!-- If we need navigation buttons -->
+            <div class="swiper-button-prev"><span></span></div>
+            <div class="swiper-button-next"><span></span></div>
+        </div>
+    </div>
+</section>
 <section class="efficiency">
     <div class="efficiency__container1920 _animate">
         <div class="efficiency__body">
