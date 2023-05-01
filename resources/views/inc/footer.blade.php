@@ -97,6 +97,7 @@
             <form action="{{route('sendMainForm')}}" method="POST" name="mainForm" id="mainForm"
                class="@lang('lang.current')">
                @csrf
+               <input name="product" class="product-input" type="hidden" value="@lang('product.footer')">
                <div class="popup__item">
                   <label for="name">@lang('popup.name')</label>
                   <input id="name" name="name" type="text" placeholder="@lang('popup.name_placeholder')">

@@ -13,7 +13,8 @@
         <div class="main__body">
             <div class="main__content">
                 <h1 class="_animate">@lang('home.main.title')</h1>
-                <button data-popup-id="main" class="main__btn link-on-popup _animate">@lang('home.main.btn')</button>
+                <button data-product="@lang('product.main')" data-popup-id="main"
+                    class="main__btn link-on-popup _animate">@lang('home.main.btn')</button>
             </div>
             <div class="main__img _animate">
                 <div class="main__img-bg"></div>
@@ -25,7 +26,8 @@
                 <img class="main__img-logo" src="{{ asset('img/home/ru/liveheat.svg') }}" alt="">
                 @endif
             </div>
-            <button data-popup-id="main" class="main__btn-mobile link-on-popup _animate">@lang('home.main.btn')</button>
+            <button data-product="@lang('product.main')" data-popup-id="main"
+                class="main__btn-mobile link-on-popup _animate">@lang('home.main.btn')</button>
         </div>
     </div>
 </section>

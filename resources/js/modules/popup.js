@@ -1,4 +1,4 @@
-export function popUp(popupId) {
+export function popUp(popupId, productName) {
 	const popUp = document.getElementById(popupId);
 	const bodyLock = document.getElementById('body');
 	const popupCloseIcon = popUp.querySelector('.close-popup');
@@ -6,8 +6,13 @@ export function popUp(popupId) {
 	const popupLoading = popUp.querySelector('.popup__loading');
 	const filePreview = popUp.querySelector('.preview-file') || false;
 	const inputs = popUp.querySelectorAll('input');
+	const inputProductName = popUp.querySelector('.product-input');
 	popUp.classList.add('open');
 	bodyLock.classList.add('lock');
+	inputProductName.value = productName;
+
+	console.log(productName);
+	console.log(inputProductName.value);
 
 	popupCloseIcon.addEventListener('click', function (e) {
 		popupClose(popUp);

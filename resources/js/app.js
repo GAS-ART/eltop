@@ -19,7 +19,7 @@ const popupButtons = document.querySelectorAll('.link-on-popup');
 
 popupButtons.forEach(btn => {
   btn.addEventListener('click', (e) => {
-    popUp(e.target.dataset.popupId);
+    popUp(e.target.dataset.popupId, e.target.dataset.product);
   });
 })
 
@@ -71,9 +71,9 @@ forms.forEach(form => {
         credentials: "same-origin",
       })
       if (response.ok) {
-        console.log(response);
         loading.classList.remove('active');
-        if (form.closest('.popup')) form.closest('.popup').classList.add('sent');
+        window.location.href = `/thanks-page${form.classList.contains('ua') ? 'ua' : 'ru'}?product=${encodeURIComponent(formData.get('product'))}`;
+        /* if (form.closest('.popup')) form.closest('.popup').classList.add('sent');
         nameError.innerText = '';
         nameError.classList.remove('error');
         nameError.previousElementSibling.classList.remove('error');
@@ -88,7 +88,7 @@ forms.forEach(form => {
           textError.previousElementSibling.classList.remove('error');
           textError.previousElementSibling.previousElementSibling.classList.remove('error');
         }
-        form.reset();
+        form.reset(); */
       } else {
         const data = await response.json();
         loading.classList.remove('active');
