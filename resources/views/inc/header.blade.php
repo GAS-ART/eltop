@@ -130,8 +130,14 @@
                                 href="{{ route('home', ['locale' => __('lang.current')]) }}#advantages-ancor">@lang('header.advantages')</a>
                             @endif
                         </li>
-                        <li class="header__menu-list-item"><a href="#"
-                                class="header__menu-list-link">@lang('header.catalog')</a></li>
+                        <li class="header__menu-list-item">
+                            @if(Route::is('home') || Route::is('index.lang'))
+                            <a href="#catalog" class="header__menu-list-link ancor">@lang('header.catalog')</a>
+                            @else
+                            <a class="header__menu-list-link"
+                                href="{{ route('home', ['locale' => __('lang.current')]) }}#catalog-ancor">@lang('header.catalog')</a>
+                            @endif
+                        </li>
                         <li class="header__menu-list-item"><a href="#contacts"
                                 class="header__menu-list-link ancor">@lang('header.contants')</a></li>
                     </ul>
@@ -211,8 +217,14 @@
                         href="{{ route('home', ['locale' => __('lang.current')]) }}#advantages-ancor">@lang('header.advantages')</a>
                     @endif
                 </li>
-                <li class="header__menu-list-item"><a href="#"
-                        class="header__menu-list-link">@lang('header.catalog')</a></li>
+                <li class="header__menu-list-item">
+                    @if(Route::is('home') || Route::is('index.lang'))
+                    <a href="#catalog" class="header__menu-list-link ancor">@lang('header.catalog')</a>
+                    @else
+                    <a class="header__menu-list-link"
+                        href="{{ route('home', ['locale' => __('lang.current')]) }}#catalog-ancor">@lang('header.catalog')</a>
+                    @endif
+                </li>
                 <li class="header__menu-list-item"><a href="#contacts"
                         class="header__menu-list-link ancor">@lang('header.contants')</a></li>
             </ul>

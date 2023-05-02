@@ -8,7 +8,8 @@ return [
         'email' => 'info@eltop.com',
         'address_text' => 'ми знаходимося тут',
         'address' => 'Україна, Кропивницький',
-      ]
+      ],
+      'breadcrumb' => 'Головна',
 ]
 
 ?>

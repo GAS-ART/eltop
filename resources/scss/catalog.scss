@@ -1,0 +1,123 @@
+.catalog-page {
+  margin-top: 24px;
+  @include adaptiveValueREM('margin-bottom', 100, 30, 1920, 320, 1);
+  @media (max-width: $mobileSmall) {
+    margin-top: 20px;
+  }
+
+  &__breadcrumbs {
+  }
+
+  &__title {
+  }
+
+  &__row {
+    display: flex;
+    justify-content: space-between;
+    &:not(:last-child){
+      margin-bottom: 40px;
+    }
+    @media (max-width: em(1250)) {
+      flex-direction: column;
+      align-items: center;
+    }
+    @media (max-width: $mobile) {
+      &:not(:last-child){
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__card {
+    padding: 60px 40px;
+    border: 1px solid #E0E0E0;
+    //max-width: 600px;
+    @media (max-width: $mobile) {
+      padding: 20px 10px;
+    }
+    @media (max-width: em(1250)) {
+      &:not(:last-child){
+        margin-bottom: 40px;
+      }
+    }
+    @media (max-width: $mobile) {
+      &:not(:last-child){
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__body {
+    display: flex;
+    @media (max-width: $mobile) {
+      margin-bottom: 20px;
+    }
+    @media (max-width: em(550)) {
+      flex-direction: column;
+    }
+  }
+
+  &__card-content{
+    max-width: 260px;
+    margin-right: 20px;
+    @media (max-width: $mobile) {
+      margin-right: 0;
+    }
+  }
+
+  &__card-title{
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+    margin-bottom: 24px;
+    @media (max-width: em(550)) {
+      text-align: center;
+    }
+    @media (max-width: $mobileSmall) {
+    margin-bottom: 20px;
+    }
+  }
+
+  &__card-text{
+    @media (max-width: $mobile) {
+      margin-bottom: 20px;
+    }
+    @media (max-width: em(550)) {
+      text-align: center;
+    }
+  }
+
+  &__img{
+    position: relative;
+    width: 240px;
+    height: 280px;
+    @media (max-width: em(550)) {
+      margin: 0 auto;
+    }
+    img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+    }
+  }
+
+  &__link {
+    .catalog__link{
+      width: 173px;
+      height: 46px;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @media (max-width: em(550)) {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+.breadcrumbs {
+  
+}

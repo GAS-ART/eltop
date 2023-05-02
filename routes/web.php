@@ -61,6 +61,150 @@ Route::get('/', function () {
     }
   })->name('thanks');
 
+  /*CATALOG*/
+  Route::get('/{locale}/heat-pumps-nibe-catalog', function ($locale) {
+    if (!in_array($locale, ['ua', 'ru'])) {
+  
+      abort(404);
+    } else if ($locale == 'ua') {
+  
+      App::setLocale('ua');
+      return view('nibe/nibe-catalog');
+    } else if ($locale == 'ru') {
+  
+      App::setLocale('ru');
+      return view('nibe/nibe-catalog');
+    }
+  })->name('nibe-catalog');
+
+  Route::get('/{locale}/heat-pumps-liveheat-catalog', function ($locale) {
+    if (!in_array($locale, ['ua', 'ru'])) {
+  
+      abort(404);
+    } else if ($locale == 'ua') {
+  
+      App::setLocale('ua');
+      return view('liveheat/liveheat-catalog');
+    } else if ($locale == 'ru') {
+  
+      App::setLocale('ru');
+      return view('liveheat/liveheat-catalog');
+    }
+  })->name('liveheat-catalog');
+  /*CATALOG*/
+
+/*PRODUCT ELTOPEKO*/
+Route::get('/{locale}/heat-pumps-liveheat-catalog/fwwhcd150c', function ($locale) {
+  if (!in_array($locale, ['ua', 'ru'])) {
+
+    abort(404);
+  } else if ($locale == 'ua') {
+
+    App::setLocale('ua');
+    return view('liveheat/fwwhcd150c');
+  } else if ($locale == 'ru') {
+
+    App::setLocale('ru');
+    return view('liveheat/fwwhcd150c');
+  }
+})->name('fwwhcd150c');
+
+Route::get('/{locale}/heat-pumps-liveheat-catalog/fwwihcd080c', function ($locale) {
+  if (!in_array($locale, ['ua', 'ru'])) {
+
+    abort(404);
+  } else if ($locale == 'ua') {
+
+    App::setLocale('ua');
+    return view('liveheat/fwwihcd080c');
+  } else if ($locale == 'ru') {
+
+    App::setLocale('ru');
+    return view('liveheat/fwwihcd080c');
+  }
+})->name('fwwihcd080c');
+/*PRODUCT ELTOPEKO*/
+
+/*PRODUCTS NIBE*/
+  Route::get('/{locale}/heat-pumps-nibe-catalog/nibe-s1255', function ($locale) {
+    if (!in_array($locale, ['ua', 'ru'])) {
+  
+      abort(404);
+    } else if ($locale == 'ua') {
+  
+      App::setLocale('ua');
+      return view('nibe/s1255/s1255');
+    } else if ($locale == 'ru') {
+  
+      App::setLocale('ru');
+      return view('nibe/s1255/s1255');
+    }
+  })->name('nibe-s1255');
+
+  Route::get('/{locale}/heat-pumps-nibe-catalog/nibe-s1155', function ($locale) {
+    if (!in_array($locale, ['ua', 'ru'])) {
+  
+      abort(404);
+    } else if ($locale == 'ua') {
+  
+      App::setLocale('ua');
+      return view('nibe/s1155/s1155');
+    } else if ($locale == 'ru') {
+  
+      App::setLocale('ru');
+      return view('nibe/s1155/s1155');
+    }
+  })->name('nibe-s1155');
+
+  Route::get('/{locale}/heat-pumps-nibe-catalog/nibe-f1255', function ($locale) {
+    if (!in_array($locale, ['ua', 'ru'])) {
+  
+      abort(404);
+    } else if ($locale == 'ua') {
+  
+      App::setLocale('ua');
+      return view('nibe/f1255/f1255');
+    } else if ($locale == 'ru') {
+  
+      App::setLocale('ru');
+      return view('nibe/f1255/f1255');
+    }
+  })->name('nibe-f1255');
+  Route::get('/{locale}/heat-pumps-nibe-catalog/nibe-f1155', function ($locale) {
+    if (!in_array($locale, ['ua', 'ru'])) {
+  
+      abort(404);
+    } else if ($locale == 'ua') {
+  
+      App::setLocale('ua');
+      return view('nibe/f1155/f1155');
+    } else if ($locale == 'ru') {
+  
+      App::setLocale('ru');
+      return view('nibe/f1155/f1155');
+    }
+  })->name('nibe-f1155');
+  /*PRODUCTS NIBE*/
+
+
+/*PRODUCT NIBE*/
+  Route::get('/{locale}/heat-pumps-nibe-catalog/nibe-s1255/nibe-s1255-6kw-400V', function ($locale) {
+    if (!in_array($locale, ['ua', 'ru'])) {
+  
+      abort(404);
+    } else if ($locale == 'ua') {
+  
+      App::setLocale('ua');
+      return view('nibe/s1255/s1255-6kw-400V');
+    } else if ($locale == 'ru') {
+  
+      App::setLocale('ru');
+      return view('nibe/s1255/s1255-6kw-400V');
+    }
+  })->name('nibe-s1255-6kw-400V');
+
+/*PRODUCT NIBE*/
+
   Route::get('/{locale}/form', function ($locale) {
     if (!in_array($locale, ['ua', 'ru'])) {
   

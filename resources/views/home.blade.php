@@ -445,10 +445,22 @@
         </div>
     </div>
 </section>
-<section class="catalog">
+<section id="catalog" class="catalog">
+    <div id="catalog-ancor" class="catalog__ancor"></div>
     <div class="catalog__container">
         <h2>@lang('home.catalog.title')</h2>
         <div class="catalog__body">
+            <div class="catalog__item">
+                <a href="{{ route('liveheat-catalog', ['locale' => __('lang.current')]) }}" class="catalog__img">
+                    @if(App::isLocale('ua'))
+                    <img src="{{ asset('img/home/ua/6_.webp') }}" alt="">
+                    @elseif(App::isLocale('ru'))
+                    <img src="{{ asset('img/home/ua/6_.webp') }}" alt="">
+                    @endif
+                </a>
+                <a href="{{ route('liveheat-catalog', ['locale' => __('lang.current')]) }}"
+                    class="catalog__link">@lang('home.catalog.link.1')</a>
+            </div>
             <div class="catalog__item">
                 <a href="#" class="catalog__img">
                     @if(App::isLocale('ua'))
@@ -457,27 +469,18 @@
                     <img src="{{ asset('img/home/ua/6_.webp') }}" alt="">
                     @endif
                 </a>
-                <a href="#" class="catalog__link">@lang('home.catalog.link.1')</a>
-            </div>
-            <div class="catalog__item">
-                <div class="catalog__img">
-                    @if(App::isLocale('ua'))
-                    <img src="{{ asset('img/home/ua/6_.webp') }}" alt="">
-                    @elseif(App::isLocale('ru'))
-                    <img src="{{ asset('img/home/ua/6_.webp') }}" alt="">
-                    @endif
-                </div>
                 <a href="#" class="catalog__link">@lang('home.catalog.link.2')</a>
             </div>
             <div class="catalog__item">
-                <div class="catalog__img">
+                <a href="{{ route('nibe-catalog', ['locale' => __('lang.current')]) }}" class="catalog__img">
                     @if(App::isLocale('ua'))
                     <img src="{{ asset('img/home/ua/7_.webp') }}" alt="">
                     @elseif(App::isLocale('ru'))
                     <img src="{{ asset('img/home/ua/7_.webp') }}" alt="">
                     @endif
-                </div>
-                <a href="#" class="catalog__link">@lang('home.catalog.link.3')</a>
+                </a>
+                <a href="{{ route('nibe-catalog', ['locale' => __('lang.current')]) }}"
+                    class="catalog__link">@lang('home.catalog.link.3')</a>
             </div>
         </div>
     </div>

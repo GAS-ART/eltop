@@ -1183,13 +1183,17 @@
 
 /*============CATALOG============*/
 .catalog {
+  position: relative;
   @include adaptiveValueREM('padding-bottom', 100, 30, 1920, 320, 1);
   @include adaptiveValueREM('padding-top', 100, 30, 1920, 320, 1);
   background-color: $lightGreen;
   h2{
     text-align: center;
   }
-
+  &__ancor{
+    position: absolute;
+    top: -100px;
+  }
   &__body {
     display: flex;
     @media (max-width: $mobile) {
