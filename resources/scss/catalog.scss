@@ -1,14 +1,19 @@
 .catalog-page {
   margin-top: 24px;
   @include adaptiveValueREM('margin-bottom', 100, 30, 1920, 320, 1);
-  @media (max-width: $mobileSmall) {
-    margin-top: 20px;
+  @media (max-width: $mobile) {
+    margin-top: 124px;
   }
 
   &__breadcrumbs {
   }
 
   &__title {
+    h1{
+      @media (max-width: em(1250)) {
+        text-align: center;
+      }
+    }
   }
 
   &__row {
