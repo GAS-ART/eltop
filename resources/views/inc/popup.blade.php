@@ -1,5 +1,5 @@
 @section('popup')
-<div id="main" class="popup">
+<div id="main" class="popup @lang('lang.current')">
    <div class="popup__body">
       <div class="popup__content">
          <div class="popup__loading">

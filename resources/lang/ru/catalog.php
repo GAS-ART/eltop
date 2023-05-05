@@ -3,7 +3,6 @@
 return [
   'link' => 'Подробнее',
   'nibe'=>[
-    'breadcrumb' => 'Тепловые насосы Nibe',
     'title' => 'Тепловые насосы Nibe',
     'cards' => [
       's1255' => [
@@ -25,7 +24,6 @@ return [
     ],
   ],
   'liveheat' => [
-    'breadcrumb' => 'Тепловые насосы Liveheat',
     'title' => 'Тепловые насосы Liveheat',
     'fwwhcd150c' => [
       'model' => 'FWWHCD150C',

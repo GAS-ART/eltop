@@ -7,12 +7,16 @@
 @section('page', 'home')
 
 @section('content')
+<section class="breadcrumbs">
+  <div class="breadcrumbs__container">
+    <div class="catalog-page__breadcrumbs">
+      <a href="{{ route('home', ['locale' => __('lang.current')]) }}">@lang('breadcrumbs.main')</a> -
+      <span>@lang('breadcrumbs.liveheat.catalog')</span>
+    </div>
+  </div>
+</section>
 <section class="catalog-page">
   <div class="catalog-page__container">
-    <div class="catalog-page__breadcrumbs breadcrumbs">
-      <a href="{{ route('home', ['locale' => __('lang.current')]) }}">@lang('main.breadcrumb')</a> -
-      <span>@lang('catalog.liveheat.breadcrumb')</span>
-    </div>
     <div class="catalog-page__title">
       <h1>@lang('catalog.liveheat.title')</h1>
       <div class="catalog-page__row">

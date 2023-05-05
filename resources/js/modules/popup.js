@@ -7,9 +7,14 @@ export function popUp(popupId, productName) {
 	const filePreview = popUp.querySelector('.preview-file') || false;
 	const inputs = popUp.querySelectorAll('input');
 	const inputProductName = popUp.querySelector('.product-input');
+	const popupTitle = popUp.querySelector('.popup__title h4');
 	popUp.classList.add('open');
 	bodyLock.classList.add('lock');
 	inputProductName.value = productName;
+
+	if (productName != 'Запит на консультацію' && productName != 'Запрос на консультацию') {
+		popUp.classList.contains('ua') ? popupTitle.innerText = `Запит на консультацію для продукту ${productName}` : popupTitle.innerText = `Запрос на консультацию для продукта ${productName}`
+	}
 
 	popupCloseIcon.addEventListener('click', function (e) {
 		popupClose(popUp);

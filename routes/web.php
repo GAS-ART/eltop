@@ -203,6 +203,51 @@ Route::get('/{locale}/heat-pumps-liveheat-catalog/fwwihcd080c', function ($local
     }
   })->name('nibe-s1255-6kw-400V');
 
+  Route::get('/{locale}/heat-pumps-nibe-catalog/nibe-s1255/nibe-s1255-12kw-400V', function ($locale) {
+    if (!in_array($locale, ['ua', 'ru'])) {
+  
+      abort(404);
+    } else if ($locale == 'ua') {
+  
+      App::setLocale('ua');
+      return view('nibe/s1255/s1255-12kw-400V');
+    } else if ($locale == 'ru') {
+  
+      App::setLocale('ru');
+      return view('nibe/s1255/s1255-12kw-400V');
+    }
+  })->name('nibe-s1255-12kw-400V');
+
+  Route::get('/{locale}/heat-pumps-nibe-catalog/nibe-s1255/nibe-s1255-16kw-400V', function ($locale) {
+    if (!in_array($locale, ['ua', 'ru'])) {
+  
+      abort(404);
+    } else if ($locale == 'ua') {
+  
+      App::setLocale('ua');
+      return view('nibe/s1255/s1255-16kw-400V');
+    } else if ($locale == 'ru') {
+  
+      App::setLocale('ru');
+      return view('nibe/s1255/s1255-16kw-400V');
+    }
+  })->name('nibe-s1255-16kw-400V');
+
+  Route::get('/{locale}/heat-pumps-nibe-catalog/nibe-s1255/nibe-s1255-r6kw-400V', function ($locale) {
+    if (!in_array($locale, ['ua', 'ru'])) {
+  
+      abort(404);
+    } else if ($locale == 'ua') {
+  
+      App::setLocale('ua');
+      return view('nibe/s1255/s1255-r6kw-400V');
+    } else if ($locale == 'ru') {
+  
+      App::setLocale('ru');
+      return view('nibe/s1255/s1255-r6kw-400V');
+    }
+  })->name('nibe-s1255-r6kw-400V');
+
 /*PRODUCT NIBE*/
 
   Route::get('/{locale}/form', function ($locale) {
