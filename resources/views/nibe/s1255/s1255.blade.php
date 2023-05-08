@@ -43,7 +43,7 @@
     <h2 class="modifications__title">@lang('product.nibe.s1255.modifications.title')</h2>
     <div class="modifications__body">
       <div class="modifications__item">
-        <h3 class="modifications__text">@lang('product.nibe.s1255.modifications.6')</h3>
+        <h3 class="modifications__text">@lang('product.nibe.s1255.modifications.6.title')</h3>
         <a href="{{ route('nibe-s1255-6kw-400V', ['locale' => __('lang.current')]) }}"
           class="modifications__link">@lang('product.nibe.s1255.modifications.link')</a>
       </div>
