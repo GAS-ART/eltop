@@ -367,7 +367,7 @@ if (tab_btns) {
   tab_btns.forEach(btn => {
     btn.addEventListener('click', (e) => {
       click++
-      e.target.innerText = click;
+      e.target.innerText = e.target.dataset.tabName;
       tab_btns.forEach(item => item.classList.remove('active'));
       tabs_content.forEach(item => {
         if (item.classList.contains(e.target.dataset.tabName))
