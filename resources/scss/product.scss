@@ -67,9 +67,56 @@
     font-size: 15px;
     line-height: 150%;
     margin-bottom: 40px;
+    &.main-product{
+      margin-bottom: 24px;
+    }
     @media (max-width: $mobile) {
       margin-bottom: 20px;
     }
+  }
+
+  &__icons{
+    display: grid;
+    grid-template-columns: repeat(7, 40px);
+    grid-template-rows: repeat(3, 40px);
+    gap: 16px;
+    margin-bottom: 40px;
+    @media (max-width: $tablet) {
+      width: fit-content;
+      margin: 0 auto 40px auto;
+    }
+    @media (max-width: $mobileSmall) {
+      grid-template-columns: repeat(6, 40px);
+    }
+    @media (max-width: em(350)) {
+      gap: 16px 10px;
+    }
+  }
+
+  &__icon{
+    /* position: relative;
+    svg{
+      position: relative;
+      z-index: 1;
+      transition: all 0.3s ease 0s;
+      stop, .change-color {
+        transition: all .3s linear 0s;
+      }
+      &:hover {
+        stop:first-child {
+          stop-color: #fff;
+        }
+        stop:last-child {
+          stop-color: #fff;
+        }
+        .change-color{
+          fill: $green;
+        }
+        &::before{
+          opacity: 1;
+        }
+      }
+    } */
   }
 
   &__content-actions {
@@ -397,3 +444,180 @@
 }
 
 /*============REVIEW===================*/
+
+/*=============TABS====================*/
+.tabs {
+  @include adaptiveValueREM('margin-bottom', 100, 30, 1920, 320, 1);
+  &__container {
+  }
+
+  &__body {
+  }
+
+  &__nav {
+    padding-bottom: 17px;
+    border-bottom: 1px solid #E0E0E0;
+    margin-bottom: 25px;
+  }
+
+  &__list {
+    display: flex;
+    @media (max-width: $mobile) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  &__list-item {
+    position: relative;
+    cursor: pointer;
+    &:not(:last-child){
+      margin-right: 40px;
+      @media (max-width: $mobile) {
+      margin-right: 0;
+      margin-bottom: 15px;
+      }
+    }
+    &::before{
+      content: '';
+      position: absolute;
+      bottom: -18px;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background: $green;
+      opacity: 0;
+      transition: all 0.3s ease 0s;
+      @media (max-width: $mobile) {
+        bottom: 0px;
+      }
+    }
+    &.active{
+      &::before{
+        opacity: 1;
+      }
+      .tabs__list-text{
+        color: $green;
+        font-weight: 900;
+      }
+    }
+  }
+
+  &__list-text {
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 127.77%;
+    text-transform: uppercase;
+  }
+
+  &__tab {
+    display: none;
+    &.active{
+      display: block;
+    }
+  }
+
+.technical-data {
+  table{
+    width: 100%;
+    border-collapse: collapse;
+  }
+  thead{
+    background: $lightGreen;
+  }
+  th{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+    white-space: nowrap;
+    @media (max-width: $mobileSmall) {
+      white-space: unset;
+    }
+  }
+  tr{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  th, td{
+    text-align: right;
+    padding: 18px 0;
+    width: fit-content;
+    &:first-child{
+      text-align: left;
+      padding-left: 16px;
+      width: 100%;
+    }
+    &:nth-child(2){
+      text-align: left;
+      padding-right: 100px;
+      @media (max-width: $mobile) {
+        padding-right: 20px;
+      }
+    }
+    &:last-child{
+      display: block;
+      padding-right: 16px;
+      text-align: left;
+      width: 170px;
+      @media (max-width: $mobile) {
+        padding-right: 10px;
+        width: unset;
+      }
+    }
+  }
+  tbody{
+    td{
+      &:last-child{
+        text-align: left;
+      }
+      @media (max-width: $mobile) {
+        &:nth-child(2){
+          text-align: center;
+        }
+      }
+    }
+    tr{
+      border-bottom: 1px solid rgba(5, 108, 54, 0.2);
+    }
+  }
+}
+
+.characteristics {
+
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px;
+    border-bottom: 1px solid rgba(5, 108, 54, 0.2);
+  }
+
+  &__item {
+    &:first-child{
+      margin-right: 30px;
+    }
+  }
+}
+
+.documents {
+
+  &_items {
+    &:not(:last-child){
+      margin-bottom: 30px;
+    }
+    display: flex;
+    img{
+      margin-right: 24px;
+    }
+    a{
+      font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    }
+  }
+}
+
+}
+
+/*=============TABS====================*/
