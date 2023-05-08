@@ -362,10 +362,12 @@ if (animation.length) {
 //TABS
 const tab_btns = document.querySelectorAll('.tabs__list-item');
 const tabs_content = document.querySelectorAll('.tabs__tab');
-
+let click = 0;
 if (tab_btns) {
   tab_btns.forEach(btn => {
     btn.addEventListener('click', (e) => {
+      click++
+      e.target.innerText = click;
       tab_btns.forEach(item => item.classList.remove('active'));
       tabs_content.forEach(item => item.classList.contains(e.target.dataset.tabName) ? item.classList.add('active') : item.classList.remove('active'));
       e.target.closest('.tabs__list-item').classList.add('active');
