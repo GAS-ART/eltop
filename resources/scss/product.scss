@@ -489,6 +489,7 @@
       background: $green;
       opacity: 0;
       transition: all 0.3s ease 0s;
+      pointer-events: none;
       @media (max-width: $mobile) {
         bottom: 0px;
       }

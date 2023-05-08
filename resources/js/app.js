@@ -367,31 +367,8 @@ if (tab_btns) {
   tab_btns.forEach(btn => {
     btn.addEventListener('click', (e) => {
       tab_btns.forEach(item => item.classList.remove('active'));
-      tabs_content.forEach(item => item.classList.contains(e.target.getAttribute('data-tab-name')) ? item.classList.add('active') : item.classList.remove('active'));
+      tabs_content.forEach(item => item.classList.contains(e.target.dataset.tabName) ? item.classList.add('active') : item.classList.remove('active'));
       e.target.closest('.tabs__list-item').classList.add('active');
     })
   });
 }
-
-
-/* const tab_btns = document.querySelectorAll('.tabs__list-item');
-const tabs_content = document.querySelectorAll('.tabs__tab');
-let click = 0;
-if (tab_btns) {
-  tab_btns.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      click++
-      const tabName = e.target.dataset.tabName;
-      e.target.innerText = tabName;
-      tab_btns.forEach(item => item.classList.remove('active'));
-      tabs_content.forEach(item => {
-        if (item.classList.contains(tabName))
-          item.classList.add('active')
-        else {
-          item.classList.remove('active')
-        }
-      });
-      e.target.closest('.tabs__list-item').classList.add('active');
-    })
-  });
-} */
