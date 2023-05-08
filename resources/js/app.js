@@ -369,7 +369,13 @@ if (tab_btns) {
       click++
       e.target.innerText = click;
       tab_btns.forEach(item => item.classList.remove('active'));
-      tabs_content.forEach(item => item.classList.contains(e.target.dataset.tabName) ? item.classList.add('active') : item.classList.remove('active'));
+      tabs_content.forEach(item => {
+        if (item.classList.contains(e.target.dataset.tabName))
+          item.classList.add('active')
+        else {
+          item.classList.remove('active')
+        }
+      });
       e.target.closest('.tabs__list-item').classList.add('active');
     })
   });
