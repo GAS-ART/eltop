@@ -19,6 +19,7 @@ const popupButtons = document.querySelectorAll('.link-on-popup');
 
 popupButtons.forEach(btn => {
   btn.addEventListener('click', (e) => {
+    console.log(e.target);
     popUp(e.target.dataset.popupId, e.target.dataset.product);
   });
 })

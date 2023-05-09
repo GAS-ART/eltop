@@ -1211,6 +1211,11 @@
         margin-bottom: 30px;
       }
     }
+    button{
+      img{
+        pointer-events: none;
+      }
+    }
   }
 
   &__img {

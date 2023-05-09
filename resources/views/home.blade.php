@@ -462,14 +462,15 @@
                     class="catalog__link">@lang('home.catalog.link.1')</a>
             </div>
             <div class="catalog__item">
-                <a href="#" class="catalog__img">
+                <button data-product="VDE" data-popup-id="main" class="catalog__img link-on-popup">
                     @if(App::isLocale('ua'))
                     <img src="{{ asset('img/home/ua/6_.webp') }}" alt="">
                     @elseif(App::isLocale('ru'))
                     <img src="{{ asset('img/home/ua/6_.webp') }}" alt="">
                     @endif
-                </a>
-                <a href="#" class="catalog__link">@lang('home.catalog.link.2')</a>
+                </button>
+                <button data-product="VDE" data-popup-id="main"
+                    class="catalog__link link-on-popup">@lang('home.catalog.link.2')</button>
             </div>
             <div class="catalog__item">
                 <a href="{{ route('nibe-catalog', ['locale' => __('lang.current')]) }}" class="catalog__img">

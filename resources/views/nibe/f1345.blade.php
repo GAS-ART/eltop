@@ -12,7 +12,7 @@
     <div class="catalog-page__breadcrumbs">
       <a href="{{ route('home', ['locale' => __('lang.current')]) }}">@lang('breadcrumbs.main')</a> -
       <a href="{{ route('nibe-catalog', ['locale' => __('lang.current')]) }}">@lang('breadcrumbs.nibe.catalog')</a> -
-      <span>@lang('breadcrumbs.nibe.s1255')</span>
+      <span>@lang('breadcrumbs.nibe.f1345')</span>
     </div>
   </div>
 </section>
@@ -21,16 +21,16 @@
     <div class="product__body">
       <div class="product__img">
         @if(App::isLocale('ua'))
-        <img src="{{ asset('img/catalog/ua/s1255_.webp') }}" alt="">
+        <img src="{{ asset('img/nibe/pumps/ua/F1345.webp') }}" alt="">
         @elseif(App::isLocale('ru'))
-        <img src="{{ asset('img/catalog/ru/s1255_.webp') }}" alt="">
+        <img src="{{ asset('img/nibe/pumps/ua/F1345.webp') }}" alt="">
         @endif
       </div>
       <div class="product__content">
-        <h1 class="product__content-title">@lang('product.nibe.s1255.title')</h1>
-        <p class="product__content-text">@lang('product.nibe.s1255.text')</p>
+        <h1 class="product__content-title">@lang('product.nibe.s1155.title')</h1>
+        <p class="product__content-text">@lang('product.nibe.s1155.text')</p>
         <div class="product__content-actions">
-          <button data-product="@lang('product.nibe.s1255.lead')" data-popup-id="main"
+          <button data-product="@lang('product.nibe.s1155.lead')" data-popup-id="main"
             class="product__content-btn-call link-on-popup">@lang('product.call')</button>
           <a href="#modifications" class="product__content-btn-choose ancor">@lang('product.choose')</a>
         </div>
@@ -43,24 +43,34 @@
     <h2 class="modifications__title">@lang('product.nibe.s1255.modifications.title')</h2>
     <div class="modifications__body">
       <div class="modifications__item">
-        <h3 class="modifications__text">@lang('product.nibe.s1255.modifications.6.title')</h3>
-        <a href="{{ route('nibe-s1255-6kw-400V', ['locale' => __('lang.current')]) }}"
-          class="modifications__link">@lang('product.nibe.s1255.modifications.link')</a>
+        <h3 class="modifications__text">@lang('product.nibe.f1345.60_')</h3>
+        <button data-product="@lang('product.nibe.f1345.60_')" data-popup-id="main"
+          class="modifications__link link-on-popup">@lang('product.nibe.s1255.modifications.link')</button>
       </div>
       <div class="modifications__item">
-        <h3 class="modifications__text">@lang('product.nibe.s1255.modifications.12')</h3>
-        <a href="{{ route('nibe-s1255-12kw-400V', ['locale' => __('lang.current')]) }}"
-          class="modifications__link">@lang('product.nibe.s1255.modifications.link')</a>
+        <h3 class="modifications__text">@lang('product.nibe.f1345.40_')</h3>
+        <button data-product="@lang('product.nibe.f1345.40_')" data-popup-id="main"
+          class="modifications__link link-on-popup">@lang('product.nibe.s1255.modifications.link')</button>
       </div>
       <div class="modifications__item">
-        <h3 class="modifications__text">@lang('product.nibe.s1255.modifications.16')</h3>
-        <a href="{{ route('nibe-s1255-16kw-400V', ['locale' => __('lang.current')]) }}"
-          class="modifications__link">@lang('product.nibe.s1255.modifications.link')</a>
+        <h3 class="modifications__text">@lang('product.nibe.f1345.60')</h3>
+        <button data-product="@lang('product.nibe.f1345.60')" data-popup-id="main"
+          class="modifications__link link-on-popup">@lang('product.nibe.s1255.modifications.link')</button>
       </div>
       <div class="modifications__item">
-        <h3 class="modifications__text">@lang('product.nibe.s1255.modifications.r6')</h3>
-        <a href="{{ route('nibe-s1255-r6kw-400V', ['locale' => __('lang.current')]) }}"
-          class="modifications__link">@lang('product.nibe.s1255.modifications.link')</a>
+        <h3 class="modifications__text">@lang('product.nibe.f1345.40')</h3>
+        <button data-product="@lang('product.nibe.f1345.40')" data-popup-id="main"
+          class="modifications__link link-on-popup">@lang('product.nibe.s1255.modifications.link')</button>
+      </div>
+      <div class="modifications__item">
+        <h3 class="modifications__text">@lang('product.nibe.f1345.30')</h3>
+        <button data-product="@lang('product.nibe.f1345.30')" data-popup-id="main"
+          class="modifications__link link-on-popup">@lang('product.nibe.s1255.modifications.link')</button>
+      </div>
+      <div class="modifications__item">
+        <h3 class="modifications__text">@lang('product.nibe.f1345.24')</h3>
+        <button data-product="@lang('product.nibe.f1345.24')" data-popup-id="main"
+          class="modifications__link link-on-popup">@lang('product.nibe.s1255.modifications.link')</button>
       </div>
     </div>
   </div>
