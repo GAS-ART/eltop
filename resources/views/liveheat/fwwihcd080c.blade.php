@@ -85,9 +85,9 @@
           </div>
         </div>
         <div class="product__content-actions">
-          <button data-product="@lang('product.nibe.s1255.modifications.6.title')" data-popup-id="main"
+          <button data-product="LIVEHEAT FIWHCD050" data-popup-id="main"
             class="product__content-btn-call link-on-popup">@lang('product.call')</button>
-          <button data-product="@lang('product.nibe.s1255.modifications.6.title')" data-popup-id="main"
+          <button data-product="LIVEHEAT FIWHCD050" data-popup-id="main"
             class="product__content-btn-choose link-on-popup">@lang('product.choose')</button>
         </div>
       </div>
