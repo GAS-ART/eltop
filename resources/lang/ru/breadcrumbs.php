@@ -12,6 +12,8 @@ return [
       ],
       'liveheat' => [
         'catalog' => 'Тепловые насосы Liveheat',
+        '150' => 'FIWHCD150C',
+        '050' => 'FIWHCD050',
       ],
 ]
 

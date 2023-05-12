@@ -324,9 +324,11 @@
             </div>
             <div class="efficiency__img">
                 @if(App::isLocale('ua'))
-                <img src="{{ asset('img/home/ua/3_.webp') }}" alt="">
+                <img src="{{ asset('img/home/ua/3.webp') }}" alt="">
+                <img class="efficiency__img-logo" src="{{ asset('img/home/ua/liveheat.svg') }}" alt="">
                 @elseif(App::isLocale('ru'))
                 <img src="{{ asset('img/home/ru/3_.webp') }}" alt="">
+                <img class="efficiency__img-logo" src="{{ asset('img/home/ru/liveheat.svg') }}" alt="">
                 @endif
             </div>
             <div class="efficiency__picture-mobile _animate">
@@ -462,14 +464,14 @@
                     class="catalog__link">@lang('home.catalog.link.1')</a>
             </div>
             <div class="catalog__item">
-                <button data-product="VDE" data-popup-id="main" class="catalog__img link-on-popup">
+                <button data-product="@lang('catalog.vde')" data-popup-id="main" class="catalog__img link-on-popup">
                     @if(App::isLocale('ua'))
                     <img src="{{ asset('img/home/ua/6_.webp') }}" alt="">
                     @elseif(App::isLocale('ru'))
                     <img src="{{ asset('img/home/ua/6_.webp') }}" alt="">
                     @endif
                 </button>
-                <button data-product="VDE" data-popup-id="main"
+                <button data-product="@lang('catalog.vde')" data-popup-id="main"
                     class="catalog__link link-on-popup">@lang('home.catalog.link.2')</button>
             </div>
             <div class="catalog__item">
