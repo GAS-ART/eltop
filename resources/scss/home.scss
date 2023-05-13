@@ -636,11 +636,21 @@
       transform: translateX(100%);
       .efficiency__img-logo{
         position: absolute;
-        top: 220px;
-        left: 150px;
+        /* top: 220px;
+        left: 150px; */
+        top: 30%;
+        left: 16%;
         width: 70px;
         height: 78.26px;
         transform: rotate(-3deg);
+        @media (max-width: $mobile) {
+          width: 50px;
+          height: 58px;
+        }
+        @media (max-width: $mobileSmall) {
+          width: 35px;
+          height: 43px;
+        }
       }
     }
     &._animated{

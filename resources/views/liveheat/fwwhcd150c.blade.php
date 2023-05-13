@@ -368,7 +368,7 @@
           <div class="tabs__documents documents">
             <div class="documents_items">
               <img src="{{asset('img/product/icons/pdf.svg')}}" alt="">
-              <a href="/docs/fiwhcd150c.pdf" download>@lang('product.liveheat.150.docs_link')</a>
+              <a href="#" download>@lang('product.liveheat.150.docs_link')</a>
             </div>
           </div>
         </div>
