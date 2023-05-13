@@ -324,7 +324,7 @@
             </div>
             <div class="efficiency__img">
                 @if(App::isLocale('ua'))
-                <img src="{{ asset('img/home/ua/3.webp') }}" alt="">
+                <img src="{{ asset('img/home/ua/3_.webp') }}" alt="">
                 <img class="efficiency__img-logo" src="{{ asset('img/home/ua/liveheat.svg') }}" alt="">
                 @elseif(App::isLocale('ru'))
                 <img src="{{ asset('img/home/ru/3_.webp') }}" alt="">
