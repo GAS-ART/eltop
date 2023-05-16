@@ -36,13 +36,7 @@
             <img src="{{asset('/img/product/icons/1.svg')}}" alt="">
           </div>
           <div class="product__icon">
-            <img src="{{asset('/img/product/icons/2.svg')}}" alt="">
-          </div>
-          <div class="product__icon">
             <img src="{{asset('/img/product/icons/3.svg')}}" alt="">
-          </div>
-          <div class="product__icon">
-            <img src="{{asset('/img/product/icons/4.svg')}}" alt="">
           </div>
           <div class="product__icon">
             <img src="{{asset('/img/product/icons/5.svg')}}" alt="">
@@ -54,16 +48,7 @@
             <img src="{{asset('/img/product/icons/7.svg')}}" alt="">
           </div>
           <div class="product__icon">
-            <img src="{{asset('/img/product/icons/8.svg')}}" alt="">
-          </div>
-          <div class="product__icon">
-            <img src="{{asset('/img/product/icons/9.svg')}}" alt="">
-          </div>
-          <div class="product__icon">
             <img src="{{asset('/img/product/icons/10.svg')}}" alt="">
-          </div>
-          <div class="product__icon">
-            <img src="{{asset('/img/product/icons/11.svg')}}" alt="">
           </div>
           <div class="product__icon">
             <img src="{{asset('/img/product/icons/12.svg')}}" alt="">
@@ -72,16 +57,7 @@
             <img src="{{asset('/img/product/icons/13.svg')}}" alt="">
           </div>
           <div class="product__icon">
-            <img src="{{asset('/img/product/icons/14.svg')}}" alt="">
-          </div>
-          <div class="product__icon">
             <img src="{{asset('/img/product/icons/15.svg')}}" alt="">
-          </div>
-          <div class="product__icon">
-            <img src="{{asset('/img/product/icons/16.svg')}}" alt="">
-          </div>
-          <div class="product__icon">
-            <img src="{{asset('/img/product/icons/17.svg')}}" alt="">
           </div>
         </div>
         <div class="product__content-actions">
@@ -125,8 +101,10 @@
               <div class="review__img">
                 @if(App::isLocale('ua'))
                 <img src="{{ asset('img/liveheat/ua/1_.webp') }}" alt="">
+                <img class="review__img-logo" src="{{asset('img/home/ua/liveheat.svg')}}" alt="">
                 @elseif(App::isLocale('ru'))
                 <img src="{{ asset('img/liveheat/ru/1_.webp') }}" alt="">
+                <img class="review__img-logo" src="{{asset('img/home/ru/liveheat.svg')}}" alt="">
                 @endif
               </div>
             </div>
