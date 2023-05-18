@@ -18,7 +18,7 @@
    <meta property="og:title" content="@yield('ogTitle')" />
    <meta property="og:description" content="@yield('ogDescription')" />
    <meta property="og:site_name" content="ruban-dentist.com.ua" />
-   <meta property="og:image" content="{{ asset('img/logo.svg')}}" />
+   <meta property="og:image" content="{{ asset('img/logo.png')}}" />
 
    @vite(['resources/scss/style.scss'])
 
