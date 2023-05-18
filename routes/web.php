@@ -109,7 +109,7 @@ Route::get('/{locale}/heat-pumps-liveheat-catalog/fwwhcd150c', function ($locale
   }
 })->name('fwwhcd150c');
 
-Route::get('/{locale}/heat-pumps-liveheat-catalog/fwwihcd080c', function ($locale) {
+Route::get('/{locale}/heat-pumps-liveheat-catalog/fwwihcd50c', function ($locale) {
   if (!in_array($locale, ['ua', 'ru'])) {
 
     abort(404);
