@@ -19,7 +19,6 @@ const popupButtons = document.querySelectorAll('.link-on-popup');
 
 popupButtons.forEach(btn => {
   btn.addEventListener('click', (e) => {
-    console.log(e.target);
     popUp(e.target.dataset.popupId, e.target.dataset.product);
   });
 })
@@ -58,7 +57,7 @@ forms.forEach(form => {
     const formData = new FormData(form);
 
     const local = 'http://localhost:8000/send-main-form';
-    const server = 'https://eltop.artgas.pro/send-main-form';
+    const server = 'https://eltopeko.com.ua/send-main-form';
 
     try {
       const response = await fetch(server, {
