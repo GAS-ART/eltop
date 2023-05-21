@@ -23,7 +23,7 @@
         @if(App::isLocale('ua'))
         <img src="{{ asset('img/nibe/pumps/ua/F1355.webp') }}" alt="">
         @elseif(App::isLocale('ru'))
-        <img src="{{ asset('img/nibe/pumps/ua/S1355.webp') }}" alt="">
+        <img src="{{ asset('img/nibe/pumps/ru/F1355.webp') }}" alt="">
         @endif
       </div>
       <div class="product__content">
