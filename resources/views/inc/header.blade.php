@@ -6,10 +6,11 @@
             <div class="header__body">
                 <div class="header__logo">
                     <a href="{{ route('home', ['locale' => __('lang.current')]) }}">
+                        {{-- <img src="{{asset('/img/eltopeco.svg')}}" alt=""> --}}
                         <picture>
-                            <source type="" media="(min-width: 992px)" srcset="{{asset('/img/eltop-logo.webp')}}">
-                            <source type="image/svg+xml" srcset="{{asset('/img/logo.svg')}}">
-                            <img src="{{asset('/img/logo.svg')}}" alt="">
+                            <source type="" media="(min-width: 992px)" srcset="{{asset('/img/eltopeko-logo.webp')}}">
+                            <source type="image/svg+xml" srcset="{{asset('/img/eltopeko-logo.svg')}}">
+                            <img src="{{asset('/img/eltopeko-logo.svg')}}" alt="">
                         </picture>
                     </a>
                 </div>

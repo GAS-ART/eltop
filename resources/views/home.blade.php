@@ -457,18 +457,18 @@
                     @if(App::isLocale('ua'))
                     <img src="{{ asset('img/home/ua/6_.webp') }}" alt="">
                     @elseif(App::isLocale('ru'))
-                    <img src="{{ asset('img/home/ua/6_.webp') }}" alt="">
+                    <img src="{{ asset('img/home/ru/6_.webp') }}" alt="">
                     @endif
                 </a>
                 <a href="{{ route('liveheat-catalog', ['locale' => __('lang.current')]) }}"
                     class="catalog__link">@lang('home.catalog.link.1')</a>
             </div>
             <div class="catalog__item">
-                <button data-product="@lang('catalog.vde')" data-popup-id="main" class="catalog__img link-on-popup">
+                <button data-product="@lang('catalog.vde')" data-popup-id="main" class="catalog__img link-on-popup vde">
                     @if(App::isLocale('ua'))
-                    <img src="{{ asset('img/home/ua/6_.webp') }}" alt="">
+                    <img src="{{ asset('img/home/ua/vde.webp') }}" alt="">
                     @elseif(App::isLocale('ru'))
-                    <img src="{{ asset('img/home/ua/6_.webp') }}" alt="">
+                    <img src="{{ asset('img/home/ru/vde.webp') }}" alt="">
                     @endif
                 </button>
                 <button data-product="@lang('catalog.vde')" data-popup-id="main"
@@ -479,7 +479,7 @@
                     @if(App::isLocale('ua'))
                     <img src="{{ asset('img/home/ua/7_.webp') }}" alt="">
                     @elseif(App::isLocale('ru'))
-                    <img src="{{ asset('img/home/ua/7_.webp') }}" alt="">
+                    <img src="{{ asset('img/home/ru/7_.webp') }}" alt="">
                     @endif
                 </a>
                 <a href="{{ route('nibe-catalog', ['locale' => __('lang.current')]) }}"
