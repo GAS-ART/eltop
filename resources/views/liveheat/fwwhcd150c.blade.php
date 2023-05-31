@@ -103,8 +103,8 @@
               </div>
             </div>
             <div class="review__item">
-              <h3>@lang('product.liveheat.review.2_title')</h3>
-              <p>@lang('product.liveheat.review.2_text')</p>
+              <h3>@lang('product.liveheat.review_60.2_title')</h3>
+              <p>@lang('product.liveheat.review_60.2_text')</p>
               <div class="review__img">
                 @if(App::isLocale('ua'))
                 <img src="{{ asset('img/liveheat/ua/60/2_.webp') }}" alt="">
@@ -114,8 +114,8 @@
               </div>
             </div>
             <div class="review__item">
-              <h3>@lang('product.liveheat.review.3_title')</h3>
-              <p>@lang('product.liveheat.review.3_text')</p>
+              <h3>@lang('product.liveheat.review_60.3_title')</h3>
+              <p>@lang('product.liveheat.review_60.3_text')</p>
               <div class="review__img">
                 @if(App::isLocale('ua'))
                 <img src="{{ asset('img/liveheat/ua/60/3_.webp') }}" alt="">
@@ -125,8 +125,8 @@
               </div>
             </div>
             <div class="review__item">
-              <h3>@lang('product.liveheat.review.4_title')</h3>
-              <p>@lang('product.liveheat.review.4_text')</p>
+              <h3>@lang('product.liveheat.review_60.4_title')</h3>
+              <p>@lang('product.liveheat.review_60.4_text')</p>
               <div class="review__img">
                 @if(App::isLocale('ua'))
                 <img src="{{ asset('img/liveheat/ua/60/4_.webp') }}" alt="">
