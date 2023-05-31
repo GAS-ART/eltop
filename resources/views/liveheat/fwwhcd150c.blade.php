@@ -23,18 +23,15 @@
     <div class="product__body">
       <div class="product__img">
         @if(App::isLocale('ua'))
-        <img src="{{ asset('img/home/ua/5_.webp') }}" alt="">
+        <img src="{{ asset('img/home/ua/теплові-насоси-Liveheat.webp') }}" alt="">
         @elseif(App::isLocale('ru'))
-        <img src="{{ asset('img/home/ru/5_.webp') }}" alt="">
+        <img src="{{ asset('img/home/ru/тепловые-насосы-Liveheat.webp') }}" alt="">
         @endif
       </div>
       <div class="product__content">
         <h1 class="product__content-title">@lang('product.liveheat.150.title')</h1>
         <p class="product__content-text main-product">@lang('product.liveheat.150.text')</p>
         <div class="product__icons">
-          <div class="product__icon">
-            <img src="{{asset('/img/product/icons/1.svg')}}" alt="">
-          </div>
           <div class="product__icon">
             <img src="{{asset('/img/product/icons/3.svg')}}" alt="">
           </div>
@@ -52,9 +49,6 @@
           </div>
           <div class="product__icon">
             <img src="{{asset('/img/product/icons/12.svg')}}" alt="">
-          </div>
-          <div class="product__icon">
-            <img src="{{asset('/img/product/icons/13.svg')}}" alt="">
           </div>
           <div class="product__icon">
             <img src="{{asset('/img/product/icons/15.svg')}}" alt="">
@@ -100,10 +94,10 @@
               <h3>@lang('product.liveheat.review.1_title')</h3>
               <div class="review__img">
                 @if(App::isLocale('ua'))
-                <img src="{{ asset('img/liveheat/ua/1_.webp') }}" alt="">
+                <img src="{{ asset('img/liveheat/ua/60/1_.webp') }}" alt="">
                 <img class="review__img-logo" src="{{asset('img/home/ua/liveheat.svg')}}" alt="">
                 @elseif(App::isLocale('ru'))
-                <img src="{{ asset('img/liveheat/ru/1_.webp') }}" alt="">
+                <img src="{{ asset('img/liveheat/ru/60/1_.webp') }}" alt="">
                 <img class="review__img-logo" src="{{asset('img/home/ru/liveheat.svg')}}" alt="">
                 @endif
               </div>
@@ -113,9 +107,9 @@
               <p>@lang('product.liveheat.review.2_text')</p>
               <div class="review__img">
                 @if(App::isLocale('ua'))
-                <img src="{{ asset('img/liveheat/ua/2_.webp') }}" alt="">
+                <img src="{{ asset('img/liveheat/ua/60/2_.webp') }}" alt="">
                 @elseif(App::isLocale('ru'))
-                <img src="{{ asset('img/liveheat/ru/2_.webp') }}" alt="">
+                <img src="{{ asset('img/liveheat/ru/60/2_.webp') }}" alt="">
                 @endif
               </div>
             </div>
@@ -124,9 +118,9 @@
               <p>@lang('product.liveheat.review.3_text')</p>
               <div class="review__img">
                 @if(App::isLocale('ua'))
-                <img src="{{ asset('img/liveheat/ua/3_.webp') }}" alt="">
+                <img src="{{ asset('img/liveheat/ua/60/3_.webp') }}" alt="">
                 @elseif(App::isLocale('ru'))
-                <img src="{{ asset('img/liveheat/ru/3_.webp') }}" alt="">
+                <img src="{{ asset('img/liveheat/ru/60/3_.webp') }}" alt="">
                 @endif
               </div>
             </div>
@@ -135,13 +129,13 @@
               <p>@lang('product.liveheat.review.4_text')</p>
               <div class="review__img">
                 @if(App::isLocale('ua'))
-                <img src="{{ asset('img/liveheat/ua/4_.webp') }}" alt="">
+                <img src="{{ asset('img/liveheat/ua/60/4_.webp') }}" alt="">
                 @elseif(App::isLocale('ru'))
-                <img src="{{ asset('img/liveheat/ru/4_.webp') }}" alt="">
+                <img src="{{ asset('img/liveheat/ru/60/4_.webp') }}" alt="">
                 @endif
               </div>
             </div>
-            <div class="review__item">
+            {{-- <div class="review__item">
               <h3>@lang('product.liveheat.review.5_title')</h3>
               <div class="review__img">
                 @if(App::isLocale('ua'))
@@ -161,7 +155,7 @@
                 <img src="{{ asset('img/liveheat/ru/6_.webp') }}" alt="">
                 @endif
               </div>
-            </div>
+            </div> --}}
           </div>
         </div>
         <div role="tabpanel" class="tabs__tab tab-3">

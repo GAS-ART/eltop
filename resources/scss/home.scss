@@ -1221,6 +1221,7 @@
   }
 
   &__item {
+    
     &:not(:last-child){
       margin-right: 20px;
     }
@@ -1229,8 +1230,14 @@
         margin-right: 0px;
         margin-bottom: 30px;
       }
+      &:nth-child(2){
+        button{
+          width: 100%;
+        }
+      }
     }
     button{
+      display: block;
       img{
         pointer-events: none;
       }
@@ -1252,6 +1259,7 @@
     left: 0;
     width: 100%;
     height: 100%;
+    margin: 0 auto;
     object-fit: fill;
     }
   }

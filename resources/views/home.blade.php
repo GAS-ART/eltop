@@ -19,10 +19,10 @@
             <div class="main__img _animate">
                 <div class="main__img-bg"></div>
                 @if(App::isLocale('ua'))
-                <img src="{{ asset('img/home/ua/1_.webp') }}" alt="">
+                <img src="{{ asset('img/home/ua/тепловий-насос.webp') }}" alt="">
                 <img class="main__img-logo" src="{{ asset('img/home/ua/liveheat.svg') }}" alt="">
                 @elseif(App::isLocale('ru'))
-                <img src="{{ asset('img/home/ru/1_.webp') }}" alt="">
+                <img src="{{ asset('img/home/ru/Тепловой-насос.webp') }}" alt="">
                 <img class="main__img-logo" src="{{ asset('img/home/ru/liveheat.svg') }}" alt="">
                 @endif
             </div>
@@ -36,9 +36,9 @@
         <div class="what__body">
             <div class="what__img _animate">
                 @if(App::isLocale('ua'))
-                <img src="{{ asset('img/home/ua/2_.webp') }}" alt="">
+                <img src="{{ asset('img/home/ua/тепловий-насос-Liveheat.webp') }}" alt="">
                 @elseif(App::isLocale('ru'))
-                <img src="{{ asset('img/home/ru/2_.webp') }}" alt="">
+                <img src="{{ asset('img/home/ru/Тепловой-насос-Liveheat.webp') }}" alt="">
                 @endif
             </div>
             <div class="what__text _animate">
@@ -272,9 +272,9 @@
                     <h3>@lang('home.about-us.slider.1')</h3>
                     <div class="about-us__slider-img">
                         @if(App::isLocale('ua'))
-                        <img src="{{ asset('img/home/ua/about.webp') }}" alt="">
+                        <img src="{{ asset('img/home/ua/Встановлення-теплового-насосу-в-кафе.webp') }}" alt="">
                         @elseif(App::isLocale('ru'))
-                        <img src="{{ asset('img/home/ru/about.webp') }}" alt="">
+                        <img src="{{ asset('img/home/ru/Установка-теплового-насоса-в-кафе.webp') }}" alt="">
                         @endif
                     </div>
                 </div>
@@ -282,9 +282,11 @@
                     <h3>@lang('home.about-us.slider.2')</h3>
                     <div class="about-us__slider-img">
                         @if(App::isLocale('ua'))
-                        <img src="{{ asset('img/home/ua/about2.webp') }}" alt="">
+                        <img src="{{ asset('img/home/ua/Встановлення-теплового-насосу-в-котеджі-київська-область.webp') }}"
+                            alt="">
                         @elseif(App::isLocale('ru'))
-                        <img src="{{ asset('img/home/ru/about2.webp') }}" alt="">
+                        <img src="{{ asset('img/home/ru/Установка-теплового-насоса-в-коттедже-киевская-область.webp') }}"
+                            alt="">
                         @endif
                     </div>
                 </div>
@@ -292,9 +294,9 @@
                     <h3>@lang('home.about-us.slider.3')</h3>
                     <div class="about-us__slider-img">
                         @if(App::isLocale('ua'))
-                        <img src="{{ asset('img/home/ua/about3.webp') }}" alt="">
+                        <img src="{{ asset('img/home/ua/Еліватор-тепловий-насос-контури.webp') }}" alt="">
                         @elseif(App::isLocale('ru'))
-                        <img src="{{ asset('img/home/ru/about3.webp') }}" alt="">
+                        <img src="{{ asset('img/home/ru/Элеватор-тепловой-насос-контура.webp') }}" alt="">
                         @endif
                     </div>
                 </div>
@@ -302,9 +304,9 @@
                     <h3>@lang('home.about-us.slider.3')</h3>
                     <div class="about-us__slider-img">
                         @if(App::isLocale('ua'))
-                        <img src="{{ asset('img/home/ua/about4.webp') }}" alt="">
+                        <img src="{{ asset('img/home/ua/Еліватор-контури-теплового-насосу.webp') }}" alt="">
                         @elseif(App::isLocale('ru'))
-                        <img src="{{ asset('img/home/ru/about4.webp') }}" alt="">
+                        <img src="{{ asset('img/home/ru/Элеватор-контура-теплового-насоса.webp') }}" alt="">
                         @endif
                     </div>
                 </div>
@@ -324,26 +326,26 @@
             </div>
             <div class="efficiency__img">
                 @if(App::isLocale('ua'))
-                <img src="{{ asset('img/home/ua/3_.webp') }}" alt="">
+                <img src="{{ asset('img/home/ua/Теплові-насоси.webp') }}" alt="">
                 <img class="efficiency__img-logo" src="{{ asset('img/home/ua/liveheat.svg') }}" alt="">
                 @elseif(App::isLocale('ru'))
-                <img src="{{ asset('img/home/ru/3_.webp') }}" alt="">
+                <img src="{{ asset('img/home/ru/Тепловые-насосы.webp') }}" alt="">
                 <img class="efficiency__img-logo" src="{{ asset('img/home/ru/liveheat.svg') }}" alt="">
                 @endif
             </div>
             <div class="efficiency__picture-mobile _animate">
                 @if(App::isLocale('ua'))
-                <img src="{{ asset('img/home/ua/4_.webp') }}" alt="">
+                <img src="{{ asset('img/home/ua/Тепловий-насос-для-дому.webp') }}" alt="">
                 @elseif(App::isLocale('ru'))
-                <img src="{{ asset('img/home/ua/4_.webp') }}" alt="">
+                <img src="{{ asset('img/home/ua/Тепловой-насос-для-дома.webp') }}" alt="">
                 @endif
             </div>
         </div>
         <div class="efficiency__picture _animate">
             @if(App::isLocale('ua'))
-            <img src="{{ asset('img/home/ua/4_.webp') }}" alt="">
+            <img src="{{ asset('img/home/ua/Тепловий-насос-для-дому.webp') }}" alt="">
             @elseif(App::isLocale('ru'))
-            <img src="{{ asset('img/home/ua/4_.webp') }}" alt="">
+            <img src="{{ asset('img/home/ua/Тепловой-насос-для-дома.webp') }}" alt="">
             @endif
         </div>
     </div>
@@ -370,9 +372,9 @@
                         <div class="presentation-pump__dot-rb"><span></span></div>
                         <div class="presentation-pump__bg"></div>
                         @if(App::isLocale('ua'))
-                        <img src="{{ asset('img/home/ua/5_.webp') }}" alt="">
+                        <img src="{{ asset('img/home/ua/теплові-насоси-Liveheat.webp') }}" alt="">
                         @elseif(App::isLocale('ru'))
-                        <img src="{{ asset('img/home/ua/5_.webp') }}" alt="">
+                        <img src="{{ asset('img/home/ru/тепловые-насосы-Liveheat.webp') }}" alt="">
                         @endif
                     </div>
                 </div>
@@ -421,9 +423,9 @@
                         <div class="presentation-pump__dot-rb"></div>
                         <div class="presentation-pump__bg"></div>
                         @if(App::isLocale('ua'))
-                        <img src="{{ asset('img/home/ua/5_.webp') }}" alt="">
+                        <img src="{{ asset('img/home/ua/теплові-насоси-Liveheat.webp') }}" alt="">
                         @elseif(App::isLocale('ru'))
-                        <img src="{{ asset('img/home/ua/5_.webp') }}" alt="">
+                        <img src="{{ asset('img/home/ru/тепловые-насосы-Liveheat.webp') }}" alt="">
                         @endif
                     </div>
                 </div>
@@ -455,9 +457,9 @@
             <div class="catalog__item">
                 <a href="{{ route('liveheat-catalog', ['locale' => __('lang.current')]) }}" class="catalog__img">
                     @if(App::isLocale('ua'))
-                    <img src="{{ asset('img/home/ua/6_.webp') }}" alt="">
+                    <img src="{{ asset('img/home/ua/Liveheat-тепловий-насос.webp') }}" alt="">
                     @elseif(App::isLocale('ru'))
-                    <img src="{{ asset('img/home/ru/6_.webp') }}" alt="">
+                    <img src="{{ asset('img/home/ru/Liveheat-тепловой-насос.webp') }}" alt="">
                     @endif
                 </a>
                 <a href="{{ route('liveheat-catalog', ['locale' => __('lang.current')]) }}"
@@ -466,9 +468,9 @@
             <div class="catalog__item">
                 <button data-product="@lang('catalog.vde')" data-popup-id="main" class="catalog__img link-on-popup vde">
                     @if(App::isLocale('ua'))
-                    <img src="{{ asset('img/home/ua/vde.webp') }}" alt="">
+                    <img src="{{ asset('img/home/ua/теплові-насоси-VDE.webp') }}" alt="">
                     @elseif(App::isLocale('ru'))
-                    <img src="{{ asset('img/home/ru/vde.webp') }}" alt="">
+                    <img src="{{ asset('img/home/ru/Тепловые-насосы-VDE.webp') }}" alt="">
                     @endif
                 </button>
                 <button data-product="@lang('catalog.vde')" data-popup-id="main"
@@ -477,9 +479,9 @@
             <div class="catalog__item">
                 <a href="{{ route('nibe-catalog', ['locale' => __('lang.current')]) }}" class="catalog__img">
                     @if(App::isLocale('ua'))
-                    <img src="{{ asset('img/home/ua/7_.webp') }}" alt="">
+                    <img src="{{ asset('img/home/ua/теплові-насоси-Nibe.webp') }}" alt="">
                     @elseif(App::isLocale('ru'))
-                    <img src="{{ asset('img/home/ru/7_.webp') }}" alt="">
+                    <img src="{{ asset('img/home/ru/Тепловые-насосы-NIBE.webp') }}" alt="">
                     @endif
                 </a>
                 <a href="{{ route('nibe-catalog', ['locale' => __('lang.current')]) }}"
