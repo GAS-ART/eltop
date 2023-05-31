@@ -345,7 +345,7 @@
             @if(App::isLocale('ua'))
             <img src="{{ asset('img/home/ua/Тепловий-насос-для-дому.webp') }}" alt="">
             @elseif(App::isLocale('ru'))
-            <img src="{{ asset('img/home/ua/Тепловой-насос-для-дома.webp') }}" alt="">
+            <img src="{{ asset('img/home/ru/Тепловой-насос-для-дома.webp') }}" alt="">
             @endif
         </div>
     </div>
