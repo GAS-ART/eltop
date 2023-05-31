@@ -28,9 +28,9 @@
             </div>
             <div class="catalog-page__img">
               @if(App::isLocale('ua'))
-              <img src="{{ asset('img/home/ua/теплові-насоси-Liveheat.webp') }}" alt="">
+              <img src="{{ asset('img/home/ua/теплові-насоси-Liveheat.webp') }}" alt="Теплові насоси Liveheat">
               @elseif(App::isLocale('ru'))
-              <img src="{{ asset('img/home/ru/тепловые-насосы-Liveheat.webp') }}" alt="">
+              <img src="{{ asset('img/home/ru/тепловые-насосы-Liveheat.webp') }}" alt="Тепловые насосы Liveheat">
               @endif
             </div>
           </div>
@@ -47,9 +47,9 @@
             </div>
             <div class="catalog-page__img">
               @if(App::isLocale('ua'))
-              <img src="{{ asset('img/home/ua/Liveheat-тепловий-насос.webp') }}" alt="">
+              <img src="{{ asset('img/home/ua/Liveheat-тепловий-насос.webp') }}" alt="Liveheat тепловий насос">
               @elseif(App::isLocale('ru'))
-              <img src="{{ asset('img/home/ru/Liveheat-тепловой-насос.webp') }}" alt="">
+              <img src="{{ asset('img/home/ru/Liveheat-тепловой-насос.webp') }}" alt="Liveheat тепловой насос">
               @endif
             </div>
           </div>

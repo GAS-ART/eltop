@@ -21,9 +21,9 @@
     <div class="product__body">
       <div class="product__img">
         @if(App::isLocale('ua'))
-        <img src="{{ asset('img/nibe/pumps/ua/тепловий-насос-Nibe-F1345.webp') }}" alt="">
+        <img src="{{ asset('img/nibe/pumps/ua/тепловий-насос-Nibe-F1345.webp') }}" alt="Тепловий насос Nibe F1345">
         @elseif(App::isLocale('ru'))
-        <img src="{{ asset('img/nibe/pumps/ru/тепловой-насос-Nibe-F1345.webp') }}" alt="">
+        <img src="{{ asset('img/nibe/pumps/ru/тепловой-насос-Nibe-F1345.webp') }}" alt="Тепловой насос Nibe F1345">
         @endif
       </div>
       <div class="product__content">

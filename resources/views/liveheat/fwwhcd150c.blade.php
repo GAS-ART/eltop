@@ -23,9 +23,9 @@
     <div class="product__body">
       <div class="product__img">
         @if(App::isLocale('ua'))
-        <img src="{{ asset('img/home/ua/теплові-насоси-Liveheat.webp') }}" alt="">
+        <img src="{{ asset('img/home/ua/теплові-насоси-Liveheat.webp') }}" alt="Теплові насоси Liveheat 60кв">
         @elseif(App::isLocale('ru'))
-        <img src="{{ asset('img/home/ru/тепловые-насосы-Liveheat.webp') }}" alt="">
+        <img src="{{ asset('img/home/ru/тепловые-насосы-Liveheat.webp') }}" alt="Тепловые насосы Liveheat 60кв">
         @endif
       </div>
       <div class="product__content">

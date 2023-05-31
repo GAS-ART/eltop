@@ -10,7 +10,7 @@
                         <picture>
                             <source type="" media="(min-width: 992px)" srcset="{{asset('/img/eltopeko-logo.webp')}}">
                             <source type="image/svg+xml" srcset="{{asset('/img/eltopeko-logo.svg')}}">
-                            <img src="{{asset('/img/eltopeko-logo.svg')}}" alt="">
+                            <img src="{{asset('/img/eltopeko-logo.svg')}}" alt="Логотип eltopeko">
                         </picture>
                     </a>
                 </div>
