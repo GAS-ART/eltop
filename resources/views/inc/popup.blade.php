@@ -117,6 +117,12 @@
                            <p class="calculate-lead">Для більш детального разрохунку залиште Ваш контакт</p>
                            <div class="popup__item popup__item-result">
                               <div class="result-body-lead">
+                                 <label for="resultName">@lang('popup.name')</label>
+                                 <input id="resultName" name="name" type="text"
+                                    placeholder="@lang('popup.name_placeholder')">
+                                 <p class="error-name"></p>
+                              </div>
+                              <div class="result-body-lead">
                                  <label for="resultPhone">@lang('popup.phone')</label>
                                  <input id="resultPhone" name="phone" type="text"
                                     placeholder="@lang('popup.phone_placeholder')">

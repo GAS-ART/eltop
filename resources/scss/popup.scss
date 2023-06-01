@@ -73,6 +73,7 @@
     top: 20px;
     right: 25px;
     margin-left: auto;
+    z-index: 10;
     cursor: pointer;
     @media (max-width: $mobile) {
       right: 0px;
@@ -370,6 +371,16 @@
   }
   
     &.calculated{
+      .popup__body{
+        padding: 100px;
+        @media (max-width: $tablet) {
+          padding: 30px 30px 0 30px;
+          max-height: 700px;
+        }
+        @media (max-width: em(350)) {
+          padding: 15px 15px 0 15px;;
+        }
+      }
       .popup__colculation{
         opacity: 0;
         visibility: hidden;
@@ -411,6 +422,9 @@
   border: 2px double $green;
   margin-bottom: 30px;
   padding: 20px 0 20px 20px;
+  @media (max-width: $mobileSmall) {
+    padding: 5px;
+  }
 }
 .colculation-result-title {
   text-align: center;
@@ -418,6 +432,9 @@
 .result-body-lead{
   max-width: 600px;
   margin: 0 auto;
+  &:not(:last-child){
+    margin-bottom: 15px;
+  }
 }
 .power {
   span{
