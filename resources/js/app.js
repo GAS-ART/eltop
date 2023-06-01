@@ -91,6 +91,7 @@ forms.forEach(form => {
         form.reset(); */
       } else {
         const data = await response.json();
+        console.log(data);
         loading.classList.remove('active');
         if (form.classList.contains('ru')) {
           if (data.errors?.name) {
