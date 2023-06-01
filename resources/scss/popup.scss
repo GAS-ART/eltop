@@ -212,11 +212,13 @@
 
 /*========CALCULATE========*/
 .popup {
-
+  
   &__body {
+    
   }
 
   &__content {
+    
   }
 
   &__loading {
@@ -340,6 +342,7 @@
 .success {
 }
 #calculate{
+  overflow-y: auto;
   input{
     min-width: 200px;
   }
@@ -347,6 +350,10 @@
     padding: 50px;
     @media (max-width: $tablet) {
       padding: 20px;
+      position: absolute;
+      top: 0%;
+      left: 50%;
+      transform: translate(-50%, 0);
     }
   }
   .popup__content{

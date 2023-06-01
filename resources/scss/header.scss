@@ -392,6 +392,7 @@
   transform: translateX(100%);
   z-index: 920;
   &.open{
+    overflow-y: auto;
     transform: translateX(0);
   }
   .header__contacts{
