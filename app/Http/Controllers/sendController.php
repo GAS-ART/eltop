@@ -20,7 +20,7 @@ class sendController extends Controller {
 
         /*ОТПРАВКА ДАННЫХ ИЗ ФОРМЫ И ФАЙЛА НА ПОЧТУ*/
         mail::send(['html' => 'mail'], ['name' => $name, 'phone' => $phone, 'text' => $text, 'area' => $area, 'people' => $people, 'floor' => $floor, 'day' => $day, 'night' => $night, ], function($message) {
-        $message->to('temoha1386@gmail.com')->subject('ЗАКАЗ ЗВОНКА ИЗ ФОРМЫ ОБРАТНОЙ СВЯЗИ');
+        $message->to('eltopeko1@gmail.com')->subject('ЗАКАЗ ЗВОНКА ИЗ ФОРМЫ ОБРАТНОЙ СВЯЗИ');
         });
         //return view('send');
     }
