@@ -5,6 +5,7 @@ return [
     'advantages' => 'Переваги',
     'catalog' => 'Каталог',
     'contants' => 'Контакти',
+    'calculate' => 'Калькулятор',
 ]
 
 ?>

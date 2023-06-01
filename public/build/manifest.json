@@ -31,7 +31,7 @@
     "css": [
       "assets/app-1043c9c1.css"
     ],
-    "file": "assets/app-2b294d79.js",
+    "file": "assets/app-0d6f1d06.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   },
@@ -100,7 +100,7 @@
     "src": "resources/scss/fonts/icon-fonts/icomoon.woff"
   },
   "resources/scss/style.scss": {
-    "file": "assets/style-b1987eda.css",
+    "file": "assets/style-c4e22c5c.css",
     "isEntry": true,
     "src": "resources/scss/style.scss"
   }

@@ -372,3 +372,114 @@ if (tab_btns) {
     })
   });
 }
+
+//calculate
+
+const calculate_btn = document.querySelector('.calculate-btn');
+let lang = document.documentElement.lang;
+
+
+calculate_btn.addEventListener('click', (e) => {
+  const isValid = validateForm();
+  if (isValid) {
+    let workHourse = 372;
+    let area = +document.getElementById('area').value;
+    let people = +document.getElementById('people').value;
+    let dayPrice = +document.getElementById('day').value;
+    let nightPrice = +document.getElementById('night').value;
+    let floorRadios = document.getElementsByName('floor');
+    let floorCoefficient;
+
+    for (let i = 0; i < floorRadios.length; i++) {
+      if (floorRadios[i].checked) {
+        floorCoefficient = floorRadios[i].value;
+        break;
+      }
+    }
+
+    let power = (area * 0.06) + (people * 0.75);
+    let dayCost = power / floorCoefficient * workHourse * dayPrice;
+    let nightCost = power / floorCoefficient * workHourse * nightPrice;
+    let mixedCost = (dayCost + nightCost) / 2;
+
+    document.querySelector('.power span').innerText = power.toFixed(2) + ' кв';
+    document.querySelector('.day-price span').innerText = dayCost.toFixed(2) + ' грн';
+    document.querySelector('.night-price span').innerText = nightCost.toFixed(2) + ' грн';
+    document.querySelector('.mixed-price span').innerText = mixedCost.toFixed(2) + ' грн';
+    document.getElementById('calculate').classList.add('calculated');
+
+  }
+});
+
+function validateForm() {
+  // Получаем все поля ввода
+  let area = document.getElementById('area');
+  let people = document.getElementById('people');
+  let day = document.getElementById('day');
+  let night = document.getElementById('night');
+
+  // Получаем все поля ошибок
+  let errorArea = document.querySelector('.error-area');
+  let errorPeople = document.querySelector('.error-people');
+  let errorDay = document.querySelector('.error-day');
+  let errorNight = document.querySelector('.error-night');
+
+  // Сбрасываем предыдущие ошибки
+  errorArea.textContent = '';
+  errorArea.classList.remove('error');
+  errorArea.previousElementSibling.classList.remove('error');
+  errorArea.previousElementSibling.previousElementSibling.classList.remove('error');
+  errorPeople.textContent = '';
+  errorPeople.classList.remove('error');
+  errorPeople.previousElementSibling.classList.remove('error');
+  errorPeople.previousElementSibling.previousElementSibling.classList.remove('error');
+  errorDay.textContent = '';
+  errorDay.classList.remove('error');
+  errorDay.previousElementSibling.classList.remove('error');
+  errorDay.previousElementSibling.previousElementSibling.classList.remove('error');
+  errorNight.textContent = '';
+  errorNight.classList.remove('error');
+  errorNight.previousElementSibling.classList.remove('error');
+  errorNight.previousElementSibling.previousElementSibling.classList.remove('error');
+
+  // Флаг для отслеживания ошибок
+  let isValid = true;
+
+  // Проверка поля "area"
+  if (area.value === '' || parseFloat(area.value) < 20 || parseFloat(area.value) > 5000) {
+    lang = 'uk' ? errorArea.textContent = 'Некоректне значення' : errorArea.textContent = 'Некорректное значение';
+    errorArea.classList.add('error');
+    errorArea.previousElementSibling.classList.add('error');
+    errorArea.previousElementSibling.previousElementSibling.classList.add('error');
+    isValid = false;
+  }
+
+  // Проверка поля "people"
+  if (people.value === '' || parseInt(people.value) < 0 || parseInt(people.value) > 1000) {
+    lang = 'uk' ? errorPeople.textContent = 'Некоректне значення' : errorPeople.textContent = 'Некорректное значение';
+    errorPeople.classList.add('error');
+    errorPeople.previousElementSibling.classList.add('error');
+    errorPeople.previousElementSibling.previousElementSibling.classList.add('error');
+    isValid = false;
+  }
+
+  // Проверка поля "day"
+  if (day.value === '' || parseFloat(day.value) < 0 || parseFloat(day.value) > 100) {
+    lang = 'uk' ? errorDay.textContent = 'Некоректне значення' : errorDay.textContent = 'Некорректное значение';
+    errorDay.classList.add('error');
+    errorDay.previousElementSibling.classList.add('error');
+    errorDay.previousElementSibling.previousElementSibling.classList.add('error');
+    isValid = false;
+  }
+
+  // Проверка поля "night"
+  if (night.value === '' || parseFloat(night.value) < 0 || parseFloat(night.value) > 100) {
+    lang = 'uk' ? errorNight.textContent = 'Некоректне значення' : errorNight.textContent = 'Некорректное значение';
+    errorNight.classList.add('error');
+    errorNight.previousElementSibling.classList.add('error');
+    errorNight.previousElementSibling.previousElementSibling.classList.add('error');
+    isValid = false;
+  }
+
+  return isValid;
+}
