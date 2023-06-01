@@ -117,8 +117,8 @@
                            <p class="calculate-lead">Для більш детального разрохунку залиште Ваш контакт</p>
                            <div class="popup__item popup__item-result">
                               <div class="result-body-lead">
-                                 <label for="phone">@lang('popup.phone')</label>
-                                 <input id="phone" name="phone" type="text"
+                                 <label for="resultPhone">@lang('popup.phone')</label>
+                                 <input id="resultPhone" name="phone" type="text"
                                     placeholder="@lang('popup.phone_placeholder')">
                                  <p class="error-phone"></p>
                               </div>

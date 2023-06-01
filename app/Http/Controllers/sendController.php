@@ -12,9 +12,15 @@ class sendController extends Controller {
         $name = $req->input('name');
         $phone = $req->input('phone');
         $text = $req->input('text');
+        $area = $req->input('area');
+        $people = $req->input('people');
+        $floor = $req->input('floor');
+        $day = $req->input('day');
+        $night = $req->input('night');
+
         /*ОТПРАВКА ДАННЫХ ИЗ ФОРМЫ И ФАЙЛА НА ПОЧТУ*/
-        mail::send(['html' => 'mail'], ['name' => $name, 'phone' => $phone, 'text' => $text ], function($message) {
-        $message->to('eltopeko1@gmail.com')->subject('ЗАКАЗ ЗВОНКА ИЗ ФОРМЫ ОБРАТНОЙ СВЯЗИ');
+        mail::send(['html' => 'mail'], ['name' => $name, 'phone' => $phone, 'text' => $text, 'area' => $area, 'people' => $people, 'floor' => $floor, 'day' => $day, 'night' => $night, ], function($message) {
+        $message->to('temoha1386@gmail.com')->subject('ЗАКАЗ ЗВОНКА ИЗ ФОРМЫ ОБРАТНОЙ СВЯЗИ');
         });
         //return view('send');
     }
