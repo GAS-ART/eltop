@@ -107,14 +107,14 @@
                            <button class="popup__btn calculate-btn" type="button">@lang('popup.calculate.btn')</button>
                         </div>
                         <div class="popup__colculation-result">
-                           <h2 class="colculation-result-title">Оцінка собівартості теплового насосу</h2>
+                           <h2 class="colculation-result-title">@lang('popup.calculate.result.title')</h2>
                            <div class="colculation-result-title-body">
-                              <p class="power">Вам потрібен насос потужністю <span>17кв<span>грн</p>
-                              <p class="day-price">Орінтовна ціна за опелення в день становіить <span>500грн</span></p>
-                              <p class="night-price">Орінтовна ціна за опелення в ніч становіить <span>300грн</span></p>
-                              <p class="mixed-price">Орінтовна ціна в змішаному циклі становіить <span>400грн</span></p>
+                              <p class="power">@lang('popup.calculate.result.power')</p>
+                              <p class="day-price">@lang('popup.calculate.result.day_price')</p>
+                              <p class="night-price">@lang('popup.calculate.result.night_price')</p>
+                              <p class="mixed-price">@lang('popup.calculate.result.mixed_price')</p>
                            </div>
-                           <p class="calculate-lead">Для більш детального разрохунку залиште Ваш контакт</p>
+                           <p class="calculate-lead">@lang('popup.calculate.result.calculate_lead')</p>
                            <div class="popup__item popup__item-result">
                               <div class="result-body-lead">
                                  <label for="resultName">@lang('popup.name')</label>
@@ -129,7 +129,7 @@
                                  <p class="error-phone"></p>
                               </div>
                            </div>
-                           <button class="popup__btn" type="submit">Зробити детальний розрахунок</button>
+                           <button class="popup__btn" type="submit">@lang('popup.calculate.submit_btn')</button>
                         </div>
                      </form>
                   </div>

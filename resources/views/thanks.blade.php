@@ -8,7 +8,8 @@
 
 @section('content')
 <section class="thanks">
-  @if(request('product') == "Запит на консультацію" || request('product') == "Запрос на консультацию")
+  @if(request('product') == "Запит на консультацію" || request('product') == "Запрос на консультацию" ||
+  request('product') == "Запит на розрахунок" || request('product') == "Запрос на расчет")
   <h1 class="thanks__title">{{ request('product') }}!</h1>
   @else
   <h1 class="thanks__title">@lang('thanks.title') "{{ request('product') }}"!</h1>

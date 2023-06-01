@@ -448,7 +448,8 @@ function validateForm() {
 
   // Проверка поля "area"
   if (area.value === '' || parseFloat(area.value) < 20 || parseFloat(area.value) > 5000) {
-    lang = 'uk' ? errorArea.textContent = 'Некоректне значення' : errorArea.textContent = 'Некорректное значение';
+    console.log(lang);
+    lang == 'uk' ? errorArea.textContent = 'Некоректне значення' : errorArea.textContent = 'Некоректные данные';
     errorArea.classList.add('error');
     errorArea.previousElementSibling.classList.add('error');
     errorArea.previousElementSibling.previousElementSibling.classList.add('error');
@@ -457,7 +458,7 @@ function validateForm() {
 
   // Проверка поля "people"
   if (people.value === '' || parseInt(people.value) < 0 || parseInt(people.value) > 1000) {
-    lang = 'uk' ? errorPeople.textContent = 'Некоректне значення' : errorPeople.textContent = 'Некорректное значение';
+    lang == 'uk' ? errorPeople.textContent = 'Некоректне значення' : errorPeople.textContent = 'Некоректные данные';
     errorPeople.classList.add('error');
     errorPeople.previousElementSibling.classList.add('error');
     errorPeople.previousElementSibling.previousElementSibling.classList.add('error');
@@ -466,7 +467,7 @@ function validateForm() {
 
   // Проверка поля "day"
   if (day.value === '' || parseFloat(day.value) < 0 || parseFloat(day.value) > 100) {
-    lang = 'uk' ? errorDay.textContent = 'Некоректне значення' : errorDay.textContent = 'Некорректное значение';
+    lang == 'uk' ? errorDay.textContent = 'Некоректне значення' : errorDay.textContent = 'Некоректные данные';
     errorDay.classList.add('error');
     errorDay.previousElementSibling.classList.add('error');
     errorDay.previousElementSibling.previousElementSibling.classList.add('error');
@@ -475,7 +476,7 @@ function validateForm() {
 
   // Проверка поля "night"
   if (night.value === '' || parseFloat(night.value) < 0 || parseFloat(night.value) > 100) {
-    lang = 'uk' ? errorNight.textContent = 'Некоректне значення' : errorNight.textContent = 'Некорректное значение';
+    lang == 'uk' ? errorNight.textContent = 'Некоректне значення' : errorNight.textContent = 'Некоректные данные';
     errorNight.classList.add('error');
     errorNight.previousElementSibling.classList.add('error');
     errorNight.previousElementSibling.previousElementSibling.classList.add('error');
