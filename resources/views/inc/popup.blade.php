@@ -105,6 +105,7 @@
                               </div>
                            </div>
                            <button class="popup__btn calculate-btn" type="button">@lang('popup.calculate.btn')</button>
+                           <p class="footnote">@lang('popup.calculate.footnote')</p>
                         </div>
                         <div class="popup__colculation-result">
                            <h2 class="colculation-result-title">@lang('popup.calculate.result.title')</h2>

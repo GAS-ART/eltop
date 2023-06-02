@@ -141,7 +141,7 @@
                         </li>
                         <li class="header__menu-list-item"><a href="#contacts"
                                 class="header__menu-list-link ancor">@lang('header.contants')</a></li>
-                        <li class="header__menu-list-item"><button data-product="Запит на розрахунок"
+                        <li class="header__menu-list-item"><button data-product="@lang('popup.calculate.data_product')"
                                 data-popup-id="calculate"
                                 class="header__menu-list-link link-on-popup">@lang('header.calculate')</button></li>
                     </ul>
@@ -231,7 +231,8 @@
                 </li>
                 <li class="header__menu-list-item"><a href="#contacts"
                         class="header__menu-list-link ancor">@lang('header.contants')</a></li>
-                <li class="header__menu-list-item"><button data-product="Запит на розрахунок" data-popup-id="calculate"
+                <li class="header__menu-list-item"><button data-product="@lang('popup.calculate.data_product')"
+                        data-popup-id="calculate"
                         class="header__menu-list-link link-on-popup">@lang('header.calculate')</button></li>
             </ul>
         </nav>

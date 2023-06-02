@@ -12,8 +12,12 @@ export function popUp(popupId, productName) {
 	bodyLock.classList.add('lock');
 	inputProductName.value = productName;
 
-	if (productName != 'Запит на консультацію' && productName != 'Запрос на консультацию') {
-		popUp.classList.contains('ua') ? popupTitle.innerText = `Запит на консультацію для продукту ${productName}` : popupTitle.innerText = `Запрос на консультацию для продукта ${productName}`
+	if (productName == 'Запит на консультацію' || productName == 'Запрос на консультацию') {
+		popupTitle.innerText = productName;
+	} else if (productName == 'Розрахунок потужності та витрат' || productName == 'Расчет мощности и затрат') {
+		popupTitle.innerText = productName;
+	} else {
+		popUp.classList.contains('ua') ? popupTitle.innerText = `Запит на консультацію для продукту ${productName}` : popupTitle.innerText = `Запрос на консультацию для продукта ${productName}`;
 	}
 
 	popupCloseIcon.addEventListener('click', function (e) {
