@@ -381,8 +381,10 @@ let lang = document.documentElement.lang;
 
 
 calculate_btn.addEventListener('click', (e) => {
+  //console.log(document.getElementById('night').value.charAt(0) === '0');
   const isValid = validateForm();
   if (isValid) {
+
     let workHourse = 372;
     let area = +document.getElementById('area').value;
     let people = +document.getElementById('people').value;
@@ -404,9 +406,9 @@ calculate_btn.addEventListener('click', (e) => {
     let mixedCost = (dayCost + nightCost) / 2;
 
     document.querySelector('.power span').innerText = power.toFixed(2) + ' кв';
-    document.querySelector('.day-price span').innerText = dayCost.toFixed(2) + ' грн';
-    document.querySelector('.night-price span').innerText = nightCost.toFixed(2) + ' грн';
-    document.querySelector('.mixed-price span').innerText = mixedCost.toFixed(2) + ' грн';
+    document.querySelector('.day-price span').innerText = dayCost.toFixed(2) + ` грн ${document.documentElement.lang === 'uk' ? 'у місяць' : 'в месяц'}`;
+    document.querySelector('.night-price span').innerText = nightCost.toFixed(2) + ` грн ${document.documentElement.lang === 'uk' ? 'у місяць' : 'в месяц'}`;
+    document.querySelector('.mixed-price span').innerText = mixedCost.toFixed(2) + ` грн ${document.documentElement.lang === 'uk' ? 'у місяць' : 'в месяц'}`;
     document.getElementById('calculate').classList.add('calculated');
 
   }
@@ -424,6 +426,16 @@ function validateForm() {
   let errorPeople = document.querySelector('.error-people');
   let errorDay = document.querySelector('.error-day');
   let errorNight = document.querySelector('.error-night');
+
+  if (night.value.charAt(0) === '0' && night.value.charAt(1) != '.') {
+    night.value = night.value.charAt(0) + '.' + night.value.slice(1);
+  }
+
+  if (day.value.charAt(0) === '0' && day.value.charAt(1) != '.') {
+    day.value = day.value.charAt(0) + '.' + day.value.slice(1);
+  }
+
+
 
   // Сбрасываем предыдущие ошибки
   errorArea.textContent = '';
@@ -466,16 +478,17 @@ function validateForm() {
   }
 
   // Проверка поля "day"
-  if (day.value === '' || parseFloat(day.value) < 0 || parseFloat(day.value) > 100) {
+  if (day.value === '' || parseFloat(day.value) < 0 || parseFloat(day.value) > 100 || day.value.charAt(0) === '0' && day.value.charAt(1) != '.') {
     lang == 'uk' ? errorDay.textContent = 'Некоректне значення' : errorDay.textContent = 'Некоректные данные';
     errorDay.classList.add('error');
     errorDay.previousElementSibling.classList.add('error');
     errorDay.previousElementSibling.previousElementSibling.classList.add('error');
     isValid = false;
   }
-
+  console.log(night.value === '' || parseFloat(night.value) < 0 || parseFloat(night.value) > 100 || night.value.charAt(0) === '0' && night.value.charAt(1) != '.');
   // Проверка поля "night"
-  if (night.value === '' || parseFloat(night.value) < 0 || parseFloat(night.value) > 100) {
+  if (night.value === '' || parseFloat(night.value) < 0 || parseFloat(night.value) > 100 || night.value.charAt(0) === '0' && night.value.charAt(1) != '.') {
+
     lang == 'uk' ? errorNight.textContent = 'Некоректне значення' : errorNight.textContent = 'Некоректные данные';
     errorNight.classList.add('error');
     errorNight.previousElementSibling.classList.add('error');

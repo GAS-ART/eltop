@@ -316,6 +316,18 @@
                         @endif
                     </div>
                 </div>
+                <div class="swiper-slide">
+                    <h3>@lang('home.about-us.slider.5')</h3>
+                    <div class="about-us__slider-img">
+                        @if(App::isLocale('ua'))
+                        <img src="{{ asset('img/home/ua/Тепловий-насос-ґрунт-вода-18квт.webp') }}"
+                            alt="Тепловий насос ґрунт вода 18кВт">
+                        @elseif(App::isLocale('ru'))
+                        <img src="{{ asset('img/home/ru/Тепловой-насос-грунт-вода-18кВт.webp') }}"
+                            alt="Тепловой насос грунт вода 18кВт">
+                        @endif
+                    </div>
+                </div>
             </div>
             <!-- If we need navigation buttons -->
             <div class="swiper-button-prev"><span></span></div>
@@ -343,7 +355,7 @@
                 @if(App::isLocale('ua'))
                 <img src="{{ asset('img/home/ua/Тепловий-насос-для-дому.webp') }}" alt="Тепловий насос для дому">
                 @elseif(App::isLocale('ru'))
-                <img src="{{ asset('img/home/ua/Тепловой-насос-для-дома.webp') }}" alt="Тепловой-насос-для-дома">
+                <img src="{{ asset('img/home/ru/Тепловой-насос-для-дома.webp') }}" alt="Тепловой-насос-для-дома">
                 @endif
             </div>
         </div>

@@ -93,13 +93,13 @@
                               <div class="popup__cost-body">
                                  <div class="popup__item">
                                     <label for="day">@lang('popup.calculate.day')</label>
-                                    <input id="day" name="day" type="number" step="0.01" required min="0" max="5000">
+                                    <input id="day" name="day" type="number" step="0.01" required min="0.01" max="100">
                                     <p class="error-day"></p>
                                  </div>
                                  <div class="popup__item">
                                     <label for="night">@lang('popup.calculate.night')</label>
-                                    <input id="night" name="night" step="0.01" type="number" required min="0"
-                                       max="5000">
+                                    <input id="night" name="night" step="0.01" type="number" required min="0.01"
+                                       max="100">
                                     <p class="error-night"></p>
                                  </div>
                               </div>
