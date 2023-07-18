@@ -30,7 +30,6 @@
   gtag('js', new Date());
 
   gtag('config', 'G-5ZX6DKKST1');
+  gtag('config', 'AW-10998840814');
    </script>
-
-
 </head>
