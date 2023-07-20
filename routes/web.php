@@ -22,6 +22,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/locale/{locale}',  'App\Http\Controllers\LanguagesController@changeLocale')->name('locale');
 Route::post('/send-main-form', 'App\Http\Controllers\sendController@submit')->name('sendMainForm');
 
+Route::get('/politika_konfidencialnosti', function () {return view('politika_konfidencialnosti');})->name('politika_konfidencialnosti');
+
 Route::get('/', function () {
     App::setLocale('ua');
     return view('home');
@@ -30,6 +32,8 @@ Route::get('/', function () {
     App::setLocale('ua');
     return  redirect('/');
   });
+
+  
   
   Route::get('/{locale}', function ($locale) {
     if (!in_array($locale, ['ua', 'ru'])) {
@@ -184,23 +188,4 @@ Route::get('/{locale}/heat-pumps-liveheat-catalog/fwwihcd50c', function ($locale
       return view('nibe/f1345');
     }
   })->name('nibe-f1345');
-  /*PRODUCTS NIBE*/
-
-
-/*PRODUCT NIBE*/
-/*   Route::get('/{locale}/heat-pumps-nibe-catalog/nibe-s1255/nibe-s1255-6kw-400V', function ($locale) {
-    if (!in_array($locale, ['ua', 'ru'])) {
-  
-      abort(404);
-    } else if ($locale == 'ua') {
-  
-      App::setLocale('ua');
-      return view('nibe/s1255/s1255-6kw-400V');
-    } else if ($locale == 'ru') {
-  
-      App::setLocale('ru');
-      return view('nibe/s1255/s1255-6kw-400V');
-    }
-  })->name('nibe-s1255-6kw-400V'); */
-
-/*PRODUCT NIBE*/
+/*PRODUCTS NIBE*/
