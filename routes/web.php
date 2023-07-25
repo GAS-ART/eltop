@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\GoogleAdsFormController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/locale/{locale}',  'App\Http\Controllers\LanguagesController@changeLocale')->name('locale');
 Route::post('/send-main-form', 'App\Http\Controllers\sendController@submit')->name('sendMainForm');
+Route::post('/gaf', [GoogleAdsFormController::class], 'sendDataToEmail')->name('google_ads_form');
 
 Route::get('/politika_konfidencialnosti', function () {return view('politika_konfidencialnosti');})->name('politika_konfidencialnosti');
 
