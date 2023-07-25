@@ -498,3 +498,9 @@ function validateForm() {
 
   return isValid;
 }
+
+const phoneConversions = document.querySelectorAll('.conversion-phone');
+
+phoneConversions.forEach(phoneConversion => {
+  phoneConversion.addEventListener('click', () => { gtag_report_conversion() });
+});

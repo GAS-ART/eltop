@@ -16,7 +16,7 @@
                 </div>
                 <div class="header__contacts">
                     <div class="header__contacts-body">
-                        <a href="tel:%2B0675201020" class="header__contacts-icon contacts-icon">
+                        <a href="tel:%2B0675201020" class="header__contacts-icon contacts-icon conversion-phone">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"
                                 fill="none">
                                 <path
@@ -33,7 +33,7 @@
                         </a>
                         <div class="header__contacts-content">
                             <div class="header__contacts-text">@lang('main.contacts.phone_text')</div>
-                            <a class="header__contacts-contact"
+                            <a class="header__contacts-contact conversion-phone"
                                 href="tel:%2B0675201020">@lang('main.contacts.phone')</a>
                         </div>
                     </div>
@@ -175,12 +175,13 @@
     <div class="burger">
         <div class="header__contacts">
             <div class="header__contacts-body">
-                <a href="tel:%2B0675201020" class="header__contacts-icon contacts-icon">
+                <a href="tel:%2B0675201020" class="header__contacts-icon contacts-icon conversion-phone">
                     <img src="{{asset('img/icons/phone.svg')}}" alt="">
                 </a>
                 <div class="header__contacts-content">
                     <div class="header__contacts-text">@lang('main.contacts.phone_text')</div>
-                    <a class="header__contacts-contact" href="tel:%2B0675201020">@lang('main.contacts.phone')</a>
+                    <a class="header__contacts-contact conversion-phone"
+                        href="tel:%2B0675201020">@lang('main.contacts.phone')</a>
                 </div>
             </div>
             <div class="header__contacts-body">
