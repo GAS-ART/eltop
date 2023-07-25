@@ -8,6 +8,9 @@ use Mail;
 class GoogleAdsFormController extends Controller
 {
     public function sendDataToEmail (Request $req){
+        header('Access-Control-Allow-Origin: *');
+        header('Access-Control-Allow-Methods: POST');
+        header('Access-Control-Allow-Headers: Content-Type');
         $raw = $req->getContent();
         $data = json_decode($raw, true);
 
