@@ -7,7 +7,7 @@ use Mail;
 
 class GoogleAdsFormController extends Controller
 {
-    public function sendDataToEmail ($req){
+    public function sendDataToEmail (Request $req){
         $name = $req->input('name');
         $phone = $req->input('phone');
         $city = $req->input('city');
